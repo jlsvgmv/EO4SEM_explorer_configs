@@ -23,25 +23,6 @@
         "zIndex": 1,
         "isBaseLayer": true
       }
-    },
-    {
-      "name": "WMTS Example",
-      "isActive": false,
-      "meta": {
-        "description": "Example configuration of a WMTS layer"
-      },
-      "layout": {
-        "layerCard": {
-          "toggleable": true
-        },
-        "interfaceGroup": "WMTS Layer"
-      },
-      "data": {
-        "zIndex": 1,
-        "url": "https://services.terrascope.be/wmts/v2",
-        "layers": "WORLDCOVER_2021_S2_TCC",
-        "type": "wmts"
-      }
     }
   ]
 }

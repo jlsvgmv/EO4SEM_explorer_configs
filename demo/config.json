@@ -75,6 +75,7 @@
       "data": [
         {
 	      "format": "wmts",
+	      "zIndex": 1,
 	      "url": "https://eo4health.api.brockmann-consult.de/api/wmts/1.0.0/WMTSCapabilities.xml",
 	      "layers": "WN_2025.WNV"
     	}
@@ -87,9 +88,6 @@
         "interfaceGroup": "WN_2025 Layer",
         "layerCard": {
           "toggleable": true,
-	  "legend": {
-            "type": "swatch"
-          },
           "controls": {
             "opacitySlider": true,
             "zoomToCenter": true

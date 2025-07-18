@@ -8,7 +8,7 @@
   },
   "interfaceGroups": [
     "World Cereal",
-    "WMTS Layer"
+	"WMTS Layer"
   ],
   "exclusivitySets": [
     "labels"
@@ -19,7 +19,13 @@
       "name": "VITO Terrascope",
       "url": "https://services.terrascope.be/wms/v2",
       "format": "wms"
-    }
+    },
+	{
+	  "id": "wmts-service-eo4health",
+	  "name": "EO4Health WMTS",
+	  "url": "https://eo4health.api.brockmann-consult.de/api/wmts/1.0.0/WMTSCapabilities.xml",
+	  "format": "wmts"
+	}
   ],
   "sources": [
     {
@@ -64,6 +70,34 @@
       },
       "layout": {
         "interfaceGroup": "World Cereal",
+        "layerCard": {
+          "toggleable": true,
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true
+          }
+        }
+      }
+    },
+	{
+      "name": "WN_2025 - West Nile Virus Forecast",
+      "isActive": false,
+      "data": [
+        {
+		  "url": "https://eo4health.api.brockmann-consult.de/api/wmts/1.0.0/tile/WN_2025/WNV/WorldCRS84Quad/{z}/{x}/{y}.png",
+          "format": "xyz",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "Probability of occurrence of West Nile Virus mosquito in the Mediterranean region (2025)",
+        "categories": []
+      },
+	  "layout": {
+        "interfaceGroup": "WMTS Layer",
         "layerCard": {
           "toggleable": true,
           "legend": {

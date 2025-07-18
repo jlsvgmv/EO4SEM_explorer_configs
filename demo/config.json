@@ -77,6 +77,7 @@
 	      "url": "https://eo4health.api.brockmann-consult.de/api/wmts/1.0.0/tile/WN_2025/WNV/WorldCRS84Quad/{z}/{x}/{y}.png?time=2022-06-09T00:00:00.000000000",
 	      "format": "wmts",
 	      "zIndex": 1,
+	      "layers": "WN_2025"
 	    }
 	  ],
 	  "meta": {

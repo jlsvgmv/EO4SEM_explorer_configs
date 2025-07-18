@@ -87,6 +87,9 @@
         "interfaceGroup": "WN_2025 Layer",
         "layerCard": {
           "toggleable": true,
+	  "legend": {
+            "type": "swatch"
+          },
           "controls": {
             "opacitySlider": true,
             "zoomToCenter": true

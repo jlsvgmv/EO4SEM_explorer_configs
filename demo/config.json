@@ -94,7 +94,7 @@
 	  "layout": {
         "interfaceGroup": "WMTS Layer",
         "layerCard": {
-          "toggleable": true
+          "toggleable": true,
           "controls": {
             "opacitySlider": true,
             "zoomToCenter": true

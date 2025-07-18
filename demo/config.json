@@ -76,7 +76,7 @@
         {
 	      "format": "wmts",
 	      "url": "https://eo4health.api.brockmann-consult.de/api/wmts/1.0.0/WMTSCapabilities.xml",
-	      "layers": "WN_2025.WNV"
+	      "layers": "MadagascarCropData.Irrigation Map"
     	}
       ],
       "meta": {

@@ -8,7 +8,7 @@
   },
   "interfaceGroups": [
     "World Cereal",
-	"WMTS Layer"
+    "WMTS Layer"
   ],
   "exclusivitySets": [
     "labels"
@@ -76,7 +76,7 @@
         }
       }
     },
-	{
+    {
       "name": "WN_2025 - West Nile Virus Forecast",
       "isActive": false,
       "data": [

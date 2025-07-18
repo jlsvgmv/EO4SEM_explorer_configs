@@ -20,7 +20,7 @@
       "data": {
         "url": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
         "type": "xyz",
-        "zIndex": 0,
+        "zIndex": 1,
         "isBaseLayer": true
       }
     },

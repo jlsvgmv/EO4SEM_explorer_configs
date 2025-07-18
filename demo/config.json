@@ -75,26 +75,6 @@
           }
         }
       }
-    },
-	{
-	  "name": "WN_2025 - West Nile Virus Forecast",
-	  "isActive": false,
-	  "meta": {
-		"description": "Probability of occurrence of West Nile Virus mosquito in the Mediterranean region (2025)"
-	  },
-	  "layout": {
-		"layerCard": {
-		  "toggleable": true
-		},
-		"interfaceGroup": "WMTS Layer"
-	  },
-	  "data": {
-		"zIndex": 2,
-		"url": "https://eo4health.api.brockmann-consult.de/api/wmts/1.0.0/tile/WN_2025/WNV/WorldCRS84Quad/{TileMatrix}/{TileRow}/{TileCol}.png",
-		"type": "wmts",
-		"tileMatrixSet": "WorldCRS84Quad",
-		"layer": "WN_2025.WNV"
-	  }
-	}
+    }
   ]
 }

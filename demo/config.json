@@ -12,16 +12,42 @@
   ],
   "sources": [
     {
-      "name": "Open Street Map",
+      "name": "Open StreetMap",
       "isActive": true,
+      "data": [
+        {
+          "url": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+          "format": "xyz",
+          "zIndex": 1
+        }
+      ],
+      "isBaseLayer": true,
+      "meta": {
+        "description": "",
+        "attribution": {
+          "text": "OpenStreetMap",
+          "url": "https://www.openstreetmap.org/copyright"
+        },
+        "categories": []
+      }
+    },
+    {
+      "name": "WMTS Example",
+      "isActive": false,
+      "meta": {
+        "description": "Example configuration of a WMTS layer"
+      },
       "layout": {
-        "interfaceGroup": "Basemaps"
+        "layerCard": {
+          "toggleable": true
+        },
+        "interfaceGroup": "WMTS Layer"
       },
       "data": {
-        "url": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-        "type": "xyz",
         "zIndex": 1,
-        "isBaseLayer": true
+        "url": "https://services.terrascope.be/wmts/v2",
+        "layers": "WORLDCOVER_2021_S2_TCC",
+        "type": "wmts"
       }
     }
   ]

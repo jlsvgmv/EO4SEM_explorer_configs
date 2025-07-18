@@ -84,7 +84,7 @@
         {
 	  "url": "https://eo4health.api.brockmann-consult.de/api/wmts/1.0.0/tile/WN_2025/WNV/WorldCRS84Quad/{z}/{x}/{y}.png",
           "format": "xyz",
-          "zIndex": 0
+          "zIndex": 1
         }
       ],
       "meta": {

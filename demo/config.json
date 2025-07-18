@@ -115,7 +115,7 @@
         "zIndex": 1,
         "url": "https://services.terrascope.be/wmts/v2",
         "layers": "WORLDCOVER_2021_S2_TCC",
-        "type": "wmts"
+        "format": "wmts"
      	}
       ]
     }

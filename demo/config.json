@@ -82,9 +82,9 @@
       "isActive": false,
       "data": [
         {
-		  "url": "https://eo4health.api.brockmann-consult.de/api/wmts/1.0.0/tile/WN_2025/WNV/WorldCRS84Quad/{z}/{x}/{y}.png",
+	  "url": "https://eo4health.api.brockmann-consult.de/api/wmts/1.0.0/tile/WN_2025/WNV/WorldCRS84Quad/{z}/{x}/{y}.png",
           "format": "xyz",
-          "zIndex": 1
+          "zIndex": 2
         }
       ],
       "meta": {
@@ -94,10 +94,7 @@
 	  "layout": {
         "interfaceGroup": "WMTS Layer",
         "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "swatch"
-          },
+          "toggleable": true
           "controls": {
             "opacitySlider": true,
             "zoomToCenter": true

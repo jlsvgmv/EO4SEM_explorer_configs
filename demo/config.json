@@ -19,13 +19,7 @@
       "name": "VITO Terrascope",
       "url": "https://services.terrascope.be/wms/v2",
       "format": "wms"
-    },
-	{
-	  "id": "wmts-service-eo4health",
-	  "name": "EO4Health WMTS",
-	  "url": "https://eo4health.api.brockmann-consult.de/api/wmts/1.0.0/WMTSCapabilities.xml",
-	  "format": "wmts"
-	}
+    }
   ],
   "sources": [
     {

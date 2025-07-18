@@ -9,7 +9,7 @@
   "interfaceGroups": [
     "World Cereal",
     "WMTS Layer",
-    "XYZ Layer"
+    "WN_2025 Layer"
   ],
   "exclusivitySets": [
     "labels"
@@ -83,7 +83,7 @@
         "categories": []
       },
 	  "layout": {
-        "interfaceGroup": "XYZ Layer",
+        "interfaceGroup": "WN_2025 Layer",
         "layerCard": {
           "toggleable": true,
           "controls": {

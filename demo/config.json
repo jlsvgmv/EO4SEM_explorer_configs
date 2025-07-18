@@ -76,8 +76,7 @@
         {
 	      "format": "xyz",
 	      "url": "https://eo4health.api.brockmann-consult.de/api/wmts/1.0.0/tile/WN_2025/WNV/WorldCRS84Quad/{TileMatrix}/{TileRow}/{TileCol}.png?time=2022-06-09T00:00:00.000000000",
-	      "zIndex": 0,
-	      "tileMatrixSet": "WorldCRS84Quad"
+	      "zIndex": 0
     	}
       ],
       "meta": {

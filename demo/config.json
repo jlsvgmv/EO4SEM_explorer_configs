@@ -76,7 +76,7 @@
         {
 	      "format": "wmts",
 	      "zIndex": 1,
-	      "url": "https://eo4health.api.brockmann-consult.de/api/wmts/1.0.0/WorldCRS84Quad",
+	      "url": "https://eo4health.api.brockmann-consult.de/api/wmts/kvp",
 	      "layers": "WN_2025.WNV"
     	}
       ],

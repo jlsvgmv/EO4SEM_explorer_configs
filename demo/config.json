@@ -41,7 +41,7 @@
 	"categories": []
       },
       "layout": {
-	"interfaceGroup": "WMTS Layer",
+	"interfaceGroup": "World WMTS Layer",
         "layerCard": {
           "toggleable": true,
 	  "controls": {

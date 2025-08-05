@@ -8,8 +8,7 @@
   },
   "interfaceGroups": [
     "World Cereal",
-    "WMTS Layer",
-    "WN_2025 Layer"
+    "WMTS Layer"
   ],
   "exclusivitySets": [
     "labels"

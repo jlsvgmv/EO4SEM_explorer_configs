@@ -7,8 +7,7 @@
     }
   },
   "interfaceGroups": [
-    "World Cereal",
-    "WMTS Layer"
+    "World WMTS Layer"
   ],
   "exclusivitySets": [
     "labels"
@@ -32,40 +31,6 @@
           "url": "https://www.openstreetmap.org/copyright"
         },
         "categories": []
-      }
-    },
-	{
-      "name": "Maize 2021",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://services.terrascope.be/wms/v2",
-          "format": "wms",
-          "zIndex": 2,
-          "layers": "WORLDCEREAL_MAIZE_V1",
-          "serviceId": "wms-service-vito-terrascope-v2"
-        }
-      ],
-      "meta": {
-        "description": "Maize, globally, at 10m resolution in specific seasons throughout the year.",
-        "attribution": {
-          "text": "World Cereal",
-          "url": "https://esa-worldcereal.org/en"
-        },
-        "categories": []
-      },
-      "layout": {
-        "interfaceGroup": "World Cereal",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "swatch"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true
-          }
-        }
       }
     },
     {

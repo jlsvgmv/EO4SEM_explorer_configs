@@ -21,7 +21,7 @@
         {
           "url": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
           "format": "xyz",
-          "zIndex": 1
+          "zIndex": 0
         }
       ],
       "isBaseLayer": true,

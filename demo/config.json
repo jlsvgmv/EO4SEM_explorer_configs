@@ -7,7 +7,8 @@
     }
   },
   "interfaceGroups": [
-    "World WMTS Layer"
+    "World WMTS Layer",
+    "EO4SEM AEMISSIONS CH4 TROPOMI"
   ],
   "exclusivitySets": [
     "labels"
@@ -15,7 +16,7 @@
   "sources": [
     {
       "name": "Open StreetMap",
-      "isActive": true,
+      "isActive": true, 
       "data": [
         {
           "url": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
@@ -34,17 +35,42 @@
       }
     },
     {
+      "name": "EO4SEM AEMISSIONS CH4 TROPOMI 20190101",
+      "isActive": false, 
+      "data": [
+        {
+          "url": "https://storage.googleapis.com/pt_bgc/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201901_ch4_posterior.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "Description EO4SEM AEMISSIONS CH4 TROPOMI 20190101",
+	      "categories": []
+      },
+      "layout": {
+	      "interfaceGroup": "EO4SEM AEMISSIONS CH4 TROPOMI",
+        "layerCard": {
+          "toggleable": true,
+	      "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true
+          }
+        }
+      }
+    },
+    {
       "name": "WMTS Example",
       "isActive": false,
       "meta": {
         "description": "Example configuration of a WMTS layer",
-	"categories": []
+	      "categories": []
       },
       "layout": {
-	"interfaceGroup": "World WMTS Layer",
+	      "interfaceGroup": "World WMTS Layer",
         "layerCard": {
           "toggleable": true,
-	  "controls": {
+	      "controls": {
             "opacitySlider": true,
             "zoomToCenter": true
           }

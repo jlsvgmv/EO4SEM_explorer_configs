@@ -8,7 +8,8 @@
   },
   "interfaceGroups": [
     "World WMTS Layer",
-    "EO4SEM AEMISSIONS CH4 TROPOMI"
+    "EO4SEM AEMISSIONS CH4 TROPOMI",
+    "WN_2025 Layer"
   ],
   "exclusivitySets": [
     "labels"
@@ -84,6 +85,32 @@
           "format": "wmts"
      	  }
       ]
+    },
+    {
+      "name": "WN_2025 - West Nile Virus Forecast",
+      "isActive": false,
+      "data": [
+        {
+	      "format": "wmts",
+	      "zIndex": 1,
+	      "url": "https://eo4health.api.brockmann-consult.de/api/wmts/1.0.0/WorldCRS84Quad/WMTSCapabilities.xml",
+	      "layers": "WN_2025.WNV"
+    	}
+      ],
+      "meta": {
+        "description": "Probability of occurrence of West Nile Virus mosquito in the Mediterranean region (2022-2025)",
+        "categories": []
+      },
+	  "layout": {
+        "interfaceGroup": "WN_2025 Layer",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true
+          }
+        }
+      }
     }
   ]
 }

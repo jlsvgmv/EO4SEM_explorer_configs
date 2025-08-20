@@ -25,7 +25,6 @@
           "zIndex": 1
         }
       ],
-	  "timeframe": "Days",
       "isBaseLayer": true,
       "meta": {
         "description": "",
@@ -99,6 +98,7 @@
 	      "layers": "WN_2025.WNV"
     	}
       ],
+	  "timeframe": "Days",
       "meta": {
         "description": "Probability of occurrence of West Nile Virus mosquito in the Mediterranean region (2022-2025)",
         "categories": []

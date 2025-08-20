@@ -25,6 +25,7 @@
           "zIndex": 1
         }
       ],
+	  "timeframe": "Days",
       "isBaseLayer": true,
       "meta": {
         "description": "",

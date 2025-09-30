@@ -1,0 +1,125 @@
+{
+  "version": "3.0.0",
+  "layout": {
+    "navigation": {
+      "logo": "https://www.esa.int/extension/pillars/design/pillars/images/ESA_Logo.svg",
+      "title": "APEx Demo - Geospatial Explorer"
+    }
+  },
+  "interfaceGroups": [
+    "World Cereal",
+    "WMTS Layer",
+    "WN_2025 Layer"
+  ],
+  "exclusivitySets": [
+    "labels"
+  ],
+  "sources": [
+    {
+      "name": "Open StreetMap",
+      "isActive": true,
+      "data": [
+        {
+          "url": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+          "format": "xyz",
+          "zIndex": 1
+        }
+      ],
+      "isBaseLayer": true,
+      "meta": {
+        "description": "",
+        "attribution": {
+          "text": "OpenStreetMap",
+          "url": "https://www.openstreetmap.org/copyright"
+        },
+        "categories": []
+      }
+    },
+	{
+      "name": "Maize 2021",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://services.terrascope.be/wms/v2",
+          "format": "wms",
+          "zIndex": 2,
+          "layers": "WORLDCEREAL_MAIZE_V1",
+          "serviceId": "wms-service-vito-terrascope-v2"
+        }
+      ],
+      "meta": {
+        "description": "Maize, globally, at 10m resolution in specific seasons throughout the year.",
+        "attribution": {
+          "text": "World Cereal",
+          "url": "https://esa-worldcereal.org/en"
+        },
+        "categories": []
+      },
+      "layout": {
+        "interfaceGroup": "World Cereal",
+        "layerCard": {
+          "toggleable": true,
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true
+          }
+        }
+      }
+    },
+    {
+      "name": "WN_2025 - West Nile Virus Forecast",
+      "isActive": false,
+      "data": [
+        {
+	      "format": "wmts",
+	      "zIndex": 1,
+	      "url": "https://eo4health.api.brockmann-consult.de/api/wmts/1.0.0/WorldCRS84Quad/WMTSCapabilities.xml",
+	      "layers": "WN_2025.WNV"
+    	}
+      ],
+      "meta": {
+        "description": "Probability of occurrence of West Nile Virus mosquito in the Mediterranean region (2022-2025)",
+        "categories": []
+      },
+	  "layout": {
+        "interfaceGroup": "WN_2025 Layer",
+        "layerCard": {
+          "toggleable": true,
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true
+          }
+        }
+      }
+    },
+     {
+      "name": "WMTS Example",
+      "isActive": false,
+      "meta": {
+        "description": "Example configuration of a WMTS layer",
+	"categories": []
+      },
+      "layout": {
+	"interfaceGroup": "WMTS Layer",
+        "layerCard": {
+          "toggleable": true,
+	  "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true
+          }
+        }
+      },
+      "data": [
+	{
+        "zIndex": 1,
+        "url": "https://services.terrascope.be/wmts/v2",
+        "layers": "WORLDCOVER_2021_S2_TCC",
+        "format": "wmts"
+     	}
+      ]
+    }
+  ]
+}

@@ -23,7 +23,7 @@
           "zIndex": 1
         }
       ],
-      "isBaseLayer": true,
+      "isBaseLayer": false,
       "meta": {
         "description": "",
         "attribution": {

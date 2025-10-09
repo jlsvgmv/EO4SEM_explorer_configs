@@ -67,7 +67,7 @@
           "max": 1500,
           "startColor": "#f0f01d",
           "endColor": "#eb1f10",
-		  "units": "CH4 (Methane emissions) [kg];",
+		  "units": "CH4 (Methane emissions) [kg]"
       },
       "layout": {
 	      "interfaceGroup": "CH4_FMI_STEAM Layer",

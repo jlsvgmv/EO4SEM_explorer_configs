@@ -23,13 +23,9 @@
           "zIndex": 1
         }
       ],
-      "isBaseLayer": false,
+      "isBaseLayer": true,
       "meta": {
         "description": "",
-        "attribution": {
-          "text": "OpenStreetMap",
-          "url": "https://www.openstreetmap.org/copyright"
-        },
         "categories": []
       }
     },

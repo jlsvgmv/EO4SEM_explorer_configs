@@ -7,7 +7,6 @@
     }
   },
   "interfaceGroups": [
-    "World WMTS Layer",
     "CH4_FMI_STEAM Layer"
   ],
   "exclusivitySets": [

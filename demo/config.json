@@ -3,7 +3,7 @@
   "layout": {
     "navigation": {
       "logo": "https://www.esa.int/extension/pillars/design/pillars/images/ESA_Logo.svg",
-      "title": "APEx Demo - Geospatial Explorer"
+      "title": "EO4SEM - Geospatial Explorer"
     }
   },
   "interfaceGroups": [
@@ -63,10 +63,11 @@
       "meta": {
         "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05° × 0.1° for the year 2023, covering the European maritime domain (15.25°W to 40°E; 25°N to 74.25°N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS).",
 	      "categories": [],
-		  		"min": 17,
-        		"max": 5000,
-        		"startColor": "#f0f01d",
-        		"endColor": "#eb1f10"
+		  "min": 17,
+          "max": 1500,
+          "startColor": "#f0f01d",
+          "endColor": "#eb1f10",
+		  "units": "CH4 (Methane emissions) [kg];",
       },
       "layout": {
 	      "interfaceGroup": "CH4_FMI_STEAM Layer",

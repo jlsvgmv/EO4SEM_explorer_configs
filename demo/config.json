@@ -32,7 +32,11 @@
           "text": "OpenStreetMap",
           "url": "https://www.openstreetmap.org/copyright"
         },
-        "categories": []
+        "categories": [],
+		"min": 0.001,
+        "max": 169131,
+        "startColor": "#0e9bed",
+        "endColor": "#eb1f10"
       }
     },
     {

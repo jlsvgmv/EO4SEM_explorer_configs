@@ -8,7 +8,9 @@
   },
   "interfaceGroups": [
     "CH4_FMI_STEAM Layer",
-	"CO_FMI_STEAM Layer"
+	"CO_FMI_STEAM Layer",
+	"CO2_FMI_STEAM Layer",
+	"NOx_FMI_STEAM Layer"
   ],
   "exclusivitySets": [
     "labels"
@@ -105,6 +107,72 @@
       },
       "layout": {
 	      "interfaceGroup": "CO_FMI_STEAM Layer",
+        "layerCard": {
+          "toggleable": true,
+		  "legend": {
+            "type": "gradient"
+          },
+	      "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true
+          }
+        }
+      }
+    },
+	{
+      "name": "CO2_FMI_STEAM 2023",
+      "isActive": false, 
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CO2_FMI/CO2_2023_FMI_STEAM.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05° × 0.1° for the year 2023, covering the European maritime domain (15.25°W to 40°E; 25°N to 74.25°N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS).",
+	      "categories": [],
+		  "min": 500,
+          "max": 500000,
+          "startColor": "#f0f01d",
+          "endColor": "#eb1f10",
+		  "units": "[kg]"
+      },
+      "layout": {
+	      "interfaceGroup": "CO2_FMI_STEAM Layer",
+        "layerCard": {
+          "toggleable": true,
+		  "legend": {
+            "type": "gradient"
+          },
+	      "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true
+          }
+        }
+      }
+    },
+	{
+      "name": "NOx_FMI_STEAM 2023",
+      "isActive": false, 
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NOx_FMI/NOx_2023_FMI_STEAM.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05° × 0.1° for the year 2023, covering the European maritime domain (15.25°W to 40°E; 25°N to 74.25°N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS).",
+	      "categories": [],
+		  "min": 500,
+          "max": 500000,
+          "startColor": "#f0f01d",
+          "endColor": "#eb1f10",
+		  "units": "[kg]"
+      },
+      "layout": {
+	      "interfaceGroup": "NOx_FMI_STEAM Layer",
         "layerCard": {
           "toggleable": true,
 		  "legend": {

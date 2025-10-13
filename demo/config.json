@@ -10,7 +10,8 @@
     "CH4_FMI_STEAM Layer",
 	"CO_FMI_STEAM Layer",
 	"CO2_FMI_STEAM Layer",
-	"NOx_FMI_STEAM Layer"
+	"NOx_FMI_STEAM Layer",
+	"CH4_GHGSAT Layer"
   ],
   "exclusivitySets": [
     "labels"
@@ -173,6 +174,39 @@
       },
       "layout": {
 	      "interfaceGroup": "NOx_FMI_STEAM Layer",
+        "layerCard": {
+          "toggleable": true,
+		  "legend": {
+            "type": "gradient"
+          },
+	      "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true
+          }
+        }
+      }
+    },
+	{
+      "name": "CH4_GHGSAT 2025-07-12",
+      "isActive": false, 
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_GHGSAT/C7_25070957_20250712_20250919_SqN0eal_58707_CH4PL.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "Add description",
+	      "categories": [],
+		  "min": 0,
+          "max": 150,
+          "startColor": "#f0f01d",
+          "endColor": "#eb1f10",
+		  "units": "[kg]"
+      },
+      "layout": {
+	      "interfaceGroup": "CH4_GHGSAT Layer",
         "layerCard": {
           "toggleable": true,
 		  "legend": {

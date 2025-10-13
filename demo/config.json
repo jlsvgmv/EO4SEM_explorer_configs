@@ -218,6 +218,39 @@
           }
         }
       }
+    },
+	{
+      "name": "CH4_GHGSAT 2024-07-13",
+      "isActive": false, 
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_GHGSAT/C11_25070957_20240713_20250919_jkg9Lq-_35867_CH4PL.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "Add description",
+	      "categories": [],
+		  "min": 0,
+          "max": 200,
+          "startColor": "#f0f01d",
+          "endColor": "#eb1f10",
+		  "units": "[kg]"
+      },
+      "layout": {
+	      "interfaceGroup": "CH4_GHGSAT Layer",
+        "layerCard": {
+          "toggleable": true,
+		  "legend": {
+            "type": "gradient"
+          },
+	      "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true
+          }
+        }
+      }
     }
 
   ]

@@ -203,7 +203,7 @@
           "max": 150,
           "startColor": "#f0f01d",
           "endColor": "#eb1f10",
-		  "units": "[kg]"
+		  "units": "[PPB]"
       },
       "layout": {
 	      "interfaceGroup": "CH4_GHGSAT Layer",
@@ -236,7 +236,7 @@
           "max": 200,
           "startColor": "#f0f01d",
           "endColor": "#eb1f10",
-		  "units": "[kg]"
+		  "units": "[PPB]"
       },
       "layout": {
 	      "interfaceGroup": "CH4_GHGSAT Layer",

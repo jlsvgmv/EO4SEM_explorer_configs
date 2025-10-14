@@ -7,6 +7,7 @@
     }
   },
   "interfaceGroups": [
+	"FMI - Marine Regions",
     "CH4_FMI_STEAM Layer",
 	"CO_FMI_STEAM Layer",
 	"CO2_FMI_STEAM Layer",
@@ -319,7 +320,7 @@
             "zoomToCenter": true
           }
         },
-        "interfaceGroup": "CH4_FMI_STEAM Layer"
+        "interfaceGroup": "FMI - Marine Regions"
       },
       "data": [
         {

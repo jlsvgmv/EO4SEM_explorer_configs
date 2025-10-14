@@ -251,6 +251,121 @@
           }
         }
       }
+    },
+	{
+      "name": "FMI - Marine Regions",
+      "isActive": false,
+      "meta": {
+        "description": "FMI - Marine Regions",
+        "categories": [
+		  {
+            "color": "rgba(252,93,95,1.0)",
+            "label": "Adriatic Sea"
+          },
+          {
+            "color": "rgba(92,253,95,1.0)",
+            "label": "Baltic Sea"
+          },
+          {
+            "color": "rgba(92,93,255,1.0)",
+            "label": "Bay of Biscay"
+          },
+		  {
+            "color": "rgba(252,253,95,1.0)",
+            "label": "Black Sea"
+          },
+		  {
+            "color": "rgba(252,93,255,1.0)",
+            "label": "Celtic Sea"
+          },
+		  {
+            "color": "rgba(92,253,255,1.0)",
+            "label": "English Channel"
+          },
+          {
+            "color": "rgba(252,173,95,1.0)",
+            "label": "Mediterranean Sea Eastern Basin"
+          },
+		  {
+            "color": "rgba(172,93,255,1.0)",
+            "label": "Mediterranean Sea Western Basin"
+          },
+		  {
+            "color": "rgba(172,133,255,1.0)",
+            "label": "North Sea"
+          },
+		  {
+            "color": "rgba(172,253,95,1.0)",
+            "label": "Tyrrhenian Sea"
+          },
+          {
+            "color": "rgba(252,93,175,1.0)",
+            "label": "Iberian coast margin"
+          },
+		  {
+            "color": "rgba(172,93,255,1.0)",
+            "label": "Extension of Bay of Biscay"
+          }
+        ]
+      },
+      "layout": {
+        "layerCard": {
+          "toggleable": true,
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true
+          }
+        },
+        "interfaceGroup": "CH4_FMI_STEAM Layer"
+      },
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/MarineRegions_FMI/mask_marineregions_europe_0.05.geojson",
+          "zIndex": 1,
+          "format": "geojson",
+          "style": [
+            {
+              "fill-color": [
+                "match",
+                [
+                  "get",
+                  "NAME"
+                ],
+                "Adriatic Sea",
+                "rgba(252,93,95,1.0)",
+                "Baltic Sea",
+                "rgba(92,253,95,1.0)",
+                "Bay of Biscay",
+                "rgba(92,93,255,1.0)",
+                "Black Sea",
+                "rgba(252,253,95,1.0))",
+                "Celtic Sea",
+                "rgba(252,93,255,1.0)",
+                "English Channel",
+                "rgba(92,253,255,1.0)",
+				"Mediterranean Sea Eastern Basin",
+                "rgba(252,173,95,1.0)",
+                "Mediterranean Sea Western Basin",
+                "rgba(172,93,255,1.0)",
+                "North Sea",
+                "rgba(172,133,255,1.0)",
+                "Tyrrhenian Sea",
+                "rgba(172,253,95,1.0)",
+                "Iberian coast margin",
+                "rgba(252,93,175,1.0)",
+                "Extension of Bay of Biscay",
+                "rgba(172,93,255,1.0)",
+                "rgba(200, 200, 200, 0)"
+              ],
+              "stroke-color": "rgba(35,35,35,1.0)",
+              "stroke-width": 0.5
+            }
+          ]
+        }
+      ]
     }
 
   ]

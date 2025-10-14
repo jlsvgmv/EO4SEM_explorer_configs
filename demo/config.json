@@ -191,7 +191,7 @@
       "isActive": false, 
       "data": [
         {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_GHGSAT/C7_25070957_20250712_20250919_SqN0eal_58707_CH4PL.tif",
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_GHGSAT/CH4_20240713_GHGSAT_BuenosAires.tif",
           "format": "cog",
           "zIndex": 1
         }
@@ -224,7 +224,7 @@
       "isActive": false, 
       "data": [
         {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_GHGSAT/C11_25070957_20240713_20250919_jkg9Lq-_35867_CH4PL.tif",
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_GHGSAT/CH4_20250712_GHGSAT_Greece.tif",
           "format": "cog",
           "zIndex": 1
         }

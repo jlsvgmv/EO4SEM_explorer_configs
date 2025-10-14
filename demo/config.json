@@ -191,7 +191,7 @@
       "isActive": false, 
       "data": [
         {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_GHGSAT/CH4_20240713_GHGSAT_BuenosAires.tif",
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_GHGSAT/CH4_20250712_GHGSAT_Greece.tif",
           "format": "cog",
           "zIndex": 1
         }
@@ -224,7 +224,7 @@
       "isActive": false, 
       "data": [
         {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_GHGSAT/CH4_20250712_GHGSAT_Greece.tif",
+		  "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_GHGSAT/CH4_20240713_GHGSAT_BuenosAires.tif",
           "format": "cog",
           "zIndex": 1
         }

@@ -412,8 +412,8 @@
       "meta": {
         "description": "Average NOx emission rate inferred from plume",
 	      "categories": [],
-		  "min": 1000000000000000,
-          "max": 3500000000000000,
+		  "min": 0,
+          "max": 3000000000000000,
           "startColor": "#f0f01d",
           "endColor": "#eb1f10",
 		  "units": "[molec/cm2]"

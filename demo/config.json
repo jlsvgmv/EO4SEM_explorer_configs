@@ -8,11 +8,11 @@
   },
   "interfaceGroups": [
 	"FMI - Marine Regions",
-    "CH4_FMI_STEAM Layer",
-	"CO_FMI_STEAM Layer",
-	"CO2_FMI_STEAM Layer",
-	"NOx_FMI_STEAM Layer",
-	"CH4_GHGSAT Layer",
+    "Methane FMI STEAM Layer",
+	"Carbon Monoxide FMI STEAM Layer",
+	"Carbon Dioxide FMI STEAM Layer",
+	"Nitrogen Oxide FMI STEAM Layer",
+	"Methane GHGSAT Layer",
 	"LSCE - Shipping Lanes Emissions"
   ],
   "exclusivitySets": [
@@ -57,7 +57,7 @@
       ]
     },
 	{
-      "name": "CH4_FMI_STEAM 2023",
+      "name": "Methane FMI STEAM 2023",
       "isActive": false, 
       "data": [
         {
@@ -76,7 +76,7 @@
 		  "units": "[kg]"
       },
       "layout": {
-	      "interfaceGroup": "CH4_FMI_STEAM Layer",
+	      "interfaceGroup": "Methane FMI STEAM Layer",
         "layerCard": {
           "toggleable": true,
 		  "legend": {
@@ -90,7 +90,7 @@
       }
     },
 	{
-      "name": "CO_FMI_STEAM 2023",
+      "name": "Carbon Monoxide FMI STEAM 2023",
       "isActive": false, 
       "data": [
         {
@@ -109,7 +109,7 @@
 		  "units": "[kg]"
       },
       "layout": {
-	      "interfaceGroup": "CO_FMI_STEAM Layer",
+	      "interfaceGroup": "Carbon Monoxide FMI STEAM Layer",
         "layerCard": {
           "toggleable": true,
 		  "legend": {
@@ -123,7 +123,7 @@
       }
     },
 	{
-      "name": "CO2_FMI_STEAM 2023",
+      "name": "Carbon Dioxide FMI STEAM 2023",
       "isActive": false, 
       "data": [
         {
@@ -142,7 +142,7 @@
 		  "units": "[kg]"
       },
       "layout": {
-	      "interfaceGroup": "CO2_FMI_STEAM Layer",
+	      "interfaceGroup": "Carbon Dioxide FMI STEAM Layer",
         "layerCard": {
           "toggleable": true,
 		  "legend": {
@@ -156,7 +156,7 @@
       }
     },
 	{
-      "name": "NOx_FMI_STEAM 2023",
+      "name": "Nitrogen Oxide FMI STEAM 2023",
       "isActive": false, 
       "data": [
         {
@@ -175,7 +175,7 @@
 		  "units": "[kg]"
       },
       "layout": {
-	      "interfaceGroup": "NOx_FMI_STEAM Layer",
+	      "interfaceGroup": "Nitrogen Oxide FMI STEAM Layer",
         "layerCard": {
           "toggleable": true,
 		  "legend": {
@@ -189,7 +189,7 @@
       }
     },
 	{
-      "name": "CH4_GHGSAT 2025-07-12",
+      "name": "Methane GHGSAT 2025-07-12",
       "isActive": false, 
       "data": [
         {
@@ -199,7 +199,7 @@
         }
       ],
       "meta": {
-        "description": "Add description",
+        "description": "The image shows the column-averaged methane concentration in excess of local background reported in the CH4 layer, only at the location where a plume was detected. Location in Greece",
 	      "categories": [],
 		  "min": 0,
           "max": 150,
@@ -208,7 +208,7 @@
 		  "units": "[PPB]"
       },
       "layout": {
-	      "interfaceGroup": "CH4_GHGSAT Layer",
+	      "interfaceGroup": "Methane GHGSAT Layer",
         "layerCard": {
           "toggleable": true,
 		  "legend": {
@@ -222,7 +222,7 @@
       }
     },
 	{
-      "name": "CH4_GHGSAT 2024-07-13",
+      "name": "Methane GHGSAT 2024-07-13",
       "isActive": false, 
       "data": [
         {
@@ -232,7 +232,7 @@
         }
       ],
       "meta": {
-        "description": "Add description",
+        "description": "The image shows the column-averaged methane concentration in excess of local background reported in the CH4 layer, only at the location where a plume was detected. Location in Buenos Aires",
 	      "categories": [],
 		  "min": 0,
           "max": 200,
@@ -241,7 +241,7 @@
 		  "units": "[PPB]"
       },
       "layout": {
-	      "interfaceGroup": "CH4_GHGSAT Layer",
+	      "interfaceGroup": "Methane GHGSAT Layer",
         "layerCard": {
           "toggleable": true,
 		  "legend": {

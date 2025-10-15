@@ -419,7 +419,7 @@
 		  "units": "[molec/cm2]"
       },
       "layout": {
-	      "interfaceGroup": "Nitrogen dioxide LSCE Plume",
+	      "interfaceGroup": "LSCE - Nitrogen dioxide Plume",
         "layerCard": {
           "toggleable": true,
 		  "legend": {

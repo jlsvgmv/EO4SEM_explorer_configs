@@ -12,7 +12,8 @@
 	"CO_FMI_STEAM Layer",
 	"CO2_FMI_STEAM Layer",
 	"NOx_FMI_STEAM Layer",
-	"CH4_GHGSAT Layer"
+	"CH4_GHGSAT Layer",
+	"LSCE - Shipping Lanes Emissions"
   ],
   "exclusivitySets": [
     "labels"
@@ -365,6 +366,26 @@
               "stroke-width": 0.5
             }
           ]
+        }
+      ]
+    },
+	{
+      "name": "LSCE - Shipping Lanes Emissions",
+      "isActive": false,
+      "meta": {
+        "description": "Maritime shipping lanes are defined based on maritime traffic patterns from the STEAM 2023 dataset."
+      },
+      "layout": {
+        "layerCard": {
+          "toggleable": true
+        },
+        "interfaceGroup": "LSCE - Shipping Lanes Emissions"
+      },
+      "data": [
+        {
+          "zIndex": 1,
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE/shipping_lanes_emissions.geojson",
+          "format": "geojson"
         }
       ]
     }

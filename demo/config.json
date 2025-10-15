@@ -385,7 +385,16 @@
         {
           "zIndex": 1,
           "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE/shipping_lanes_emissions.geojson",
-          "format": "geojson"
+          "format": "geojson",
+		  "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 0.5
+            }
+          ]
         }
       ]
     }

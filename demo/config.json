@@ -400,6 +400,39 @@
       ]
     },
 	{
+      "name": "Nitrogen dioxide LSCE Plume: 2023-04-17",
+      "isActive": false, 
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NO2_LSCE_Plumes/NO2_20230417_LSCE_plume.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "Average NOx emission rate inferred from plume",
+	      "categories": [],
+		  "min": 1000000000000000,
+          "max": 3500000000000000,
+          "startColor": "#f0f01d",
+          "endColor": "#eb1f10",
+		  "units": "[molec/cm2]"
+      },
+      "layout": {
+	      "interfaceGroup": "Nitrogen dioxide LSCE Plume",
+        "layerCard": {
+          "toggleable": true,
+		  "legend": {
+            "type": "gradient"
+          },
+	      "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true
+          }
+        }
+      }
+    },
+	{
       "name": "Nitrogen dioxide LSCE Plume: 2023-04-29",
       "isActive": false, 
       "data": [
@@ -412,14 +445,179 @@
       "meta": {
         "description": "Average NOx emission rate inferred from plume",
 	      "categories": [],
-		  "min": 0,
-          "max": 3000000000000000,
+		  "min": 1000000000000000,
+          "max": 3500000000000000,
           "startColor": "#f0f01d",
           "endColor": "#eb1f10",
 		  "units": "[molec/cm2]"
       },
       "layout": {
-	      "interfaceGroup": "LSCE - Nitrogen dioxide Plume",
+	      "interfaceGroup": "Nitrogen dioxide LSCE Plume",
+        "layerCard": {
+          "toggleable": true,
+		  "legend": {
+            "type": "gradient"
+          },
+	      "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true
+          }
+        }
+      }
+    },
+	{
+      "name": "Nitrogen dioxide LSCE Plume: 2023-06-24",
+      "isActive": false, 
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NO2_LSCE_Plumes/NO2_20230624_LSCE_plume.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "Average NOx emission rate inferred from plume",
+	      "categories": [],
+		  "min": 1000000000000000,
+          "max": 3500000000000000,
+          "startColor": "#f0f01d",
+          "endColor": "#eb1f10",
+		  "units": "[molec/cm2]"
+      },
+      "layout": {
+	      "interfaceGroup": "Nitrogen dioxide LSCE Plume",
+        "layerCard": {
+          "toggleable": true,
+		  "legend": {
+            "type": "gradient"
+          },
+	      "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true
+          }
+        }
+      }
+    },
+	{
+      "name": "Nitrogen dioxide LSCE Plume: 2023-07-15",
+      "isActive": false, 
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NO2_LSCE_Plumes/NO2_20230715_LSCE_plume.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "Average NOx emission rate inferred from plume",
+	      "categories": [],
+		  "min": 1000000000000000,
+          "max": 3500000000000000,
+          "startColor": "#f0f01d",
+          "endColor": "#eb1f10",
+		  "units": "[molec/cm2]"
+      },
+      "layout": {
+	      "interfaceGroup": "Nitrogen dioxide LSCE Plume",
+        "layerCard": {
+          "toggleable": true,
+		  "legend": {
+            "type": "gradient"
+          },
+	      "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true
+          }
+        }
+      }
+    },
+	{
+      "name": "Nitrogen dioxide LSCE Plume: 2023-07-22",
+      "isActive": false, 
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NO2_LSCE_Plumes/NO2_20230722_LSCE_plume.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "Average NOx emission rate inferred from plume",
+	      "categories": [],
+		  "min": 1000000000000000,
+          "max": 3500000000000000,
+          "startColor": "#f0f01d",
+          "endColor": "#eb1f10",
+		  "units": "[molec/cm2]"
+      },
+      "layout": {
+	      "interfaceGroup": "Nitrogen dioxide LSCE Plume",
+        "layerCard": {
+          "toggleable": true,
+		  "legend": {
+            "type": "gradient"
+          },
+	      "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true
+          }
+        }
+      }
+    },
+	{
+      "name": "Nitrogen dioxide LSCE Plume: 2023-08-23",
+      "isActive": false, 
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NO2_LSCE_Plumes/NO2_20230823_LSCE_plume.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "Average NOx emission rate inferred from plume",
+	      "categories": [],
+		  "min": 1000000000000000,
+          "max": 3500000000000000,
+          "startColor": "#f0f01d",
+          "endColor": "#eb1f10",
+		  "units": "[molec/cm2]"
+      },
+      "layout": {
+	      "interfaceGroup": "Nitrogen dioxide LSCE Plume",
+        "layerCard": {
+          "toggleable": true,
+		  "legend": {
+            "type": "gradient"
+          },
+	      "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true
+          }
+        }
+      }
+    },
+	{
+      "name": "Nitrogen dioxide LSCE Plume: 2023-08-28",
+      "isActive": false, 
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NO2_LSCE_Plumes/NO2_20230828_LSCE_plume.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "Average NOx emission rate inferred from plume",
+	      "categories": [],
+		  "min": 1000000000000000,
+          "max": 3500000000000000,
+          "startColor": "#f0f01d",
+          "endColor": "#eb1f10",
+		  "units": "[molec/cm2]"
+      },
+      "layout": {
+	      "interfaceGroup": "Nitrogen dioxide LSCE Plume",
         "layerCard": {
           "toggleable": true,
 		  "legend": {

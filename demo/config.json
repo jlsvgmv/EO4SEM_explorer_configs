@@ -13,7 +13,8 @@
 	"Carbon Dioxide FMI STEAM Layer",
 	"Nitrogen Oxide FMI STEAM Layer",
 	"Methane GHGSAT Layer",
-	"LSCE - Shipping Lanes Emissions"
+	"LSCE - Shipping Lanes Emissions",
+	"LSCE - Nitrogen dioxide Plume"
   ],
   "exclusivitySets": [
     "labels"
@@ -397,7 +398,40 @@
           ]
         }
       ]
-    }
+    },
+	{
+      "name": "Nitrogen dioxide LSCE Plume: 2023-04-29",
+      "isActive": false, 
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NO2_LSCE_Plumes/NO2_20230429_LSCE_plume.tif",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "Average NOx emission rate inferred from plume",
+	      "categories": [],
+		  "min": 1000000000000000,
+          "max": 3500000000000000,
+          "startColor": "#f0f01d",
+          "endColor": "#eb1f10",
+		  "units": "[molec/cm2]"
+      },
+      "layout": {
+	      "interfaceGroup": "Nitrogen dioxide LSCE Plume",
+        "layerCard": {
+          "toggleable": true,
+		  "legend": {
+            "type": "gradient"
+          },
+	      "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true
+          }
+        }
+      }
+    },
 
   ]
 }

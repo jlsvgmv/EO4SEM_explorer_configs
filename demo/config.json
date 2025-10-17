@@ -632,14 +632,23 @@
       }
     },
 	{
-	  "name": "LSCE_CH4_TROPOMI_WFMD - posterior: 2019-01",
+	  "name": "LSCE_CH4_TROPOMI_WFMD: 2019-01",
 	  "isActive": false,
+	  "isSwipeLayer": true,
 	  "data": [
-	    {
-	      "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201901_ch4_posterior.tif",
-	      "format": "cog",
-	      "zIndex": 1
-	    }
+		{
+		  "url": "EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201901_ch4_prior",
+		  "format": "cog",
+	      "zIndex": 2,
+		  "position": "left"
+		},
+		{
+		  "zIndex": 1,
+		  "url": "EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201901_ch4_posterior",
+		  "format": "cog",
+		  "position": "right"
+		}
+	
 	  ],
 	  "meta": {
 	    "description": "Average NOx emission rate inferred from plume",
@@ -648,7 +657,7 @@
 	    "max": 15,
 	    "startColor": "#f0f01d",
 	    "endColor": "#eb1f10",
-	    "units": "[ktCH4/month]"
+	    "units": "[molec/cm2]"
 	  },
 	  "layout": {
 	    "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",

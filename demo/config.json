@@ -644,11 +644,11 @@
 	  "meta": {
 	    "description": "Average NOx emission rate inferred from plume",
 	    "categories": [],
-	    "min": 0,
-	    "max": 3000000000000000,
+	    "min": 0.1,
+	    "max": 15,
 	    "startColor": "#f0f01d",
 	    "endColor": "#eb1f10",
-	    "units": "[molec/cm2]"
+	    "units": "[ktCH4/month]"
 	  },
 	  "layout": {
 	    "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",

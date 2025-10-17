@@ -637,13 +637,13 @@
 	  "isSwipeLayer": true,
 	  "data": [
 		{
+		  "zIndex": 2,
 		  "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201901_ch4_prior.tif",
 		  "format": "cog",
-	      "zIndex": 1,
 		  "position": "left"
 		},
 		{
-		  "zIndex": 2,
+		  "zIndex": 1,
 		  "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201901_ch4_posterior.tif",
 		  "format": "cog",
 		  "position": "right"

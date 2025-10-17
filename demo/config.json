@@ -15,6 +15,7 @@
 	"Methane GHGSAT Layer",
 	"LSCE - Shipping Lanes Emissions",
 	"LSCE - Nitrogen dioxide Plume",
+	"LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
 	"LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy"
   ],
   "exclusivitySets": [
@@ -1422,7 +1423,799 @@
 	      }
 	    }
 	  }
-}
+	},
+	{
+	  "name": "LSCE_CH4_TROPOMI_SRON - posterior: 2019-01",
+	  "isActive": false,
+	  "data": [
+	    {
+	      "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201901_ch4_posterior.tif",
+	      "format": "cog",
+	      "zIndex": 1
+	    }
+	  ],
+	  "meta": {
+	    "description": "Monthly maps of the CH4 a priori and a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
+	    "categories": [],
+	    "min": 0.1,
+	    "max": 13,
+	    "startColor": "#f0f01d",
+	    "endColor": "#eb1f10",
+	    "units": "[ktCH4/month]"
+	  },
+	  "layout": {
+	    "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
+	    "layerCard": {
+	      "toggleable": true,
+	      "legend": {
+	        "type": "gradient"
+	      },
+	      "controls": {
+	        "opacitySlider": true,
+	        "zoomToCenter": true
+	      }
+	    }
+	  }
+	} ,
+	{
+	  "name": "LSCE_CH4_TROPOMI_SRON - prior: 2019-01",
+	  "isActive": false,
+	  "data": [
+	    {
+	      "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201901_ch4_prior.tif",
+	      "format": "cog",
+	      "zIndex": 1
+	    }
+	  ],
+	  "meta": {
+	    "description": "Monthly maps of the CH4 a priori and a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
+	    "categories": [],
+	    "min": 0.1,
+	    "max": 13,
+	    "startColor": "#f0f01d",
+	    "endColor": "#eb1f10",
+	    "units": "[ktCH4/month]"
+	  },
+	  "layout": {
+	    "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
+	    "layerCard": {
+	      "toggleable": true,
+	      "legend": {
+	        "type": "gradient"
+	      },
+	      "controls": {
+	        "opacitySlider": true,
+	        "zoomToCenter": true
+	      }
+	    }
+	  }
+	} ,
+	{
+	  "name": "LSCE_CH4_TROPOMI_SRON - posterior: 2019-02",
+	  "isActive": false,
+	  "data": [
+	    {
+	      "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201902_ch4_posterior.tif",
+	      "format": "cog",
+	      "zIndex": 1
+	    }
+	  ],
+	  "meta": {
+	    "description": "Monthly maps of the CH4 a priori and a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
+	    "categories": [],
+	    "min": 0.1,
+	    "max": 13,
+	    "startColor": "#f0f01d",
+	    "endColor": "#eb1f10",
+	    "units": "[ktCH4/month]"
+	  },
+	  "layout": {
+	    "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
+	    "layerCard": {
+	      "toggleable": true,
+	      "legend": {
+	        "type": "gradient"
+	      },
+	      "controls": {
+	        "opacitySlider": true,
+	        "zoomToCenter": true
+	      }
+	    }
+	  }
+	} ,
+	{
+	  "name": "LSCE_CH4_TROPOMI_SRON - prior: 2019-02",
+	  "isActive": false,
+	  "data": [
+	    {
+	      "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201902_ch4_prior.tif",
+	      "format": "cog",
+	      "zIndex": 1
+	    }
+	  ],
+	  "meta": {
+	    "description": "Monthly maps of the CH4 a priori and a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
+	    "categories": [],
+	    "min": 0.1,
+	    "max": 13,
+	    "startColor": "#f0f01d",
+	    "endColor": "#eb1f10",
+	    "units": "[ktCH4/month]"
+	  },
+	  "layout": {
+	    "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
+	    "layerCard": {
+	      "toggleable": true,
+	      "legend": {
+	        "type": "gradient"
+	      },
+	      "controls": {
+	        "opacitySlider": true,
+	        "zoomToCenter": true
+	      }
+	    }
+	  }
+	} ,
+	{
+	  "name": "LSCE_CH4_TROPOMI_SRON - posterior: 2019-03",
+	  "isActive": false,
+	  "data": [
+	    {
+	      "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201903_ch4_posterior.tif",
+	      "format": "cog",
+	      "zIndex": 1
+	    }
+	  ],
+	  "meta": {
+	    "description": "Monthly maps of the CH4 a priori and a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
+	    "categories": [],
+	    "min": 0.1,
+	    "max": 13,
+	    "startColor": "#f0f01d",
+	    "endColor": "#eb1f10",
+	    "units": "[ktCH4/month]"
+	  },
+	  "layout": {
+	    "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
+	    "layerCard": {
+	      "toggleable": true,
+	      "legend": {
+	        "type": "gradient"
+	      },
+	      "controls": {
+	        "opacitySlider": true,
+	        "zoomToCenter": true
+	      }
+	    }
+	  }
+	} ,
+	{
+	  "name": "LSCE_CH4_TROPOMI_SRON - prior: 2019-03",
+	  "isActive": false,
+	  "data": [
+	    {
+	      "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201903_ch4_prior.tif",
+	      "format": "cog",
+	      "zIndex": 1
+	    }
+	  ],
+	  "meta": {
+	    "description": "Monthly maps of the CH4 a priori and a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
+	    "categories": [],
+	    "min": 0.1,
+	    "max": 13,
+	    "startColor": "#f0f01d",
+	    "endColor": "#eb1f10",
+	    "units": "[ktCH4/month]"
+	  },
+	  "layout": {
+	    "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
+	    "layerCard": {
+	      "toggleable": true,
+	      "legend": {
+	        "type": "gradient"
+	      },
+	      "controls": {
+	        "opacitySlider": true,
+	        "zoomToCenter": true
+	      }
+	    }
+	  }
+	} ,
+	{
+	  "name": "LSCE_CH4_TROPOMI_SRON - posterior: 2019-04",
+	  "isActive": false,
+	  "data": [
+	    {
+	      "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201904_ch4_posterior.tif",
+	      "format": "cog",
+	      "zIndex": 1
+	    }
+	  ],
+	  "meta": {
+	    "description": "Monthly maps of the CH4 a priori and a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
+	    "categories": [],
+	    "min": 0.1,
+	    "max": 13,
+	    "startColor": "#f0f01d",
+	    "endColor": "#eb1f10",
+	    "units": "[ktCH4/month]"
+	  },
+	  "layout": {
+	    "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
+	    "layerCard": {
+	      "toggleable": true,
+	      "legend": {
+	        "type": "gradient"
+	      },
+	      "controls": {
+	        "opacitySlider": true,
+	        "zoomToCenter": true
+	      }
+	    }
+	  }
+	} ,
+	{
+	  "name": "LSCE_CH4_TROPOMI_SRON - prior: 2019-04",
+	  "isActive": false,
+	  "data": [
+	    {
+	      "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201904_ch4_prior.tif",
+	      "format": "cog",
+	      "zIndex": 1
+	    }
+	  ],
+	  "meta": {
+	    "description": "Monthly maps of the CH4 a priori and a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
+	    "categories": [],
+	    "min": 0.1,
+	    "max": 13,
+	    "startColor": "#f0f01d",
+	    "endColor": "#eb1f10",
+	    "units": "[ktCH4/month]"
+	  },
+	  "layout": {
+	    "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
+	    "layerCard": {
+	      "toggleable": true,
+	      "legend": {
+	        "type": "gradient"
+	      },
+	      "controls": {
+	        "opacitySlider": true,
+	        "zoomToCenter": true
+	      }
+	    }
+	  }
+	} ,
+	{
+	  "name": "LSCE_CH4_TROPOMI_SRON - posterior: 2019-05",
+	  "isActive": false,
+	  "data": [
+	    {
+	      "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201905_ch4_posterior.tif",
+	      "format": "cog",
+	      "zIndex": 1
+	    }
+	  ],
+	  "meta": {
+	    "description": "Monthly maps of the CH4 a priori and a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
+	    "categories": [],
+	    "min": 0.1,
+	    "max": 13,
+	    "startColor": "#f0f01d",
+	    "endColor": "#eb1f10",
+	    "units": "[ktCH4/month]"
+	  },
+	  "layout": {
+	    "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
+	    "layerCard": {
+	      "toggleable": true,
+	      "legend": {
+	        "type": "gradient"
+	      },
+	      "controls": {
+	        "opacitySlider": true,
+	        "zoomToCenter": true
+	      }
+	    }
+	  }
+	} ,
+	{
+	  "name": "LSCE_CH4_TROPOMI_SRON - prior: 2019-05",
+	  "isActive": false,
+	  "data": [
+	    {
+	      "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201905_ch4_prior.tif",
+	      "format": "cog",
+	      "zIndex": 1
+	    }
+	  ],
+	  "meta": {
+	    "description": "Monthly maps of the CH4 a priori and a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
+	    "categories": [],
+	    "min": 0.1,
+	    "max": 13,
+	    "startColor": "#f0f01d",
+	    "endColor": "#eb1f10",
+	    "units": "[ktCH4/month]"
+	  },
+	  "layout": {
+	    "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
+	    "layerCard": {
+	      "toggleable": true,
+	      "legend": {
+	        "type": "gradient"
+	      },
+	      "controls": {
+	        "opacitySlider": true,
+	        "zoomToCenter": true
+	      }
+	    }
+	  }
+	} ,
+	{
+	  "name": "LSCE_CH4_TROPOMI_SRON - posterior: 2019-06",
+	  "isActive": false,
+	  "data": [
+	    {
+	      "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201906_ch4_posterior.tif",
+	      "format": "cog",
+	      "zIndex": 1
+	    }
+	  ],
+	  "meta": {
+	    "description": "Monthly maps of the CH4 a priori and a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
+	    "categories": [],
+	    "min": 0.1,
+	    "max": 13,
+	    "startColor": "#f0f01d",
+	    "endColor": "#eb1f10",
+	    "units": "[ktCH4/month]"
+	  },
+	  "layout": {
+	    "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
+	    "layerCard": {
+	      "toggleable": true,
+	      "legend": {
+	        "type": "gradient"
+	      },
+	      "controls": {
+	        "opacitySlider": true,
+	        "zoomToCenter": true
+	      }
+	    }
+	  }
+	} ,
+	{
+	  "name": "LSCE_CH4_TROPOMI_SRON - prior: 2019-06",
+	  "isActive": false,
+	  "data": [
+	    {
+	      "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201906_ch4_prior.tif",
+	      "format": "cog",
+	      "zIndex": 1
+	    }
+	  ],
+	  "meta": {
+	    "description": "Monthly maps of the CH4 a priori and a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
+	    "categories": [],
+	    "min": 0.1,
+	    "max": 13,
+	    "startColor": "#f0f01d",
+	    "endColor": "#eb1f10",
+	    "units": "[ktCH4/month]"
+	  },
+	  "layout": {
+	    "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
+	    "layerCard": {
+	      "toggleable": true,
+	      "legend": {
+	        "type": "gradient"
+	      },
+	      "controls": {
+	        "opacitySlider": true,
+	        "zoomToCenter": true
+	      }
+	    }
+	  }
+	} ,
+	{
+	  "name": "LSCE_CH4_TROPOMI_SRON - posterior: 2019-07",
+	  "isActive": false,
+	  "data": [
+	    {
+	      "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201907_ch4_posterior.tif",
+	      "format": "cog",
+	      "zIndex": 1
+	    }
+	  ],
+	  "meta": {
+	    "description": "Monthly maps of the CH4 a priori and a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
+	    "categories": [],
+	    "min": 0.1,
+	    "max": 13,
+	    "startColor": "#f0f01d",
+	    "endColor": "#eb1f10",
+	    "units": "[ktCH4/month]"
+	  },
+	  "layout": {
+	    "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
+	    "layerCard": {
+	      "toggleable": true,
+	      "legend": {
+	        "type": "gradient"
+	      },
+	      "controls": {
+	        "opacitySlider": true,
+	        "zoomToCenter": true
+	      }
+	    }
+	  }
+	} ,
+	{
+	  "name": "LSCE_CH4_TROPOMI_SRON - prior: 2019-07",
+	  "isActive": false,
+	  "data": [
+	    {
+	      "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201907_ch4_prior.tif",
+	      "format": "cog",
+	      "zIndex": 1
+	    }
+	  ],
+	  "meta": {
+	    "description": "Monthly maps of the CH4 a priori and a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
+	    "categories": [],
+	    "min": 0.1,
+	    "max": 13,
+	    "startColor": "#f0f01d",
+	    "endColor": "#eb1f10",
+	    "units": "[ktCH4/month]"
+	  },
+	  "layout": {
+	    "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
+	    "layerCard": {
+	      "toggleable": true,
+	      "legend": {
+	        "type": "gradient"
+	      },
+	      "controls": {
+	        "opacitySlider": true,
+	        "zoomToCenter": true
+	      }
+	    }
+	  }
+	} ,
+	{
+	  "name": "LSCE_CH4_TROPOMI_SRON - posterior: 2019-08",
+	  "isActive": false,
+	  "data": [
+	    {
+	      "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201908_ch4_posterior.tif",
+	      "format": "cog",
+	      "zIndex": 1
+	    }
+	  ],
+	  "meta": {
+	    "description": "Monthly maps of the CH4 a priori and a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
+	    "categories": [],
+	    "min": 0.1,
+	    "max": 13,
+	    "startColor": "#f0f01d",
+	    "endColor": "#eb1f10",
+	    "units": "[ktCH4/month]"
+	  },
+	  "layout": {
+	    "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
+	    "layerCard": {
+	      "toggleable": true,
+	      "legend": {
+	        "type": "gradient"
+	      },
+	      "controls": {
+	        "opacitySlider": true,
+	        "zoomToCenter": true
+	      }
+	    }
+	  }
+	} ,
+	{
+	  "name": "LSCE_CH4_TROPOMI_SRON - prior: 2019-08",
+	  "isActive": false,
+	  "data": [
+	    {
+	      "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201908_ch4_prior.tif",
+	      "format": "cog",
+	      "zIndex": 1
+	    }
+	  ],
+	  "meta": {
+	    "description": "Monthly maps of the CH4 a priori and a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
+	    "categories": [],
+	    "min": 0.1,
+	    "max": 13,
+	    "startColor": "#f0f01d",
+	    "endColor": "#eb1f10",
+	    "units": "[ktCH4/month]"
+	  },
+	  "layout": {
+	    "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
+	    "layerCard": {
+	      "toggleable": true,
+	      "legend": {
+	        "type": "gradient"
+	      },
+	      "controls": {
+	        "opacitySlider": true,
+	        "zoomToCenter": true
+	      }
+	    }
+	  }
+	} ,
+	{
+	  "name": "LSCE_CH4_TROPOMI_SRON - posterior: 2019-09",
+	  "isActive": false,
+	  "data": [
+	    {
+	      "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201909_ch4_posterior.tif",
+	      "format": "cog",
+	      "zIndex": 1
+	    }
+	  ],
+	  "meta": {
+	    "description": "Monthly maps of the CH4 a priori and a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
+	    "categories": [],
+	    "min": 0.1,
+	    "max": 13,
+	    "startColor": "#f0f01d",
+	    "endColor": "#eb1f10",
+	    "units": "[ktCH4/month]"
+	  },
+	  "layout": {
+	    "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
+	    "layerCard": {
+	      "toggleable": true,
+	      "legend": {
+	        "type": "gradient"
+	      },
+	      "controls": {
+	        "opacitySlider": true,
+	        "zoomToCenter": true
+	      }
+	    }
+	  }
+	} ,
+	{
+	  "name": "LSCE_CH4_TROPOMI_SRON - prior: 2019-09",
+	  "isActive": false,
+	  "data": [
+	    {
+	      "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201909_ch4_prior.tif",
+	      "format": "cog",
+	      "zIndex": 1
+	    }
+	  ],
+	  "meta": {
+	    "description": "Monthly maps of the CH4 a priori and a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
+	    "categories": [],
+	    "min": 0.1,
+	    "max": 13,
+	    "startColor": "#f0f01d",
+	    "endColor": "#eb1f10",
+	    "units": "[ktCH4/month]"
+	  },
+	  "layout": {
+	    "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
+	    "layerCard": {
+	      "toggleable": true,
+	      "legend": {
+	        "type": "gradient"
+	      },
+	      "controls": {
+	        "opacitySlider": true,
+	        "zoomToCenter": true
+	      }
+	    }
+	  }
+	} ,
+	{
+	  "name": "LSCE_CH4_TROPOMI_SRON - posterior: 2019-10",
+	  "isActive": false,
+	  "data": [
+	    {
+	      "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201910_ch4_posterior.tif",
+	      "format": "cog",
+	      "zIndex": 1
+	    }
+	  ],
+	  "meta": {
+	    "description": "Monthly maps of the CH4 a priori and a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
+	    "categories": [],
+	    "min": 0.1,
+	    "max": 13,
+	    "startColor": "#f0f01d",
+	    "endColor": "#eb1f10",
+	    "units": "[ktCH4/month]"
+	  },
+	  "layout": {
+	    "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
+	    "layerCard": {
+	      "toggleable": true,
+	      "legend": {
+	        "type": "gradient"
+	      },
+	      "controls": {
+	        "opacitySlider": true,
+	        "zoomToCenter": true
+	      }
+	    }
+	  }
+	} ,
+	{
+	  "name": "LSCE_CH4_TROPOMI_SRON - prior: 2019-10",
+	  "isActive": false,
+	  "data": [
+	    {
+	      "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201910_ch4_prior.tif",
+	      "format": "cog",
+	      "zIndex": 1
+	    }
+	  ],
+	  "meta": {
+	    "description": "Monthly maps of the CH4 a priori and a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
+	    "categories": [],
+	    "min": 0.1,
+	    "max": 13,
+	    "startColor": "#f0f01d",
+	    "endColor": "#eb1f10",
+	    "units": "[ktCH4/month]"
+	  },
+	  "layout": {
+	    "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
+	    "layerCard": {
+	      "toggleable": true,
+	      "legend": {
+	        "type": "gradient"
+	      },
+	      "controls": {
+	        "opacitySlider": true,
+	        "zoomToCenter": true
+	      }
+	    }
+	  }
+	} ,
+	{
+	  "name": "LSCE_CH4_TROPOMI_SRON - posterior: 2019-11",
+	  "isActive": false,
+	  "data": [
+	    {
+	      "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201911_ch4_posterior.tif",
+	      "format": "cog",
+	      "zIndex": 1
+	    }
+	  ],
+	  "meta": {
+	    "description": "Monthly maps of the CH4 a priori and a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
+	    "categories": [],
+	    "min": 0.1,
+	    "max": 13,
+	    "startColor": "#f0f01d",
+	    "endColor": "#eb1f10",
+	    "units": "[ktCH4/month]"
+	  },
+	  "layout": {
+	    "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
+	    "layerCard": {
+	      "toggleable": true,
+	      "legend": {
+	        "type": "gradient"
+	      },
+	      "controls": {
+	        "opacitySlider": true,
+	        "zoomToCenter": true
+	      }
+	    }
+	  }
+	} ,
+	{
+	  "name": "LSCE_CH4_TROPOMI_SRON - prior: 2019-11",
+	  "isActive": false,
+	  "data": [
+	    {
+	      "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201911_ch4_prior.tif",
+	      "format": "cog",
+	      "zIndex": 1
+	    }
+	  ],
+	  "meta": {
+	    "description": "Monthly maps of the CH4 a priori and a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
+	    "categories": [],
+	    "min": 0.1,
+	    "max": 13,
+	    "startColor": "#f0f01d",
+	    "endColor": "#eb1f10",
+	    "units": "[ktCH4/month]"
+	  },
+	  "layout": {
+	    "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
+	    "layerCard": {
+	      "toggleable": true,
+	      "legend": {
+	        "type": "gradient"
+	      },
+	      "controls": {
+	        "opacitySlider": true,
+	        "zoomToCenter": true
+	      }
+	    }
+	  }
+	} ,
+	{
+	  "name": "LSCE_CH4_TROPOMI_SRON - posterior: 2019-12",
+	  "isActive": false,
+	  "data": [
+	    {
+	      "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201912_ch4_posterior.tif",
+	      "format": "cog",
+	      "zIndex": 1
+	    }
+	  ],
+	  "meta": {
+	    "description": "Monthly maps of the CH4 a priori and a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
+	    "categories": [],
+	    "min": 0.1,
+	    "max": 13,
+	    "startColor": "#f0f01d",
+	    "endColor": "#eb1f10",
+	    "units": "[ktCH4/month]"
+	  },
+	  "layout": {
+	    "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
+	    "layerCard": {
+	      "toggleable": true,
+	      "legend": {
+	        "type": "gradient"
+	      },
+	      "controls": {
+	        "opacitySlider": true,
+	        "zoomToCenter": true
+	      }
+	    }
+	  }
+	} ,
+	{
+	  "name": "LSCE_CH4_TROPOMI_SRON - prior: 2019-12",
+	  "isActive": false,
+	  "data": [
+	    {
+	      "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201912_ch4_prior.tif",
+	      "format": "cog",
+	      "zIndex": 1
+	    }
+	  ],
+	  "meta": {
+	    "description": "Monthly maps of the CH4 a priori and a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
+	    "categories": [],
+	    "min": 0.1,
+	    "max": 13,
+	    "startColor": "#f0f01d",
+	    "endColor": "#eb1f10",
+	    "units": "[ktCH4/month]"
+	  },
+	  "layout": {
+	    "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
+	    "layerCard": {
+	      "toggleable": true,
+	      "legend": {
+	        "type": "gradient"
+	      },
+	      "controls": {
+	        "opacitySlider": true,
+	        "zoomToCenter": true
+	      }
+	    }
+	  }
+	}
 
   ]
 }

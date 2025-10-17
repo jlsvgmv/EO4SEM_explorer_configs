@@ -14,7 +14,8 @@
 	"Nitrogen Oxide FMI STEAM Layer",
 	"Methane GHGSAT Layer",
 	"LSCE - Shipping Lanes Emissions",
-	"LSCE - Nitrogen dioxide Plume"
+	"LSCE - Nitrogen dioxide Plume",
+	"LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy"
   ],
   "exclusivitySets": [
     "labels"
@@ -629,7 +630,40 @@
           }
         }
       }
-    }
+    },
+	{
+	  "name": "LSCE_CH4_TROPOMI_WFMD - posterior: 2019-01",
+	  "isActive": false,
+	  "data": [
+	    {
+	      "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201901_ch4_posterior.tif",
+	      "format": "cog",
+	      "zIndex": 1
+	    }
+	  ],
+	  "meta": {
+	    "description": "Average NOx emission rate inferred from plume",
+	    "categories": [],
+	    "min": 0,
+	    "max": 3000000000000000,
+	    "startColor": "#f0f01d",
+	    "endColor": "#eb1f10",
+	    "units": "[molec/cm2]"
+	  },
+	  "layout": {
+	    "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
+	    "layerCard": {
+	      "toggleable": true,
+	      "legend": {
+	        "type": "gradient"
+	      },
+	      "controls": {
+	        "opacitySlider": true,
+	        "zoomToCenter": true
+	      }
+	    }
+	  }
+	}
 
   ]
 }

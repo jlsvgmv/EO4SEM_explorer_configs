@@ -7,7 +7,7 @@
     }
   },
   "interfaceGroups": [
-	"FMI - Marine Regions",
+	"LSCE - Marine Regions",
     "Methane FMI STEAM Layer",
 	"Carbon Monoxide FMI STEAM Layer",
 	"Carbon Dioxide FMI STEAM Layer",
@@ -258,10 +258,10 @@
       }
     },
 	{
-      "name": "FMI - Marine Regions",
+      "name": "LSCE - Marine Regions",
       "isActive": false,
       "meta": {
-        "description": "FMI - Marine Regions",
+        "description": "LSCE - Marine Regions",
         "categories": [
 		  {
             "color": "rgba(252,93,95,1.0)",
@@ -324,7 +324,7 @@
             "zoomToCenter": true
           }
         },
-        "interfaceGroup": "FMI - Marine Regions"
+        "interfaceGroup": "LSCE - Marine Regions"
       },
       "data": [
         {

@@ -388,7 +388,10 @@
       },
       "layout": {
         "layerCard": {
-          "toggleable": true
+          "toggleable": true,
+          "controls": {
+            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE/shipping_lanes_with_stats.geojson"
+          }
         },
         "interfaceGroup": "LSCE - Shipping Lanes Emissions"
       },

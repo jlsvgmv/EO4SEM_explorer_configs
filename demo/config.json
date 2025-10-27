@@ -2267,7 +2267,7 @@
           "max": 1,
           "startColor": "#f0f01d",
           "endColor": "#eb1f10",
-		  "units": ""
+		  "units": "None"
       },
       "layout": {
 	      "interfaceGroup": "ONERA - ENMAP",
@@ -2297,7 +2297,7 @@
         "description": "When detection mask are applied to methane correlation mask, an integrated column concentration (ppm.m) is then estimated. This value is assumed to be an enhancement compared to the local background.",
 	      "categories": [],
 		  "min": 0,
-          "max": 10000,
+          "max": 8500,
           "startColor": "#f0f01d",
           "endColor": "#eb1f10",
 		  "units": "ppm.m"

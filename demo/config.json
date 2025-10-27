@@ -2355,7 +2355,7 @@
       "isActive": false,
       "data": [
         {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/ONERA_ENMAP/ENMAP_L1C-DT0000081717_20240701T114438_CH4_ppmm_cog.tif",
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/ONERA_ENMAP/ENMAP_L1C-DT0000081717_20240701T114438_CH4_ppmm_cog_nan.tif",
           "format": "cog",
           "zIndex": 1
         }
@@ -2379,7 +2379,7 @@
           "controls": {
             "opacitySlider": true,
             "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/ONERA_ENMAP/ENMAP_L1C-DT0000081717_20240701T114438_CH4_ppmm_cog.tif"
+            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/ONERA_ENMAP/ENMAP_L1C-DT0000081717_20240701T114438_CH4_ppmm_cog_nan.tif"
           }
         }
       }

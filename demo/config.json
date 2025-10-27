@@ -2222,7 +2222,7 @@
       "isActive": false, 
       "data": [
         {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/ONERA_ENMAP/ENMAP_L1C-DT0000081717_20240701T114438_SWIR.tiff",
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/ONERA_ENMAP/ENMAP_L1C-DT0000081717_20240701T114438_SWIR_cog.tif",
           "format": "cog",
           "zIndex": 1
         }
@@ -2230,8 +2230,8 @@
       "meta": {
         "description": "Image extracted from EnMap database",
 	      "categories": [],
-		  "min": 0.0002,
-          "max": 0.009,
+		  "min": 0,
+          "max": 31000,
           "startColor": "#f0f01d",
           "endColor": "#eb1f10",
 		  "units": "[W/m2/st/µm]"

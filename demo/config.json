@@ -16,7 +16,8 @@
 	"LSCE - Shipping Lanes Emissions",
 	"LSCE - Nitrogen dioxide Plume",
 	"LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
-	"LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy"
+	"LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
+	"ONERA - ENMAP"
   ],
   "exclusivitySets": [
     "labels"
@@ -2215,7 +2216,106 @@
 	      }
 	    }
 	  }
-	}
+	},
+	{
+      "name": "EnMap SWIR Radiance",
+      "isActive": false, 
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/ONERA_ENMAP/ENMAP_L1C-DT0000081717_20240701T114438_SWIR.tiff",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "Image extracted from EnMap database",
+	      "categories": [],
+		  "min": 0.0002,
+          "max": 0.009,
+          "startColor": "#f0f01d",
+          "endColor": "#eb1f10",
+		  "units": "[W/m2/st/µm]"
+      },
+      "layout": {
+	      "interfaceGroup": "ONERA - ENMAP",
+        "layerCard": {
+          "toggleable": true,
+		  "legend": {
+            "type": "gradient"
+          },
+	      "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true
+          }
+        }
+      }
+    },
+	{
+      "name": "EnMap CH4 Detection",
+      "isActive": false, 
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/ONERA_ENMAP/ENMAP_L1C-DT0000081717_20240701T114438_CH4_detection.tiff",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "Methane detection  : Value of Methane spectral correlator applied to data pixel by pixel. False alarms can occured.",
+	      "categories": [],
+		  "min": 0,
+          "max": 1,
+          "startColor": "#f0f01d",
+          "endColor": "#eb1f10",
+		  "units": ""
+      },
+      "layout": {
+	      "interfaceGroup": "ONERA - ENMAP",
+        "layerCard": {
+          "toggleable": true,
+		  "legend": {
+            "type": "gradient"
+          },
+	      "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true
+          }
+        }
+      }
+    },
+	{
+      "name": "EnMap CH4 quantification (ppm.m)",
+      "isActive": false, 
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/ONERA_ENMAP/ENMAP_L1C-DT0000081717_20240701T114438_CH4_ppmm.tiff",
+          "format": "cog",
+          "zIndex": 1
+        }
+      ],
+      "meta": {
+        "description": "When detection mask are applied to methane correlation mask, an integrated column concentration (ppm.m) is then estimated. This value is assumed to be an enhancement compared to the local background.",
+	      "categories": [],
+		  "min": 0,
+          "max": 10000,
+          "startColor": "#f0f01d",
+          "endColor": "#eb1f10",
+		  "units": "ppm.m"
+      },
+      "layout": {
+	      "interfaceGroup": "ONERA - ENMAP",
+        "layerCard": {
+          "toggleable": true,
+		  "legend": {
+            "type": "gradient"
+          },
+	      "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true
+          }
+        }
+      }
+    }
 
   ]
 }

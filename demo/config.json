@@ -2255,7 +2255,7 @@
       "isActive": false, 
       "data": [
         {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/ONERA_ENMAP/ENMAP_L1C-DT0000081717_20240701T114438_CH4_detection.tiff",
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/ONERA_ENMAP/ENMAP_L1C-DT0000081717_20240701T114438_CH4_detection_cog.tif",
           "format": "cog",
           "zIndex": 1
         }
@@ -2288,7 +2288,7 @@
       "isActive": false, 
       "data": [
         {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/ONERA_ENMAP/ENMAP_L1C-DT0000081717_20240701T114438_CH4_ppmm.tiff",
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/ONERA_ENMAP/ENMAP_L1C-DT0000081717_20240701T114438_CH4_ppmm_cog.tif",
           "format": "cog",
           "zIndex": 1
         }

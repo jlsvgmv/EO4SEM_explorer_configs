@@ -9,7 +9,7 @@
   "interfaceGroups": [
     "LSCE - Marine Regions",
     "Methane FMI STEAM Layer",
-    #"Carbon Monoxide FMI STEAM Layer",
+    /*"Carbon Monoxide FMI STEAM Layer",*/
     "Carbon Dioxide FMI STEAM Layer",
     "Nitrogen Oxide FMI STEAM Layer",
     "Methane GHGSAT Layer",

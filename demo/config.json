@@ -119,14 +119,14 @@
         "colormaps": [
           {
             "min": 17,
-            "max": 169131,
+            "max": 6000,
             "steps": 50,
             "name": "jet",
             "reverse": false
           }
 		],
         "min": 17,
-        "max": 169131,
+        "max": 6000,
         "units": "[kg]"
       },
       "layout": {

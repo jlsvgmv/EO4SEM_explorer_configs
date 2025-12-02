@@ -75,14 +75,14 @@
 		"colormaps": [
           {
             "min": 17,
-            "max": 169131,
+            "max": 5000,
             "steps": 50,
             "name": "jet",
             "reverse": false
           }
 		],
         "min": 17,
-        "max": 169131,
+        "max": 5000,
         "units": "[kg]"
       },
       "layout": {
@@ -119,14 +119,14 @@
         "colormaps": [
           {
             "min": 17,
-            "max": 6000,
+            "max": 5000,
             "steps": 50,
             "name": "jet",
             "reverse": false
           }
 		],
         "min": 17,
-        "max": 6000,
+        "max": 5000,
         "units": "[kg]"
       },
       "layout": {
@@ -163,14 +163,14 @@
         "colormaps": [
           {
             "min": 17,
-            "max": 169131,
+            "max": 5000,
             "steps": 50,
             "name": "jet",
             "reverse": false
           }
 		],
         "min": 17,
-        "max": 169131,
+        "max": 5000,
         "units": "[kg]"
       },
       "layout": {
@@ -207,14 +207,14 @@
         "colormaps": [
           {
             "min": 17,
-            "max": 169131,
+            "max": 5000,
             "steps": 50,
             "name": "jet",
             "reverse": false
           }
 		],
         "min": 17,
-        "max": 169131,
+        "max": 5000,
         "units": "[kg]"
       },
       "layout": {
@@ -251,14 +251,14 @@
         "colormaps": [
           {
             "min": 17,
-            "max": 169131,
+            "max": 5000,
             "steps": 50,
             "name": "jet",
             "reverse": false
           }
 		],
         "min": 17,
-        "max": 169131,
+        "max": 5000,
         "units": "[kg]"
       },
       "layout": {

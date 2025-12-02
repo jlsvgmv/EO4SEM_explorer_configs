@@ -427,8 +427,8 @@
       },
       "layout": {
         "interfaceGroup": "Carbon Dioxide FMI STEAM Layer",
-        "layerCard": {
-          "toggleable": true,
+        "contentLocation": "infoPanel",
+        "infoPanel": {
           "legend": {
             "type": "gradient"
           },
@@ -437,6 +437,9 @@
             "zoomToCenter": true,
             "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CO2_FMI/CO2_2019_FMI_STEAM.tif"
           }
+        },
+		"layerCard": {
+          "toggleable": true
         }
       }
     },

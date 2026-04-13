@@ -1,27 +1,48 @@
 {
-  "version": "3.0.0",
+  "version": "1.0.0",
   "layout": {
     "navigation": {
       "logo": "https://www.esa.int/extension/pillars/design/pillars/images/ESA_Logo.svg",
-      "title": "EO4SEM - Geospatial Explorer"
+      "title": "Geospatial Explorer - Custom Config"
     }
   },
   "interfaceGroups": [
-    "LSCE - Marine Regions",
-    "Methane FMI STEAM Layer",
-    "Carbon Dioxide FMI STEAM Layer",
-    "Nitrogen Oxide FMI STEAM Layer",
-    "Methane GHGSAT Layer",
-    "LSCE - Shipping Lanes Emissions",
-    "LSCE - Nitrogen dioxide Plume",
-    "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
-    "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
-    "ONERA - ENMAP"
+    "Regional Inversions"
   ],
-  "exclusivitySets": [
-    "labels"
-  ],
+  "exclusivitySets": [],
+  "mapConstraints": {
+    "zoom": 0,
+    "center": [
+      0,
+      0
+    ],
+    "projection": "EPSG:3857"
+  },
+  "services": [],
   "sources": [
+    {
+      "name": "Blue Marble",
+      "isActive": true,
+      "data": [
+        {
+          "url": "https://geoservice.dlr.de/eoc/basemap/wms",
+          "format": "wms",
+          "zIndex": 10,
+          "layers": "blue_marble:blue_marble"
+        }
+      ],
+      "isBaseLayer": true,
+      "exclusivitySets": [],
+      "preview": "https://raw.githubusercontent.com/ESA-APEx/apex_geospatial_explorer_configs/refs/heads/main/resources/bluemarble.png",
+      "meta": {
+        "description": "Base layer: Blue Marble",
+        "attribution": {
+          "text": "EOC Base Map Service from DLR",
+          "url": "https://earthobservatory.nasa.gov/features/BlueMarble"
+        },
+        "categories": []
+      }
+    },
     {
       "name": "Open StreetMap",
       "isActive": false,
@@ -29,919 +50,327 @@
         {
           "url": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
           "format": "xyz",
-          "zIndex": 1
+          "zIndex": 10
         }
       ],
       "isBaseLayer": true,
       "meta": {
-        "description": "",
+        "description": "Base layer: Open StreetMap",
+        "attribution": {
+          "text": "Data attribution not specified"
+        },
         "categories": []
       }
     },
     {
-      "name": "WMTS terrascope",
-      "isActive": true,
-      "isBaseLayer": true,
+      "name": "NOx Time Series",
+      "isActive": false,
+      "timeframe": "Months",
       "meta": {
         "description": "",
         "attribution": {
-          "text": "terrascope",
-          "url": "https://services.terrascope.be/wmts/v2"
+          "text": ""
         },
-        "categories": []
-      },
-      "data": [
-        {
-          "zIndex": 1,
-          "url": "https://services.terrascope.be/wmts/v2",
-          "layers": "WORLDCOVER_2021_S2_TCC",
-          "format": "wmts"
-        }
-      ]
-    },
-	{
-      "name": "Methane FMI STEAM 2019",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_FMI/CH4_2019_FMI_STEAM.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05\u00b0 \u00d7 0.1\u00b0 for the year 2023, covering the European maritime domain (15.25\u00b0W to 40\u00b0E; 25\u00b0N to 74.25\u00b0N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS).",
-        "categories": [],
-		"colormaps": [
-          {
-            "min": 17,
-            "max": 5000,
-            "steps": 50,
-            "name": "jet",
-            "reverse": false
-          }
-		],
-        "min": 17,
-        "max": 5000,
-        "units": "[kg]"
-      },
-      "layout": {
-        "interfaceGroup": "Methane FMI STEAM Layer",
-        "contentLocation": "infoPanel",
-        "infoPanel": {
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_FMI/CH4_2019_FMI_STEAM.tif"
-          }
-        },
-		"layerCard": {
-          "toggleable": true
-        }
-      }
-    },
-	{
-      "name": "Methane FMI STEAM 2020",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_FMI/CH4_2020_FMI_STEAM.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05\u00b0 \u00d7 0.1\u00b0 for the year 2023, covering the European maritime domain (15.25\u00b0W to 40\u00b0E; 25\u00b0N to 74.25\u00b0N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS).",
-        "categories": [],
         "colormaps": [
           {
-            "min": 17,
-            "max": 5000,
-            "steps": 50,
+            "min": 0,
+            "max": 2.5,
+            "steps": 200,
             "name": "jet",
             "reverse": false
-          }
-		],
-        "min": 17,
-        "max": 5000,
-        "units": "[kg]"
-      },
-      "layout": {
-        "interfaceGroup": "Methane FMI STEAM Layer",
-        "contentLocation": "infoPanel",
-        "infoPanel": {
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_FMI/CH4_2020_FMI_STEAM.tif"
-          }
-        },
-		"layerCard": {
-          "toggleable": true
-        }
-      }
-    },
-	{
-      "name": "Methane FMI STEAM 2021",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_FMI/CH4_2021_FMI_STEAM.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05\u00b0 \u00d7 0.1\u00b0 for the year 2023, covering the European maritime domain (15.25\u00b0W to 40\u00b0E; 25\u00b0N to 74.25\u00b0N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS).",
-        "categories": [],
-        "colormaps": [
-          {
-            "min": 17,
-            "max": 5000,
-            "steps": 50,
-            "name": "jet",
-            "reverse": false
-          }
-		],
-        "min": 17,
-        "max": 5000,
-        "units": "[kg]"
-      },
-      "layout": {
-        "interfaceGroup": "Methane FMI STEAM Layer",
-        "contentLocation": "infoPanel",
-        "infoPanel": {
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_FMI/CH4_2021_FMI_STEAM.tif"
-          }
-        },
-		"layerCard": {
-          "toggleable": true
-        }
-      }
-    },
-	{
-      "name": "Methane FMI STEAM 2022",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_FMI/CH4_2022_FMI_STEAM.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05\u00b0 \u00d7 0.1\u00b0 for the year 2023, covering the European maritime domain (15.25\u00b0W to 40\u00b0E; 25\u00b0N to 74.25\u00b0N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS).",
-        "categories": [],
-        "colormaps": [
-          {
-            "min": 17,
-            "max": 5000,
-            "steps": 50,
-            "name": "jet",
-            "reverse": false
-          }
-		],
-        "min": 17,
-        "max": 5000,
-        "units": "[kg]"
-      },
-      "layout": {
-        "interfaceGroup": "Methane FMI STEAM Layer",
-        "contentLocation": "infoPanel",
-        "infoPanel": {
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_FMI/CH4_2022_FMI_STEAM.tif"
-          }
-        },
-		"layerCard": {
-          "toggleable": true
-        }
-      }
-    },
-	{
-      "name": "Methane FMI STEAM 2023",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_FMI/CH4_2023_FMI_STEAM.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05\u00b0 \u00d7 0.1\u00b0 for the year 2023, covering the European maritime domain (15.25\u00b0W to 40\u00b0E; 25\u00b0N to 74.25\u00b0N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS).",
-        "categories": [],
-        "colormaps": [
-          {
-            "min": 17,
-            "max": 5000,
-            "steps": 50,
-            "name": "jet",
-            "reverse": false
-          }
-		],
-        "min": 17,
-        "max": 5000,
-        "units": "[kg]"
-      },
-      "layout": {
-        "interfaceGroup": "Methane FMI STEAM Layer",
-        "contentLocation": "infoPanel",
-        "infoPanel": {
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_FMI/CH4_2023_FMI_STEAM.tif"
-          }
-        },
-		"layerCard": {
-          "toggleable": true
-        }
-      }
-    },
-	{
-      "name": "Carbon Monoxide FMI STEAM 2019",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CO_FMI/CO_2019_FMI_STEAM.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05\u00b0 \u00d7 0.1\u00b0 for the year 2023, covering the European maritime domain (15.25\u00b0W to 40\u00b0E; 25\u00b0N to 74.25\u00b0N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS).",
-        "categories": [],
-        "min": 500,
-        "max": 500000,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[kg]"
-      },
-      "layout": {
-        "interfaceGroup": "Carbon Monoxide FMI STEAM Layer",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CO_FMI/CO_2019_FMI_STEAM.tif"
-          }
-        }
-      }
-    },
-	{
-      "name": "Carbon Monoxide FMI STEAM 2020",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CO_FMI/CO_2020_FMI_STEAM.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05\u00b0 \u00d7 0.1\u00b0 for the year 2023, covering the European maritime domain (15.25\u00b0W to 40\u00b0E; 25\u00b0N to 74.25\u00b0N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS).",
-        "categories": [],
-        "min": 500,
-        "max": 500000,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[kg]"
-      },
-      "layout": {
-        "interfaceGroup": "Carbon Monoxide FMI STEAM Layer",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CO_FMI/CO_2020_FMI_STEAM.tif"
-          }
-        }
-      }
-    },
-	{
-      "name": "Carbon Monoxide FMI STEAM 2021",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CO_FMI/CO_2021_FMI_STEAM.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05\u00b0 \u00d7 0.1\u00b0 for the year 2023, covering the European maritime domain (15.25\u00b0W to 40\u00b0E; 25\u00b0N to 74.25\u00b0N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS).",
-        "categories": [],
-        "min": 500,
-        "max": 500000,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[kg]"
-      },
-      "layout": {
-        "interfaceGroup": "Carbon Monoxide FMI STEAM Layer",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CO_FMI/CO_2021_FMI_STEAM.tif"
-          }
-        }
-      }
-    },
-	{
-      "name": "Carbon Monoxide FMI STEAM 2022",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CO_FMI/CO_2022_FMI_STEAM.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05\u00b0 \u00d7 0.1\u00b0 for the year 2023, covering the European maritime domain (15.25\u00b0W to 40\u00b0E; 25\u00b0N to 74.25\u00b0N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS).",
-        "categories": [],
-        "min": 500,
-        "max": 500000,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[kg]"
-      },
-      "layout": {
-        "interfaceGroup": "Carbon Monoxide FMI STEAM Layer",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CO_FMI/CO_2022_FMI_STEAM.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "Carbon Monoxide FMI STEAM 2023",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CO_FMI/CO_2023_FMI_STEAM.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05\u00b0 \u00d7 0.1\u00b0 for the year 2023, covering the European maritime domain (15.25\u00b0W to 40\u00b0E; 25\u00b0N to 74.25\u00b0N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS).",
-        "categories": [],
-        "min": 500,
-        "max": 500000,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[kg]"
-      },
-      "layout": {
-        "interfaceGroup": "Carbon Monoxide FMI STEAM Layer",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CO_FMI/CO_2023_FMI_STEAM.tif"
-          }
-        }
-      }
-    },
-	{
-      "name": "Carbon Dioxide FMI STEAM 2019",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CO2_FMI/CO2_2019_FMI_STEAM.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05\u00b0 \u00d7 0.1\u00b0 for the year 2023, covering the European maritime domain (15.25\u00b0W to 40\u00b0E; 25\u00b0N to 74.25\u00b0N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS).",
-        "categories": [],
-		"colormaps": [
-          {
-            "min": 500,
-            "max": 7500000,
-            "steps": 50,
-            "name": "jet",
-            "reverse": false
-          }
-		],
-        "min": 500,
-        "max": 7500000,
-        "units": "[kg]"
-      },
-      "layout": {
-        "interfaceGroup": "Carbon Dioxide FMI STEAM Layer",
-        "contentLocation": "infoPanel",
-        "infoPanel": {
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CO2_FMI/CO2_2019_FMI_STEAM.tif"
-          }
-        },
-		"layerCard": {
-          "toggleable": true
-        }
-      }
-    },
-	{
-      "name": "Carbon Dioxide FMI STEAM 2020",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CO2_FMI/CO2_2020_FMI_STEAM.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05\u00b0 \u00d7 0.1\u00b0 for the year 2023, covering the European maritime domain (15.25\u00b0W to 40\u00b0E; 25\u00b0N to 74.25\u00b0N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS).",
-        "categories": [],
-        "min": 500,
-        "max": 500000,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[kg]"
-      },
-      "layout": {
-        "interfaceGroup": "Carbon Dioxide FMI STEAM Layer",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CO2_FMI/CO2_2020_FMI_STEAM.tif"
-          }
-        }
-      }
-    },
-	{
-      "name": "Carbon Dioxide FMI STEAM 2021",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CO2_FMI/CO2_2021_FMI_STEAM.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05\u00b0 \u00d7 0.1\u00b0 for the year 2023, covering the European maritime domain (15.25\u00b0W to 40\u00b0E; 25\u00b0N to 74.25\u00b0N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS).",
-        "categories": [],
-        "min": 500,
-        "max": 500000,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[kg]"
-      },
-      "layout": {
-        "interfaceGroup": "Carbon Dioxide FMI STEAM Layer",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CO2_FMI/CO2_2021_FMI_STEAM.tif"
-          }
-        }
-      }
-    },
-	{
-      "name": "Carbon Dioxide FMI STEAM 2022",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CO2_FMI/CO2_2022_FMI_STEAM.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05\u00b0 \u00d7 0.1\u00b0 for the year 2023, covering the European maritime domain (15.25\u00b0W to 40\u00b0E; 25\u00b0N to 74.25\u00b0N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS).",
-        "categories": [],
-        "min": 500,
-        "max": 500000,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[kg]"
-      },
-      "layout": {
-        "interfaceGroup": "Carbon Dioxide FMI STEAM Layer",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CO2_FMI/CO2_2022_FMI_STEAM.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "Carbon Dioxide FMI STEAM 2023",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CO2_FMI/CO2_2023_FMI_STEAM.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05\u00b0 \u00d7 0.1\u00b0 for the year 2023, covering the European maritime domain (15.25\u00b0W to 40\u00b0E; 25\u00b0N to 74.25\u00b0N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS).",
-        "categories": [],
-        "min": 500,
-        "max": 500000,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[kg]"
-      },
-      "layout": {
-        "interfaceGroup": "Carbon Dioxide FMI STEAM Layer",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CO2_FMI/CO2_2023_FMI_STEAM.tif"
-          }
-        }
-      }
-    },
-	{
-      "name": "Nitrogen Oxide FMI STEAM 2019",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NOx_FMI/NOx_2019_FMI_STEAM.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05\u00b0 \u00d7 0.1\u00b0 for the year 2023, covering the European maritime domain (15.25\u00b0W to 40\u00b0E; 25\u00b0N to 74.25\u00b0N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS).",
-        "categories": [],
-        "min": 500,
-        "max": 13000,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[kg]"
-      },
-      "layout": {
-        "interfaceGroup": "Nitrogen Oxide FMI STEAM Layer",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NOx_FMI/NOx_2019_FMI_STEAM.tif"
-          }
-        }
-      }
-    },
-	{
-      "name": "Nitrogen Oxide FMI STEAM 2020",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NOx_FMI/NOx_2020_FMI_STEAM.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05\u00b0 \u00d7 0.1\u00b0 for the year 2023, covering the European maritime domain (15.25\u00b0W to 40\u00b0E; 25\u00b0N to 74.25\u00b0N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS).",
-        "categories": [],
-        "min": 500,
-        "max": 13000,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[kg]"
-      },
-      "layout": {
-        "interfaceGroup": "Nitrogen Oxide FMI STEAM Layer",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NOx_FMI/NOx_2020_FMI_STEAM.tif"
-          }
-        }
-      }
-    },
-	{
-      "name": "Nitrogen Oxide FMI STEAM 2021",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NOx_FMI/NOx_2021_FMI_STEAM.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05\u00b0 \u00d7 0.1\u00b0 for the year 2023, covering the European maritime domain (15.25\u00b0W to 40\u00b0E; 25\u00b0N to 74.25\u00b0N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS).",
-        "categories": [],
-        "min": 500,
-        "max": 13000,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[kg]"
-      },
-      "layout": {
-        "interfaceGroup": "Nitrogen Oxide FMI STEAM Layer",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NOx_FMI/NOx_2021_FMI_STEAM.tif"
-          }
-        }
-      }
-    },
-	{
-      "name": "Nitrogen Oxide FMI STEAM 2022",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NOx_FMI/NOx_2022_FMI_STEAM.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05\u00b0 \u00d7 0.1\u00b0 for the year 2023, covering the European maritime domain (15.25\u00b0W to 40\u00b0E; 25\u00b0N to 74.25\u00b0N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS).",
-        "categories": [],
-        "min": 500,
-        "max": 13000,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[kg]"
-      },
-      "layout": {
-        "interfaceGroup": "Nitrogen Oxide FMI STEAM Layer",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NOx_FMI/NOx_2022_FMI_STEAM.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "Nitrogen Oxide FMI STEAM 2023",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NOx_FMI/NOx_2023_FMI_STEAM.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05\u00b0 \u00d7 0.1\u00b0 for the year 2023, covering the European maritime domain (15.25\u00b0W to 40\u00b0E; 25\u00b0N to 74.25\u00b0N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS).",
-        "categories": [],
-        "min": 500,
-        "max": 13000,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[kg]"
-      },
-      "layout": {
-        "interfaceGroup": "Nitrogen Oxide FMI STEAM Layer",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NOx_FMI/NOx_2023_FMI_STEAM.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "Methane GHGSAT 2025-07-12",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_GHGSAT/CH4_20250712_GHGSAT_Greece.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "The image shows the column-averaged methane concentration in excess of local background reported in the CH4 layer, only at the location where a plume was detected. Location in Greece",
-        "categories": [],
-        "min": 0,
-        "max": 150,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[PPB]"
-      },
-      "layout": {
-        "interfaceGroup": "Methane GHGSAT Layer",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_GHGSAT/CH4_20250712_GHGSAT_Greece.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "Methane GHGSAT 2024-07-13",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_GHGSAT/CH4_20240713_GHGSAT_BuenosAires.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "The image shows the column-averaged methane concentration in excess of local background reported in the CH4 layer, only at the location where a plume was detected. Location in Buenos Aires",
-        "categories": [],
-        "min": 0,
-        "max": 200,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[PPB]"
-      },
-      "layout": {
-        "interfaceGroup": "Methane GHGSAT Layer",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_GHGSAT/CH4_20240713_GHGSAT_BuenosAires.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE - Marine Regions",
-      "isActive": false,
-      "meta": {
-        "description": "LSCE - Marine Regions",
-        "categories": [
-          {
-            "color": "rgba(252,93,95,1.0)",
-            "label": "Adriatic Sea"
-          },
-          {
-            "color": "rgba(92,253,95,1.0)",
-            "label": "Baltic Sea"
-          },
-          {
-            "color": "rgba(92,93,255,1.0)",
-            "label": "Bay of Biscay"
-          },
-          {
-            "color": "rgba(252,253,95,1.0)",
-            "label": "Black Sea"
-          },
-          {
-            "color": "rgba(252,93,255,1.0)",
-            "label": "Celtic Sea"
-          },
-          {
-            "color": "rgba(92,253,255,1.0)",
-            "label": "English Channel"
-          },
-          {
-            "color": "rgba(252,173,95,1.0)",
-            "label": "Mediterranean Sea Eastern Basin"
-          },
-          {
-            "color": "rgba(172,93,255,1.0)",
-            "label": "Mediterranean Sea Western Basin"
-          },
-          {
-            "color": "rgba(172,133,255,1.0)",
-            "label": "North Sea"
-          },
-          {
-            "color": "rgba(172,253,95,1.0)",
-            "label": "Tyrrhenian Sea"
-          },
-          {
-            "color": "rgba(252,93,175,1.0)",
-            "label": "Iberian coast margin"
-          },
-          {
-            "color": "rgba(172,93,255,1.0)",
-            "label": "Extension of Bay of Biscay"
           }
         ]
       },
       "layout": {
-        "layerCard": {
-          "toggleable": true,
+        "interfaceGroup": "Regional Inversions",
+        "subinterfaceGroup": "NOx",
+        "infoPanel": {
           "legend": {
             "type": "swatch"
           },
           "controls": {
             "opacitySlider": true,
             "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/MarineRegions_FMI/mask_marineregions_europe_0.05.geojson"
+            "temporalControls": true,
+            "constraintSlider": false,
+            "blendControls": false
           }
         },
-        "interfaceGroup": "LSCE - Marine Regions"
+        "layerCard": {
+          "toggleable": true
+        }
       },
       "data": [
+        {"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_201901_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1546300800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_201902_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1548979200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_201903_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1551398400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_201904_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1554076800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_201905_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1556668800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_201906_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1559347200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_201907_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1561939200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_201908_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1564617600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_201909_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1567296000]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_201910_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1569888000]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_201911_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1572566400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_201912_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1575158400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202001_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1577836800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202002_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1580515200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202003_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1583020800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202004_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1585699200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202005_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1588291200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202006_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1590969600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202007_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1593561600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202008_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1596240000]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202009_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1598918400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202010_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1601510400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202011_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1604188800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202012_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1606780800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202101_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1609459200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202102_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1612137600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202103_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1614556800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202104_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1617235200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202105_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1619827200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202106_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1622505600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202107_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1625097600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202108_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1627776000]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202109_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1630454400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202110_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1633046400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202111_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1635724800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202112_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1638316800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202201_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1640995200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202202_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1643673600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202203_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1646092800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202204_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1648771200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202205_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1651363200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202206_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1654041600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202207_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1656633600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202208_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1659312000]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202209_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1661990400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202210_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1664582400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202211_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1667260800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202212_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1669852800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202301_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1672531200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202302_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1675209600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202303_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1677628800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202304_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1680307200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202305_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1682899200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202306_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1685577600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202307_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1688169600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202308_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1690848000]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202309_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1693526400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202310_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1696118400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202311_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1698796800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202312_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1701388800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202401_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1704067200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202402_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1706745600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202403_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1709251200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202404_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1711929600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202405_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1714521600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202406_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1717200000]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202407_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1719792000]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202408_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1722470400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202409_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1725148800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202410_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1727740800]}
+      ]
+    },
+	{
+      "name": "CH4 Time Series",
+      "isActive": false,
+      "timeframe": "Years",
+      "meta": {
+        "description": "",
+        "attribution": {
+          "text": ""
+        },
+        "colormaps": [
+          {
+            "min": 0,
+            "max": 0.05,
+            "steps": 200,
+            "name": "jet",
+            "reverse": false
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Regional Inversions",
+        "subinterfaceGroup": "CH4",
+        "infoPanel": {
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true,
+            "temporalControls": true,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        },
+        "layerCard": {
+          "toggleable": true
+        }
+      },
+      "data": [
+        {"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_201901_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1546300800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_201902_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1548979200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_201903_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1551398400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_201904_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1554076800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_201905_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1556668800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_201906_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1559347200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_201907_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1561939200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_201908_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1564617600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_201909_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1567296000]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_201910_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1569888000]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_201911_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1572566400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_201912_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1575158400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202001_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1577836800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202002_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1580515200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202003_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1583020800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202004_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1585699200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202005_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1588291200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202006_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1590969600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202007_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1593561600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202008_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1596240000]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202009_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1598918400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202010_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1601510400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202011_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1604188800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202012_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1606780800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202101_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1609459200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202102_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1612137600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202103_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1614556800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202104_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1617235200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202105_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1619827200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202106_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1622505600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202107_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1625097600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202108_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1627776000]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202109_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1630454400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202110_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1633046400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202111_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1635724800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202112_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1638316800]}
+      ]
+    },
+	{
+      "name": "FFCO2 Time Series",
+      "isActive": false,
+      "timeframe": "Years",
+      "meta": {
+        "description": "",
+        "attribution": {
+          "text": ""
+        },
+        "colormaps": [
+          {
+            "min": 0,
+            "max": 150,
+            "steps": 100,
+            "name": "jet",
+            "reverse": false
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Regional Inversions",
+        "subinterfaceGroup": "FFCO2",
+        "infoPanel": {
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true,
+            "temporalControls": true,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        },
+        "layerCard": {
+          "toggleable": true
+        }
+      },
+      "data": [
+        {"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201901_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1546300800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201902_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1548979200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201903_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1551398400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201904_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1554076800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201905_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1556668800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201906_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1559347200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201907_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1561939200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201908_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1564617600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201909_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1567296000]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201910_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1569888000]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201911_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1572566400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201912_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1575158400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202001_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1577836800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202002_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1580515200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202003_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1583020800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202004_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1585699200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202005_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1588291200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202006_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1590969600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202007_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1593561600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202008_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1596240000]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202009_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1598918400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202010_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1601510400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202011_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1604188800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202012_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1606780800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202101_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1609459200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202102_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1612137600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202103_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1614556800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202104_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1617235200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202105_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1619827200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202106_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1622505600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202107_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1625097600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202108_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1627776000]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202109_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1630454400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202110_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1633046400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202111_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1635724800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202112_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1638316800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202201_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1640995200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202202_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1643673600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202203_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1646092800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202204_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1648771200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202205_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1651363200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202206_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1654041600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202207_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1656633600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202208_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1659312000]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202209_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1661990400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202210_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1664582400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202211_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1667260800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202212_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1669852800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202301_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1672531200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202302_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1675209600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202303_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1677628800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202304_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1680307200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202305_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1682899200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202306_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1685577600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202307_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1688169600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202308_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1690848000]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202309_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1693526400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202310_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1696118400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202311_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1698796800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202312_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1701388800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202401_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1704067200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202402_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1706745600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202403_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1709251200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202404_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1711929600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202405_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1714521600]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202406_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1717200000]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202407_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1719792000]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202408_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1722470400]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202409_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1725148800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202410_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1727740800]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202411_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1730419200]},
+		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202412_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1733011200]}
+      ]
+    },
+	{
+      "name": "Emissions by Marine Regions",
+      "isActive": false,
+      "data": [
         {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/MarineRegions_FMI/mask_marineregions_europe_0.05.geojson",
-          "zIndex": 1,
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/regions/mask_marineregions_europe_stats.geojson",
           "format": "geojson",
+          "zIndex": 100,
           "style": [
             {
               "fill-color": [
@@ -981,2008 +410,221 @@
             }
           ]
         }
-      ]
-    },
-    {
-      "name": "LSCE - Shipping Lanes Emissions",
-      "isActive": false,
-      "meta": {
-        "description": "Maritime shipping lanes are defined based on maritime traffic patterns from the STEAM 2023 dataset."
-      },
-      "layout": {
-        "layerCard": {
-          "toggleable": true,
-          "controls": {
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE/shipping_lanes_with_stats.geojson"
-          }
-        },
-        "interfaceGroup": "LSCE - Shipping Lanes Emissions"
-      },
-      "data": [
+      ],
+	  "charts": [
         {
-          "zIndex": 1,
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE/shipping_lanes_with_stats.geojson",
-          "format": "geojson",
-          "style": [
+          "chartType": "xy",
+          "title": "NOx",
+          "x": "date",
+          "traces": [
             {
-              "fill-color": "rgba(255, 0, 0, 1.0)"
+              "y": "Prior_NOx",
+              "name": "NOx Prior [Kg/Month]",
+              "type": "scatter",
+              "mode": "lines",
+              "line": {
+                "color": "#2563eb",
+                "width": 2
+              },
+              "showlegend": true
             },
             {
-              "stroke-color": "rgba(60,60,60,1.0)",
-              "stroke-width": 0.5
+              "y": "Post_NOx",
+              "name": "NOx Post [Kg/Month]",
+              "type": "scatter",
+              "mode": "lines",
+              "line": {
+                "color": "#ef4444",
+                "width": 2
+              },
+              "showlegend": true
+            }
+          ],
+          "layout": {
+            "height": 400,
+            "showlegend": true,
+            "xaxis": {
+              "type": "-"
+            }
+          },
+          "sources": [
+            {
+              "type": "lookupURL",
+              "field": "statistics-url",
+              "format": "csv",
+              "label": "Data lookup via statistics-url"
+            }
+          ]
+        },
+		{
+          "chartType": "xy",
+          "title": "CH4",
+          "x": "date",
+          "traces": [
+            {
+              "y": "Prior_CH4",
+              "name": "CH4 Prior [Kg/Month]",
+              "type": "scatter",
+              "mode": "lines",
+              "line": {
+                "color": "#2563eb",
+                "width": 2
+              },
+              "showlegend": true
+            },
+            {
+              "y": "Post_CH4",
+              "name": "CH4 Post [Kg/Month]",
+              "type": "scatter",
+              "mode": "lines",
+              "line": {
+                "color": "#ef4444",
+                "width": 2
+              },
+              "showlegend": true
+            }
+          ],
+          "layout": {
+            "height": 400,
+            "showlegend": true,
+            "xaxis": {
+              "type": "-"
+            }
+          },
+          "sources": [
+            {
+              "type": "lookupURL",
+              "field": "statistics-url",
+              "format": "csv",
+              "label": "Data lookup via statistics-url"
+            }
+          ]
+        },
+		{
+          "chartType": "xy",
+          "title": "FFCO2",
+          "x": "date",
+          "traces": [
+            {
+              "y": "Prior_FFCO2",
+              "name": "FFCO2 Prior [Kg/Month]",
+              "type": "scatter",
+              "mode": "lines",
+              "line": {
+                "color": "#2563eb",
+                "width": 2
+              },
+              "showlegend": true
+            },
+            {
+              "y": "Post_FFCO2",
+              "name": "FFCO2 Post [Kg/Month]",
+              "type": "scatter",
+              "mode": "lines",
+              "line": {
+                "color": "#ef4444",
+                "width": 2
+              },
+              "showlegend": true
+            }
+          ],
+          "layout": {
+            "height": 400,
+            "showlegend": true,
+            "xaxis": {
+              "type": "-"
+            }
+          },
+          "sources": [
+            {
+              "type": "lookupURL",
+              "field": "statistics-url",
+              "format": "csv",
+              "label": "Data lookup via statistics-url"
             }
           ]
         }
-      ]
-    },
-    {
-      "name": "Nitrogen dioxide LSCE Plume: 2023-04-17",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NO2_LSCE_Plumes/NO2_20230417_LSCE_plume.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
       ],
       "meta": {
-        "description": "Average NOx emission rate inferred from plume",
-        "categories": [],
-        "min": 0,
-        "max": 3000000000000000,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[molec/cm2]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE - Nitrogen dioxide Plume",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
+        "description": "Emissions by Marine Regions",
+        "attribution": {
+          "text": "Data attribution not specified"
+        },
+        "categories": [
+          {
+            "color": "rgba(252,93,95,1.0)",
+            "label": "Adriatic Sea",
+            "value": 0
           },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NO2_LSCE_Plumes/NO2_20230417_LSCE_plume.tif"
+          {
+            "color": "rgba(92,253,95,1.0)",
+            "label": "Baltic Sea",
+            "value": 0
+          },
+          {
+            "color": "rgba(92,93,255,1.0)",
+            "label": "Bay of Biscay",
+            "value": 0
+          },
+          {
+            "color": "rgba(252,253,95,1.0)",
+            "label": "Black Sea",
+            "value": 0
+          },
+          {
+            "color": "rgba(252,93,255,1.0)",
+            "label": "Celtic Sea",
+            "value": 0
+          },
+          {
+            "color": "rgba(92,253,255,1.0)",
+            "label": "English Channel",
+            "value": 0
+          },
+          {
+            "color": "rgba(252,173,95,1.0)",
+            "label": "Mediterranean Sea Eastern Basin",
+            "value": 0
+          },
+          {
+            "color": "rgba(172,93,255,1.0)",
+            "label": "Mediterranean Sea Western Basin",
+            "value": 0
+          },
+          {
+            "color": "rgba(172,133,255,1.0)",
+            "label": "North Sea",
+            "value": 0
+          },
+          {
+            "color": "rgba(172,253,95,1.0)",
+            "label": "Tyrrhenian Sea",
+            "value": 0
+          },
+          {
+            "color": "rgba(252,93,175,1.0)",
+            "label": "Iberian coast margin",
+            "value": 0
+          },
+          {
+            "color": "rgba(172,93,255,1.0)",
+            "label": "Extension of Bay of Biscay",
+            "value": 0
           }
-        }
-      }
-    },
-    {
-      "name": "Nitrogen dioxide LSCE Plume: 2023-04-29",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NO2_LSCE_Plumes/NO2_20230429_LSCE_plume.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Average NOx emission rate inferred from plume",
-        "categories": [],
-        "min": 0,
-        "max": 3000000000000000,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[molec/cm2]"
+        ]
       },
       "layout": {
-        "interfaceGroup": "LSCE - Nitrogen dioxide Plume",
+        "interfaceGroup": "Regional Inversions",
+        "contentLocation": "layerCard",
         "layerCard": {
           "toggleable": true,
           "legend": {
-            "type": "gradient"
+            "type": "swatch"
           },
           "controls": {
             "opacitySlider": true,
             "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NO2_LSCE_Plumes/NO2_20230429_LSCE_plume.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "Nitrogen dioxide LSCE Plume: 2023-06-24",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NO2_LSCE_Plumes/NO2_20230624_LSCE_plume.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Average NOx emission rate inferred from plume",
-        "categories": [],
-        "min": 0,
-        "max": 3000000000000000,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[molec/cm2]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE - Nitrogen dioxide Plume",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NO2_LSCE_Plumes/NO2_20230624_LSCE_plume.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "Nitrogen dioxide LSCE Plume: 2023-07-15",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NO2_LSCE_Plumes/NO2_20230715_LSCE_plume.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Average NOx emission rate inferred from plume",
-        "categories": [],
-        "min": 0,
-        "max": 3000000000000000,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[molec/cm2]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE - Nitrogen dioxide Plume",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NO2_LSCE_Plumes/NO2_20230715_LSCE_plume.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "Nitrogen dioxide LSCE Plume: 2023-07-22",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NO2_LSCE_Plumes/NO2_20230722_LSCE_plume.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Average NOx emission rate inferred from plume",
-        "categories": [],
-        "min": 0,
-        "max": 3000000000000000,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[molec/cm2]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE - Nitrogen dioxide Plume",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NO2_LSCE_Plumes/NO2_20230722_LSCE_plume.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "Nitrogen dioxide LSCE Plume: 2023-08-23",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NO2_LSCE_Plumes/NO2_20230823_LSCE_plume.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Average NOx emission rate inferred from plume",
-        "categories": [],
-        "min": 0,
-        "max": 3000000000000000,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[molec/cm2]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE - Nitrogen dioxide Plume",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NO2_LSCE_Plumes/NO2_20230823_LSCE_plume.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "Nitrogen dioxide LSCE Plume: 2023-08-28",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NO2_LSCE_Plumes/NO2_20230828_LSCE_plume.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Average NOx emission rate inferred from plume",
-        "categories": [],
-        "min": 0,
-        "max": 3000000000000000,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[molec/cm2]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE - Nitrogen dioxide Plume",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/NO2_LSCE_Plumes/NO2_20230828_LSCE_plume.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_WFMD - posterior: 2019-01",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201901_ch4_posterior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-WFMD-v1.8 product.",
-        "categories": [],
-        "min": 0.1,
-        "max": 15,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201901_ch4_posterior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_WFMD - prior: 2019-01",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201901_ch4_prior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 a priori maritime emissions over Europe. Assimilation of observations from the TROPOMI-WFMD-v1.8 product.",
-        "categories": [],
-        "min": 0.1,
-        "max": 15,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201901_ch4_prior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_WFMD - posterior: 2019-02",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201902_ch4_posterior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-WFMD-v1.8 product.",
-        "categories": [],
-        "min": 0.1,
-        "max": 15,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201902_ch4_posterior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_WFMD - prior: 2019-02",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201902_ch4_prior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 a priori maritime emissions over Europe. Assimilation of observations from the TROPOMI-WFMD-v1.8 product.",
-        "categories": [],
-        "min": 0.1,
-        "max": 15,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201902_ch4_prior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_WFMD - posterior: 2019-03",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201903_ch4_posterior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-WFMD-v1.8 product.",
-        "categories": [],
-        "min": 0.1,
-        "max": 15,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201903_ch4_posterior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_WFMD - prior: 2019-03",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201903_ch4_prior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 a prior maritime emissions over Europe. Assimilation of observations from the TROPOMI-WFMD-v1.8 product.",
-        "categories": [],
-        "min": 0.1,
-        "max": 15,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201903_ch4_prior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_WFMD - posterior: 2019-04",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201904_ch4_posterior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-WFMD-v1.8 product.",
-        "categories": [],
-        "min": 0.1,
-        "max": 15,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201904_ch4_posterior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_WFMD - prior: 2019-04",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201904_ch4_prior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 a priori maritime emissions over Europe. Assimilation of observations from the TROPOMI-WFMD-v1.8 product.",
-        "categories": [],
-        "min": 0.1,
-        "max": 15,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201904_ch4_prior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_WFMD - posterior: 2019-05",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201905_ch4_posterior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-WFMD-v1.8 product.",
-        "categories": [],
-        "min": 0.1,
-        "max": 15,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201905_ch4_posterior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_WFMD - prior: 2019-05",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201905_ch4_prior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 a priori maritime emissions over Europe. Assimilation of observations from the TROPOMI-WFMD-v1.8 product.",
-        "categories": [],
-        "min": 0.1,
-        "max": 15,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201905_ch4_prior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_WFMD - posterior: 2019-06",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201906_ch4_posterior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-WFMD-v1.8 product.",
-        "categories": [],
-        "min": 0.1,
-        "max": 15,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201906_ch4_posterior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_WFMD - prior: 2019-06",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201906_ch4_prior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 a priori maritime emissions over Europe. Assimilation of observations from the TROPOMI-WFMD-v1.8 product.",
-        "categories": [],
-        "min": 0.1,
-        "max": 15,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201906_ch4_prior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_WFMD - posterior: 2019-07",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201907_ch4_posterior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-WFMD-v1.8 product.",
-        "categories": [],
-        "min": 0.1,
-        "max": 15,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201907_ch4_posterior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_WFMD - prior: 2019-07",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201907_ch4_prior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 a priori maritime emissions over Europe. Assimilation of observations from the TROPOMI-WFMD-v1.8 product.",
-        "categories": [],
-        "min": 0.1,
-        "max": 15,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201907_ch4_prior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_WFMD - posterior: 2019-08",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201908_ch4_posterior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 a posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-WFMD-v1.8 product.",
-        "categories": [],
-        "min": 0.1,
-        "max": 15,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201908_ch4_posterior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_WFMD - prior: 2019-08",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201908_ch4_prior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 a priori maritime emissions over Europe. Assimilation of observations from the TROPOMI-WFMD-v1.8 product.",
-        "categories": [],
-        "min": 0.1,
-        "max": 15,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201908_ch4_prior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_WFMD - posterior: 2019-09",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201909_ch4_posterior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-WFMD-v1.8 product.",
-        "categories": [],
-        "min": 0.1,
-        "max": 15,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201909_ch4_posterior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_WFMD - prior: 2019-09",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201909_ch4_prior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 priori maritime emissions over Europe. Assimilation of observations from the TROPOMI-WFMD-v1.8 product.",
-        "categories": [],
-        "min": 0.1,
-        "max": 15,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201909_ch4_prior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_WFMD - posterior: 2019-10",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201910_ch4_posterior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-WFMD-v1.8 product.",
-        "categories": [],
-        "min": 0.1,
-        "max": 15,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201910_ch4_posterior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_WFMD - prior: 2019-10",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201910_ch4_prior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 a priori maritime emissions over Europe. Assimilation of observations from the TROPOMI-WFMD-v1.8 product.",
-        "categories": [],
-        "min": 0.1,
-        "max": 15,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201910_ch4_prior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_WFMD - posterior: 2019-11",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201911_ch4_posterior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-WFMD-v1.8 product.",
-        "categories": [],
-        "min": 0.1,
-        "max": 15,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201911_ch4_posterior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_WFMD - prior: 2019-11",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201911_ch4_prior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 priori maritime emissions over Europe. Assimilation of observations from the TROPOMI-WFMD-v1.8 product.",
-        "categories": [],
-        "min": 0.1,
-        "max": 15,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201911_ch4_prior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_WFMD - posterior: 2019-12",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201912_ch4_posterior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-WFMD-v1.8 product.",
-        "categories": [],
-        "min": 0.1,
-        "max": 15,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201912_ch4_posterior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_WFMD - prior: 2019-12",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201912_ch4_prior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 priori maritime emissions over Europe. Assimilation of observations from the TROPOMI-WFMD-v1.8 product.",
-        "categories": [],
-        "min": 0.1,
-        "max": 15,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(WFMD) - Weighted Function Modified Differential Optical Absorption Spectroscopy",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_WFMD/EO4SEM_AEMISSIONS_CH4_TROPOMI_WFMD_CAMSREGv8_201912_ch4_prior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_SRON - posterior: 2019-01",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201901_ch4_posterior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
-        "categories": [],
-        "min": 0.1,
-        "max": 13,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201901_ch4_posterior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_SRON - prior: 2019-01",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201901_ch4_prior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 priori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
-        "categories": [],
-        "min": 0.1,
-        "max": 13,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201901_ch4_prior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_SRON - posterior: 2019-02",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201902_ch4_posterior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
-        "categories": [],
-        "min": 0.1,
-        "max": 13,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201902_ch4_posterior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_SRON - prior: 2019-02",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201902_ch4_prior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 priori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
-        "categories": [],
-        "min": 0.1,
-        "max": 13,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201902_ch4_prior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_SRON - posterior: 2019-03",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201903_ch4_posterior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
-        "categories": [],
-        "min": 0.1,
-        "max": 13,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201903_ch4_posterior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_SRON - prior: 2019-03",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201903_ch4_prior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 priori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
-        "categories": [],
-        "min": 0.1,
-        "max": 13,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201903_ch4_prior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_SRON - posterior: 2019-04",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201904_ch4_posterior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
-        "categories": [],
-        "min": 0.1,
-        "max": 13,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201904_ch4_posterior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_SRON - prior: 2019-04",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201904_ch4_prior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 a priori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
-        "categories": [],
-        "min": 0.1,
-        "max": 13,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201904_ch4_prior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_SRON - posterior: 2019-05",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201905_ch4_posterior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
-        "categories": [],
-        "min": 0.1,
-        "max": 13,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201905_ch4_posterior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_SRON - prior: 2019-05",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201905_ch4_prior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 priori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
-        "categories": [],
-        "min": 0.1,
-        "max": 13,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201905_ch4_prior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_SRON - posterior: 2019-06",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201906_ch4_posterior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
-        "categories": [],
-        "min": 0.1,
-        "max": 13,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201906_ch4_posterior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_SRON - prior: 2019-06",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201906_ch4_prior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 priori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
-        "categories": [],
-        "min": 0.1,
-        "max": 13,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201906_ch4_prior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_SRON - posterior: 2019-07",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201907_ch4_posterior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
-        "categories": [],
-        "min": 0.1,
-        "max": 13,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201907_ch4_posterior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_SRON - prior: 2019-07",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201907_ch4_prior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 priori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
-        "categories": [],
-        "min": 0.1,
-        "max": 13,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201907_ch4_prior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_SRON - posterior: 2019-08",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201908_ch4_posterior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
-        "categories": [],
-        "min": 0.1,
-        "max": 13,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201908_ch4_posterior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_SRON - prior: 2019-08",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201908_ch4_prior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 priori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
-        "categories": [],
-        "min": 0.1,
-        "max": 13,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201908_ch4_prior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_SRON - posterior: 2019-09",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201909_ch4_posterior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
-        "categories": [],
-        "min": 0.1,
-        "max": 13,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201909_ch4_posterior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_SRON - prior: 2019-09",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201909_ch4_prior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 priori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
-        "categories": [],
-        "min": 0.1,
-        "max": 13,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201909_ch4_prior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_SRON - posterior: 2019-10",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201910_ch4_posterior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
-        "categories": [],
-        "min": 0.1,
-        "max": 13,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201910_ch4_posterior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_SRON - prior: 2019-10",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201910_ch4_prior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 priori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
-        "categories": [],
-        "min": 0.1,
-        "max": 13,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201910_ch4_prior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_SRON - posterior: 2019-11",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201911_ch4_posterior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
-        "categories": [],
-        "min": 0.1,
-        "max": 13,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201911_ch4_posterior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_SRON - prior: 2019-11",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201911_ch4_prior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 priori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
-        "categories": [],
-        "min": 0.1,
-        "max": 13,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201911_ch4_prior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_SRON - posterior: 2019-12",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201912_ch4_posterior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 posteriori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
-        "categories": [],
-        "min": 0.1,
-        "max": 13,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201912_ch4_posterior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "LSCE_CH4_TROPOMI_SRON - prior: 2019-12",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201912_ch4_prior.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Monthly maps of the CH4 priori maritime emissions over Europe. Assimilation of observations from the TROPOMI-SRON-v2.4 product",
-        "categories": [],
-        "min": 0.1,
-        "max": 13,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[ktCH4/month]"
-      },
-      "layout": {
-        "interfaceGroup": "LSCE(SRON) - Single Observation Retrieval of Nitrogen Dioxide",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE_CH4_TROPOMI_SRON/EO4SEM_AEMISSIONS_CH4_TROPOMI_SRON_CAMSREGv8_201912_ch4_prior.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "EnMap SWIR Radiance",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/ONERA_ENMAP/ENMAP_L1C-DT0000081717_20240701T114438_SWIR_cog.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Image extracted from EnMap database",
-        "categories": [],
-        "min": 0,
-        "max": 31000,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "[W/m2/st/\u00b5m]"
-      },
-      "layout": {
-        "interfaceGroup": "ONERA - ENMAP",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/ONERA_ENMAP/ENMAP_L1C-DT0000081717_20240701T114438_SWIR_cog.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "EnMap CH4 Detection",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/ONERA_ENMAP/ENMAP_L1C-DT0000081717_20240701T114438_CH4_detection_cog_nan.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "Methane detection  : Value of Methane spectral correlator applied to data pixel by pixel. False alarms can occured.",
-        "categories": [],
-        "min": 0,
-        "max": 1,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "None"
-      },
-      "layout": {
-        "interfaceGroup": "ONERA - ENMAP",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/ONERA_ENMAP/ENMAP_L1C-DT0000081717_20240701T114438_CH4_detection_cog_nan.tif"
-          }
-        }
-      }
-    },
-    {
-      "name": "EnMap CH4 quantification (ppm.m)",
-      "isActive": false,
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/ONERA_ENMAP/ENMAP_L1C-DT0000081717_20240701T114438_CH4_ppmm_cog_nan.tif",
-          "format": "cog",
-          "zIndex": 1
-        }
-      ],
-      "meta": {
-        "description": "When detection mask are applied to methane correlation mask, an integrated column concentration (ppm.m) is then estimated. This value is assumed to be an enhancement compared to the local background.",
-        "categories": [],
-        "min": 0,
-        "max": 8500,
-        "startColor": "#f0f01d",
-        "endColor": "#eb1f10",
-        "units": "ppm.m"
-      },
-      "layout": {
-        "interfaceGroup": "ONERA - ENMAP",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "gradient"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/ONERA_ENMAP/ENMAP_L1C-DT0000081717_20240701T114438_CH4_ppmm_cog_nan.tif"
+            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/regions/mask_marineregions_europe_stats.geojson"
           }
         }
       }

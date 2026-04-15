@@ -7,7 +7,10 @@
     }
   },
   "interfaceGroups": [
-    "Regional Inversions"
+    "Regional Inversions",
+	"STEAM All pollutants",
+	"Individual NO2 Plumes",
+	"Shipping Lanes Emissions"
   ],
   "exclusivitySets": [],
   "mapConstraints": {
@@ -364,6 +367,479 @@
       ]
     },
 	{
+      "name": "NOx Time Series",
+      "isActive": false,
+      "timeframe": "Months",
+      "meta": {
+        "description": "",
+        "attribution": {
+          "text": ""
+        },
+        "colormaps": [
+          {
+            "min": 0,
+            "max": 4.09906e+06,
+            "steps": 200,
+            "name": "jet",
+            "reverse": false
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "STEAM All pollutants",
+        "infoPanel": {
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true,
+            "temporalControls": true,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        },
+        "layerCard": {
+          "toggleable": true
+        }
+      },
+      "data": [
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NOx_FMI_STEAM_20190101.tif", "format": "cog", "zIndex": 50, "timestamps": [1546300800]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NOx_FMI_STEAM_20200101.tif", "format": "cog", "zIndex": 50, "timestamps": [1577836800]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NOx_FMI_STEAM_20210101.tif", "format": "cog", "zIndex": 50, "timestamps": [1609459200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NOx_FMI_STEAM_20220101.tif", "format": "cog", "zIndex": 50, "timestamps": [1640995200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NOx_FMI_STEAM_20230101.tif", "format": "cog", "zIndex": 50, "timestamps": [1672531200]}
+      ]
+    },
+	{
+      "name": "SOx Time Series",
+      "isActive": false,
+      "timeframe": "Months",
+      "meta": {
+        "description": "",
+        "attribution": {
+          "text": ""
+        },
+        "colormaps": [
+          {
+            "min": 0,
+            "max": 430890,
+            "steps": 200,
+            "name": "jet",
+            "reverse": false
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "STEAM All pollutants",
+        "infoPanel": {
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true,
+            "temporalControls": true,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        },
+        "layerCard": {
+          "toggleable": true
+        }
+      },
+      "data": [
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SOx_FMI_STEAM_20190101.tif", "format": "cog", "zIndex": 50, "timestamps": [1546300800]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SOx_FMI_STEAM_20200101.tif", "format": "cog", "zIndex": 50, "timestamps": [1577836800]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SOx_FMI_STEAM_20210101.tif", "format": "cog", "zIndex": 50, "timestamps": [1609459200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SOx_FMI_STEAM_20220101.tif", "format": "cog", "zIndex": 50, "timestamps": [1640995200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SOx_FMI_STEAM_20230101.tif", "format": "cog", "zIndex": 50, "timestamps": [1672531200]}
+      ]
+    },
+	{
+      "name": "CO Time Series",
+      "isActive": false,
+      "timeframe": "Months",
+      "meta": {
+        "description": "",
+        "attribution": {
+          "text": ""
+        },
+        "colormaps": [
+          {
+            "min": 0,
+            "max": 618870,
+            "steps": 200,
+            "name": "jet",
+            "reverse": false
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "STEAM All pollutants",
+        "infoPanel": {
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true,
+            "temporalControls": true,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        },
+        "layerCard": {
+          "toggleable": true
+        }
+      },
+      "data": [
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO_FMI_STEAM_20190101.tif", "format": "cog", "zIndex": 50, "timestamps": [1546300800]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO_FMI_STEAM_20200101.tif", "format": "cog", "zIndex": 50, "timestamps": [1577836800]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO_FMI_STEAM_20210101.tif", "format": "cog", "zIndex": 50, "timestamps": [1609459200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO_FMI_STEAM_20220101.tif", "format": "cog", "zIndex": 50, "timestamps": [1640995200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO_FMI_STEAM_20230101.tif", "format": "cog", "zIndex": 50, "timestamps": [1672531200]}
+      ]
+    },
+	{
+      "name": "CO2 Time Series",
+      "isActive": false,
+      "timeframe": "Months",
+      "meta": {
+        "description": "",
+        "attribution": {
+          "text": ""
+        },
+        "colormaps": [
+          {
+            "min": 0,
+            "max": 2.65043e+08,
+            "steps": 200,
+            "name": "jet",
+            "reverse": false
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "STEAM All pollutants",
+        "infoPanel": {
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true,
+            "temporalControls": true,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        },
+        "layerCard": {
+          "toggleable": true
+        }
+      },
+      "data": [
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO2_FMI_STEAM_20190101.tif", "format": "cog", "zIndex": 50, "timestamps": [1546300800]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO2_FMI_STEAM_20200101.tif", "format": "cog", "zIndex": 50, "timestamps": [1577836800]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO2_FMI_STEAM_20210101.tif", "format": "cog", "zIndex": 50, "timestamps": [1609459200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO2_FMI_STEAM_20220101.tif", "format": "cog", "zIndex": 50, "timestamps": [1640995200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO2_FMI_STEAM_20230101.tif", "format": "cog", "zIndex": 50, "timestamps": [1672531200]}
+      ]
+    },
+	{
+      "name": "PM25 Time Series",
+      "isActive": false,
+      "timeframe": "Months",
+      "meta": {
+        "description": "",
+        "attribution": {
+          "text": ""
+        },
+        "colormaps": [
+          {
+            "min": 0,
+            "max": 78995.8,
+            "steps": 200,
+            "name": "jet",
+            "reverse": false
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "STEAM All pollutants",
+        "infoPanel": {
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true,
+            "temporalControls": true,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        },
+        "layerCard": {
+          "toggleable": true
+        }
+      },
+      "data": [
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/PM25_FMI_STEAM_20190101.tif", "format": "cog", "zIndex": 50, "timestamps": [1546300800]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/PM25_FMI_STEAM_20200101.tif", "format": "cog", "zIndex": 50, "timestamps": [1577836800]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/PM25_FMI_STEAM_20210101.tif", "format": "cog", "zIndex": 50, "timestamps": [1609459200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/PM25_FMI_STEAM_20220101.tif", "format": "cog", "zIndex": 50, "timestamps": [1640995200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/PM25_FMI_STEAM_20230101.tif", "format": "cog", "zIndex": 50, "timestamps": [1672531200]}
+      ]
+    },
+	{
+      "name": "SO4 Time Series",
+      "isActive": false,
+      "timeframe": "Months",
+      "meta": {
+        "description": "",
+        "attribution": {
+          "text": ""
+        },
+        "colormaps": [
+          {
+            "min": 0,
+            "max": 24212.4,
+            "steps": 200,
+            "name": "jet",
+            "reverse": false
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "STEAM All pollutants",
+        "infoPanel": {
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true,
+            "temporalControls": true,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        },
+        "layerCard": {
+          "toggleable": true
+        }
+      },
+      "data": [
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SO4_FMI_STEAM_20190101.tif", "format": "cog", "zIndex": 50, "timestamps": [1546300800]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SO4_FMI_STEAM_20200101.tif", "format": "cog", "zIndex": 50, "timestamps": [1577836800]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SO4_FMI_STEAM_20210101.tif", "format": "cog", "zIndex": 50, "timestamps": [1609459200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SO4_FMI_STEAM_20220101.tif", "format": "cog", "zIndex": 50, "timestamps": [1640995200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SO4_FMI_STEAM_20230101.tif", "format": "cog", "zIndex": 50, "timestamps": [1672531200]}
+      ]
+    },
+	{
+      "name": "CH4 Time Series",
+      "isActive": false,
+      "timeframe": "Months",
+      "meta": {
+        "description": "",
+        "attribution": {
+          "text": ""
+        },
+        "colormaps": [
+          {
+            "min": 0,
+            "max": 41306,
+            "steps": 200,
+            "name": "jet",
+            "reverse": false
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "STEAM All pollutants",
+        "infoPanel": {
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true,
+            "temporalControls": true,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        },
+        "layerCard": {
+          "toggleable": true
+        }
+      },
+      "data": [
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CH4_FMI_STEAM_20190101.tif", "format": "cog", "zIndex": 50, "timestamps": [1546300800]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CH4_FMI_STEAM_20200101.tif", "format": "cog", "zIndex": 50, "timestamps": [1577836800]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CH4_FMI_STEAM_20210101.tif", "format": "cog", "zIndex": 50, "timestamps": [1609459200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CH4_FMI_STEAM_20220101.tif", "format": "cog", "zIndex": 50, "timestamps": [1640995200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CH4_FMI_STEAM_20230101.tif", "format": "cog", "zIndex": 50, "timestamps": [1672531200]}
+      ]
+    },
+	{
+      "name": "NH3 Time Series",
+      "isActive": false,
+      "timeframe": "Months",
+      "meta": {
+        "description": "",
+        "attribution": {
+          "text": ""
+        },
+        "colormaps": [
+          {
+            "min": 0,
+            "max": 70.8148,
+            "steps": 200,
+            "name": "jet",
+            "reverse": false
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "STEAM All pollutants",
+        "infoPanel": {
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true,
+            "temporalControls": true,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        },
+        "layerCard": {
+          "toggleable": true
+        }
+      },
+      "data": [
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NH3_FMI_STEAM_20190101.tif", "format": "cog", "zIndex": 50, "timestamps": [1546300800]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NH3_FMI_STEAM_20200101.tif", "format": "cog", "zIndex": 50, "timestamps": [1577836800]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NH3_FMI_STEAM_20210101.tif", "format": "cog", "zIndex": 50, "timestamps": [1609459200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NH3_FMI_STEAM_20220101.tif", "format": "cog", "zIndex": 50, "timestamps": [1640995200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NH3_FMI_STEAM_20230101.tif", "format": "cog", "zIndex": 50, "timestamps": [1672531200]}
+      ]
+    },
+	{
+      "name": "N20 Time Series",
+      "isActive": false,
+      "timeframe": "Months",
+      "meta": {
+        "description": "",
+        "attribution": {
+          "text": ""
+        },
+        "colormaps": [
+          {
+            "min": 0,
+            "max": 11746.3,
+            "steps": 200,
+            "name": "jet",
+            "reverse": false
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "STEAM All pollutants",
+        "infoPanel": {
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true,
+            "temporalControls": true,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        },
+        "layerCard": {
+          "toggleable": true
+        }
+      },
+      "data": [
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/N2O_FMI_STEAM_20190101.tif", "format": "cog", "zIndex": 50, "timestamps": [1546300800]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/N2O_FMI_STEAM_20200101.tif", "format": "cog", "zIndex": 50, "timestamps": [1577836800]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/N2O_FMI_STEAM_20210101.tif", "format": "cog", "zIndex": 50, "timestamps": [1609459200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/N2O_FMI_STEAM_20220101.tif", "format": "cog", "zIndex": 50, "timestamps": [1640995200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/N2O_FMI_STEAM_20230101.tif", "format": "cog", "zIndex": 50, "timestamps": [1672531200]}
+      ]
+    },
+	{
+      "name": "Individual NO2 Plumes Time Series",
+      "isActive": false,
+      "timeframe": "Months",
+      "meta": {
+        "description": "",
+        "attribution": {
+          "text": ""
+        },
+        "colormaps": [
+          {
+            "min": 0,
+            "max": 3000000000000000,
+            "steps": 200,
+            "name": "jet",
+            "reverse": false
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Individual NO2 Plumes",
+        "infoPanel": {
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true,
+            "temporalControls": true,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        },
+        "layerCard": {
+          "toggleable": true
+        }
+      },
+      "data": [
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200424.tif", "format": "cog", "zIndex": 50, "timestamps": [1587686400]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200429.tif", "format": "cog", "zIndex": 50, "timestamps": [1588118400]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200525.tif", "format": "cog", "zIndex": 50, "timestamps": [1590364800]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200529.tif", "format": "cog", "zIndex": 50, "timestamps": [1590710400]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200610.tif", "format": "cog", "zIndex": 50, "timestamps": [1591747200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200611.tif", "format": "cog", "zIndex": 50, "timestamps": [1591833600]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200627.tif", "format": "cog", "zIndex": 50, "timestamps": [1593216000]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200629.tif", "format": "cog", "zIndex": 50, "timestamps": [1593388800]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200723.tif", "format": "cog", "zIndex": 50, "timestamps": [1595462400]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200815.tif", "format": "cog", "zIndex": 50, "timestamps": [1597449600]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200819.tif", "format": "cog", "zIndex": 50, "timestamps": [1597795200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200913.tif", "format": "cog", "zIndex": 50, "timestamps": [1599955200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210523.tif", "format": "cog", "zIndex": 50, "timestamps": [1621728000]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210603.tif", "format": "cog", "zIndex": 50, "timestamps": [1622678400]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210619.tif", "format": "cog", "zIndex": 50, "timestamps": [1624060800]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210702.tif", "format": "cog", "zIndex": 50, "timestamps": [1625184000]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210702_002.tif", "format": "cog", "zIndex": 50, "timestamps": [1625184001]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210705.tif", "format": "cog", "zIndex": 50, "timestamps": [1625443200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210706.tif", "format": "cog", "zIndex": 50, "timestamps": [1625529600]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210727.tif", "format": "cog", "zIndex": 50, "timestamps": [1627344000]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210827.tif", "format": "cog", "zIndex": 50, "timestamps": [1630022400]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20220529.tif", "format": "cog", "zIndex": 50, "timestamps": [1653782400]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20220622.tif", "format": "cog", "zIndex": 50, "timestamps": [1655856000]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20220703.tif", "format": "cog", "zIndex": 50, "timestamps": [1656806400]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20220715.tif", "format": "cog", "zIndex": 50, "timestamps": [1657843200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20220814.tif", "format": "cog", "zIndex": 50, "timestamps": [1660435200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20220820.tif", "format": "cog", "zIndex": 50, "timestamps": [1660953600]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20220907.tif", "format": "cog", "zIndex": 50, "timestamps": [1662508800]}
+      ]
+    },
+	{
       "name": "Emissions by Marine Regions",
       "isActive": false,
       "data": [
@@ -628,6 +1104,115 @@
           }
         }
       }
+    },
+	{
+      "name": "Shipping Lanes Emissions based on maritime traffic patterns",
+      "isActive": false,
+      "meta": {
+        "description": "Maritime shipping lanes are defined based on maritime traffic patterns from the STEAM 2023 dataset.",
+        "attribution": {
+          "text": "Data attribution not specified"
+        },
+        "categories": [
+		  {
+            "color": "rgba(255, 0, 0,1.0)",
+            "label": "Shipping Lane charts",
+            "value": 0
+          }
+		]
+      },
+      "layout": {
+        "interfaceGroup": "Shipping Lanes Emissions",
+        "contentLocation": "layerCard",
+        "layerCard": {
+          "toggleable": true,
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": false,
+            "zoomToCenter": false,
+            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE/shipping_lanes_with_stats_csv.geojson",
+            "temporalControls": false,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        }
+      },
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE/shipping_lanes_with_stats_csv.geojson",
+          "format": "geojson",
+          "zIndex": 50,
+		  "style": [
+			{
+			  "fill-color": "rgba(255, 230, 230, 1.0)",
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 0.5
+            },
+            {
+              "fill-color": [
+                "match",
+                [
+                  "get",
+                  "id"
+                ],
+                "lane_45_e44e48",
+                "rgba(255, 0, 0,1.0)",
+                "rgba(200, 200, 200, 0)"
+              ],
+              "stroke-color": "rgba(35,35,35,1.0)",
+              "stroke-width": 0.5
+            }
+          ]
+        }
+      ],
+      "charts": [
+        {
+          "chartType": "xy",
+          "title": "CSV data from file refernced in statistics-url field",
+          "x": "date",
+          "traces": [
+            {
+              "y": "Lineic_TROPOMI_kg_km_month",
+              "name": "Lineic TROPOMI kg/km/month",
+              "type": "scatter",
+              "mode": "lines",
+              "line": {
+                "color": "#2563eb",
+                "width": 2
+              },
+              "showlegend": true
+            },
+            {
+              "y": "Lineic_STEAM_kg_km_month",
+              "name": "Lineic STEAM kg/km/month",
+              "type": "scatter",
+              "mode": "lines",
+              "line": {
+                "color": "#ef4444",
+                "width": 2
+              },
+              "showlegend": true
+            }
+          ],
+          "layout": {
+            "height": 400,
+            "showlegend": true,
+            "xaxis": {
+              "type": "-"
+            }
+          },
+          "sources": [
+            {
+              "type": "lookupURL",
+              "field": "statistics-url",
+              "format": "csv",
+              "label": "Data lookup via statistics-url"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -801,7 +801,7 @@
             "zoomToCenter": true,
             "temporalControls": true,
             "constraintSlider": false,
-            "blendControls": false
+            "blendControls": true
           }
         },
         "layerCard": {
@@ -836,7 +836,35 @@
 			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20220715.tif", "format": "cog", "zIndex": 50, "timestamps": [1657843200]},
 			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20220814.tif", "format": "cog", "zIndex": 50, "timestamps": [1660435200]},
 			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20220820.tif", "format": "cog", "zIndex": 50, "timestamps": [1660953600]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20220907.tif", "format": "cog", "zIndex": 50, "timestamps": [1662508800]}
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20220907.tif", "format": "cog", "zIndex": 50, "timestamps": [1662508800]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200424.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1587686400]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200429.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1588118400]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200525.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1590364800]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200529.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1590710400]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200610.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1591747200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200611.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1591833600]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200627.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1593216000]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200629.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1593388800]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200723.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1595462400]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200815.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1597449600]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200819.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1597795200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200913.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1599955200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210523.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1621728000]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210603.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1622678400]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210619.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1624060800]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210702.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1625184000]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210702_002.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1625184001]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210705.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1625443200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210706.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1625529600]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210727.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1627344000]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210827.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1630022400]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20220529.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1653782400]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20220622.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1655856000]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20220703.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1656806400]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20220715.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1657843200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20220814.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1660435200]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20220820.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1660953600]},
+			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20220907.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1662508800]}
       ]
     },
 	{
@@ -1211,6 +1239,41 @@
               "label": "Data lookup via statistics-url"
             }
           ]
+        }
+      ]
+    },
+	{
+      "name": "Setup Plumes Track",
+      "isActive": false,
+      "meta": {
+        "description": "Setup Plumes Track",
+        "attribution": {
+          "text": "Data attribution not specified"
+        },
+        "categories": []
+      },
+      "layout": {
+        "interfaceGroup": "Individual NO2 Plumes",
+        "contentLocation": "layerCard",
+        "layerCard": {
+          "toggleable": true,
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": false,
+            "zoomToCenter": false,
+            "temporalControls": false,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        }
+      },
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/worldPolygon.geojson",
+          "format": "geojson",
+          "zIndex": 50
         }
       ]
     }

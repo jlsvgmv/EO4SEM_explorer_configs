@@ -8,9 +8,9 @@
   },
   "interfaceGroups": [
     "Regional Inversions",
-	"STEAM All pollutants",
-	"Individual NO2 Plumes",
-	"Shipping Lanes Emissions"
+    "STEAM All pollutants",
+    "Individual NOx Plumes",
+    "Shipping Lanes Emissions"
   ],
   "exclusivitySets": [],
   "mapConstraints": {
@@ -68,16 +68,60 @@
     {
       "name": "NOx Time Series",
       "isActive": false,
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NOx_FMI_STEAM_20190101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1546300800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NOx_FMI_STEAM_20200101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1577836800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NOx_FMI_STEAM_20210101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1609459200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NOx_FMI_STEAM_20220101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1640995200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NOx_FMI_STEAM_20230101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1672531200
+          ]
+        }
+      ],
       "timeframe": "Months",
       "meta": {
-        "description": "",
+        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05° × 0.1° for the year 2019 to 2023, covering the European maritime domain (15.25°W to 40°E; 25°N to 74.25°N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS)",
         "attribution": {
-          "text": ""
+          "text": "Finnish Meteorological Institute, Jukka-Pekka.Jalkanen@fmi.fi",
+          "url": "https://en.ilmatieteenlaitos.fi/"
         },
+        "categories": [],
         "colormaps": [
           {
             "min": 0,
-            "max": 2.5,
+            "max": 4099060,
             "steps": 200,
             "name": "jet",
             "reverse": false
@@ -85,110 +129,76 @@
         ]
       },
       "layout": {
-        "interfaceGroup": "Regional Inversions",
-        "subinterfaceGroup": "NOx",
-        "infoPanel": {
+        "interfaceGroup": "STEAM All pollutants",
+        "contentLocation": "layerCard",
+        "layerCard": {
+          "toggleable": true,
           "legend": {
             "type": "swatch"
           },
           "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "temporalControls": true,
-            "constraintSlider": false,
-            "blendControls": false
+            "opacitySlider": true
           }
-        },
-        "layerCard": {
-          "toggleable": true
         }
-      },
-      "data": [
-        {"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_201901_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1546300800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_201902_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1548979200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_201903_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1551398400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_201904_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1554076800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_201905_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1556668800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_201906_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1559347200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_201907_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1561939200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_201908_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1564617600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_201909_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1567296000]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_201910_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1569888000]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_201911_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1572566400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_201912_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1575158400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202001_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1577836800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202002_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1580515200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202003_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1583020800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202004_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1585699200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202005_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1588291200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202006_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1590969600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202007_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1593561600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202008_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1596240000]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202009_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1598918400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202010_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1601510400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202011_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1604188800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202012_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1606780800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202101_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1609459200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202102_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1612137600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202103_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1614556800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202104_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1617235200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202105_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1619827200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202106_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1622505600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202107_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1625097600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202108_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1627776000]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202109_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1630454400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202110_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1633046400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202111_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1635724800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202112_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1638316800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202201_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1640995200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202202_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1643673600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202203_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1646092800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202204_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1648771200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202205_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1651363200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202206_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1654041600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202207_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1656633600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202208_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1659312000]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202209_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1661990400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202210_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1664582400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202211_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1667260800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202212_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1669852800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202301_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1672531200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202302_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1675209600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202303_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1677628800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202304_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1680307200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202305_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1682899200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202306_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1685577600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202307_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1688169600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202308_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1690848000]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202309_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1693526400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202310_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1696118400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202311_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1698796800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202312_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1701388800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202401_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1704067200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202402_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1706745600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202403_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1709251200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202404_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1711929600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202405_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1714521600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202406_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1717200000]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202407_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1719792000]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202408_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1722470400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202409_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1725148800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/NOx/EO4SEM_Monthly_Map_AEMISSIONS_NOx_fromTROPOMI_202410_sector5_Shipping_EUROCOM_externe_maritime_NOx_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1727740800]}
-      ]
+      }
     },
-	{
+    {
       "name": "CH4 Time Series",
       "isActive": false,
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CH4_FMI_STEAM_20190101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1546300800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CH4_FMI_STEAM_20200101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1577836800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CH4_FMI_STEAM_20210101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1609459200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CH4_FMI_STEAM_20220101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1640995200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CH4_FMI_STEAM_20230101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1672531200
+          ]
+        }
+      ],
       "timeframe": "Months",
       "meta": {
-        "description": "",
+        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05° × 0.1° for the year 2019 to 2023, covering the European maritime domain (15.25°W to 40°E; 25°N to 74.25°N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS)",
         "attribution": {
-          "text": ""
+          "text": "Finnish Meteorological Institute, Jukka-Pekka.Jalkanen@fmi.fi",
+          "url": "https://en.ilmatieteenlaitos.fi/"
         },
+        "categories": [],
         "colormaps": [
           {
             "min": 0,
-            "max": 0.05,
+            "max": 41306,
             "steps": 200,
             "name": "jet",
             "reverse": false
@@ -196,72 +206,608 @@
         ]
       },
       "layout": {
-        "interfaceGroup": "Regional Inversions",
-        "subinterfaceGroup": "CH4",
-        "infoPanel": {
+        "interfaceGroup": "STEAM All pollutants",
+        "contentLocation": "layerCard",
+        "layerCard": {
+          "toggleable": true,
           "legend": {
             "type": "swatch"
           },
           "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "temporalControls": true,
-            "constraintSlider": false,
-            "blendControls": false
+            "opacitySlider": true
           }
-        },
-        "layerCard": {
-          "toggleable": true
         }
-      },
-      "data": [
-        {"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_201901_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1546300800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_201902_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1548979200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_201903_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1551398400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_201904_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1554076800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_201905_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1556668800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_201906_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1559347200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_201907_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1561939200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_201908_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1564617600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_201909_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1567296000]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_201910_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1569888000]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_201911_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1572566400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_201912_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1575158400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202001_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1577836800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202002_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1580515200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202003_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1583020800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202004_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1585699200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202005_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1588291200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202006_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1590969600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202007_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1593561600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202008_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1596240000]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202009_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1598918400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202010_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1601510400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202011_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1604188800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202012_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1606780800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202101_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1609459200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202102_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1612137600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202103_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1614556800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202104_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1617235200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202105_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1619827200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202106_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1622505600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202107_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1625097600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202108_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1627776000]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202109_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1630454400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202110_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1633046400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202111_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1635724800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/CH4/EO4SEM_Monthly_Map_AEMISSIONS_CH4_fromTROPOMI_202112_sector5_Shipping_EUROCOM_externe_maritime_CH4_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1638316800]}
-      ]
+      }
     },
-	{
+    {
       "name": "FFCO2 Time Series",
       "isActive": false,
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201901_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1546300800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201902_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1548979200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201903_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1551398400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201904_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1554076800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201905_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1556668800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201906_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1559347200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201907_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1561939200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201908_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1564617600
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201909_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1567296000
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201910_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1569888000
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201911_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1572566400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201912_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1575158400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202001_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1577836800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202002_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1580515200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202003_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1583020800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202004_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1585699200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202005_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1588291200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202006_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1590969600
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202007_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1593561600
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202008_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1596240000
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202009_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1598918400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202010_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1601510400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202011_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1604188800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202012_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1606780800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202101_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1609459200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202102_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1612137600
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202103_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1614556800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202104_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1617235200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202105_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1619827200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202106_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1622505600
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202107_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1625097600
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202108_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1627776000
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202109_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1630454400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202110_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1633046400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202111_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1635724800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202112_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1638316800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202201_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1640995200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202202_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1643673600
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202203_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1646092800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202204_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1648771200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202205_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1651363200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202206_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1654041600
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202207_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1656633600
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202208_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1659312000
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202209_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1661990400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202210_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1664582400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202211_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1667260800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202212_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1669852800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202301_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1672531200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202302_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1675209600
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202303_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1677628800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202304_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1680307200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202305_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1682899200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202306_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1685577600
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202307_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1688169600
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202308_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1690848000
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202309_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1693526400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202310_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1696118400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202311_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1698796800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202312_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1701388800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202401_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1704067200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202402_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1706745600
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202403_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1709251200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202404_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1711929600
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202405_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1714521600
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202406_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1717200000
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202407_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1719792000
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202408_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1722470400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202409_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1725148800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202410_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1727740800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202411_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1730419200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202412_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1733011200
+          ]
+        }
+      ],
       "timeframe": "Months",
       "meta": {
-        "description": "",
+        "description": "Monthly maps of fossil fuel CO₂ shipping emissions across European waters at 0.5° spatial resolution, derived from the NOx regional inversion results. These estimates translate the optimised NOx shipping emissions into corresponding CO₂ estimates, capturing monthly variations in maritime emission patterns",
         "attribution": {
-          "text": ""
+          "text": "Science Partners, Contact audrey.fortems@science-partners.com",
+          "url": "https://www.science-partners.com/"
         },
+        "categories": [],
         "colormaps": [
           {
             "min": 0,
@@ -275,151 +821,71 @@
       "layout": {
         "interfaceGroup": "Regional Inversions",
         "subinterfaceGroup": "FFCO2",
-        "infoPanel": {
+        "contentLocation": "layerCard",
+        "layerCard": {
+          "toggleable": true,
           "legend": {
             "type": "swatch"
           },
           "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "temporalControls": true,
-            "constraintSlider": false,
-            "blendControls": false
+            "opacitySlider": true
           }
-        },
-        "layerCard": {
-          "toggleable": true
         }
-      },
-      "data": [
-        {"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201901_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1546300800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201902_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1548979200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201903_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1551398400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201904_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1554076800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201905_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1556668800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201906_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1559347200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201907_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1561939200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201908_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1564617600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201909_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1567296000]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201910_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1569888000]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201911_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1572566400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_201912_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1575158400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202001_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1577836800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202002_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1580515200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202003_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1583020800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202004_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1585699200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202005_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1588291200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202006_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1590969600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202007_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1593561600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202008_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1596240000]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202009_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1598918400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202010_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1601510400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202011_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1604188800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202012_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1606780800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202101_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1609459200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202102_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1612137600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202103_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1614556800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202104_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1617235200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202105_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1619827200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202106_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1622505600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202107_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1625097600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202108_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1627776000]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202109_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1630454400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202110_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1633046400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202111_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1635724800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202112_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1638316800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202201_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1640995200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202202_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1643673600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202203_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1646092800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202204_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1648771200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202205_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1651363200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202206_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1654041600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202207_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1656633600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202208_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1659312000]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202209_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1661990400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202210_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1664582400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202211_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1667260800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202212_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1669852800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202301_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1672531200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202302_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1675209600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202303_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1677628800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202304_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1680307200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202305_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1682899200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202306_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1685577600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202307_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1688169600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202308_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1690848000]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202309_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1693526400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202310_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1696118400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202311_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1698796800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202312_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1701388800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202401_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1704067200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202402_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1706745600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202403_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1709251200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202404_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1711929600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202405_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1714521600]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202406_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1717200000]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202407_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1719792000]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202408_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1722470400]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202409_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1725148800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202410_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1727740800]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202411_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1730419200]},
-		{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/regional_inversions/FFCO2/EO4SEM_Monthly_Map_AEMISSIONS_CO2FF_fromTROPOMI_202412_sector5_Shipping_EUROCOM_externe_maritime_CO2ff_posterior.tif", "format": "cog", "zIndex": 50, "timestamps": [1733011200]}
-      ]
+      }
     },
-	{
-      "name": "NOx Time Series",
-      "isActive": false,
-      "timeframe": "Months",
-      "meta": {
-        "description": "",
-        "attribution": {
-          "text": ""
-        },
-        "colormaps": [
-          {
-            "min": 0,
-            "max": 4.09906e+06,
-            "steps": 200,
-            "name": "jet",
-            "reverse": false
-          }
-        ]
-      },
-      "layout": {
-        "interfaceGroup": "STEAM All pollutants",
-        "infoPanel": {
-          "legend": {
-            "type": "swatch"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "temporalControls": true,
-            "constraintSlider": false,
-            "blendControls": false
-          }
-        },
-        "layerCard": {
-          "toggleable": true
-        }
-      },
-      "data": [
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NOx_FMI_STEAM_20190101.tif", "format": "cog", "zIndex": 50, "timestamps": [1546300800]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NOx_FMI_STEAM_20200101.tif", "format": "cog", "zIndex": 50, "timestamps": [1577836800]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NOx_FMI_STEAM_20210101.tif", "format": "cog", "zIndex": 50, "timestamps": [1609459200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NOx_FMI_STEAM_20220101.tif", "format": "cog", "zIndex": 50, "timestamps": [1640995200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NOx_FMI_STEAM_20230101.tif", "format": "cog", "zIndex": 50, "timestamps": [1672531200]}
-      ]
-    },
-	{
+    {
       "name": "SOx Time Series",
       "isActive": false,
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SOx_FMI_STEAM_20190101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1546300800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SOx_FMI_STEAM_20200101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1577836800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SOx_FMI_STEAM_20210101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1609459200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SOx_FMI_STEAM_20220101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1640995200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SOx_FMI_STEAM_20230101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1672531200
+          ]
+        }
+      ],
       "timeframe": "Months",
       "meta": {
-        "description": "",
+        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05° × 0.1° for the year 2019 to 2023, covering the European maritime domain (15.25°W to 40°E; 25°N to 74.25°N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS)",
         "attribution": {
-          "text": ""
+          "text": "Finnish Meteorological Institute, Jukka-Pekka.Jalkanen@fmi.fi",
+          "url": "https://en.ilmatieteenlaitos.fi/"
         },
+        "categories": [],
         "colormaps": [
           {
             "min": 0,
@@ -432,39 +898,71 @@
       },
       "layout": {
         "interfaceGroup": "STEAM All pollutants",
-        "infoPanel": {
+        "contentLocation": "layerCard",
+        "layerCard": {
+          "toggleable": true,
           "legend": {
             "type": "swatch"
           },
           "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "temporalControls": true,
-            "constraintSlider": false,
-            "blendControls": false
+            "opacitySlider": true
           }
-        },
-        "layerCard": {
-          "toggleable": true
         }
-      },
-      "data": [
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SOx_FMI_STEAM_20190101.tif", "format": "cog", "zIndex": 50, "timestamps": [1546300800]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SOx_FMI_STEAM_20200101.tif", "format": "cog", "zIndex": 50, "timestamps": [1577836800]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SOx_FMI_STEAM_20210101.tif", "format": "cog", "zIndex": 50, "timestamps": [1609459200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SOx_FMI_STEAM_20220101.tif", "format": "cog", "zIndex": 50, "timestamps": [1640995200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SOx_FMI_STEAM_20230101.tif", "format": "cog", "zIndex": 50, "timestamps": [1672531200]}
-      ]
+      }
     },
-	{
+    {
       "name": "CO Time Series",
       "isActive": false,
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO_FMI_STEAM_20190101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1546300800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO_FMI_STEAM_20200101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1577836800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO_FMI_STEAM_20210101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1609459200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO_FMI_STEAM_20220101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1640995200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO_FMI_STEAM_20230101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1672531200
+          ]
+        }
+      ],
       "timeframe": "Months",
       "meta": {
-        "description": "",
+        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05° × 0.1° for the year 2019 to 2023, covering the European maritime domain (15.25°W to 40°E; 25°N to 74.25°N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS)",
         "attribution": {
-          "text": ""
+          "text": "Finnish Meteorological Institute, Jukka-Pekka.Jalkanen@fmi.fi",
+          "url": "https://en.ilmatieteenlaitos.fi/"
         },
+        "categories": [],
         "colormaps": [
           {
             "min": 0,
@@ -477,43 +975,75 @@
       },
       "layout": {
         "interfaceGroup": "STEAM All pollutants",
-        "infoPanel": {
+        "contentLocation": "layerCard",
+        "layerCard": {
+          "toggleable": true,
           "legend": {
             "type": "swatch"
           },
           "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "temporalControls": true,
-            "constraintSlider": false,
-            "blendControls": false
+            "opacitySlider": true
           }
-        },
-        "layerCard": {
-          "toggleable": true
         }
-      },
-      "data": [
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO_FMI_STEAM_20190101.tif", "format": "cog", "zIndex": 50, "timestamps": [1546300800]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO_FMI_STEAM_20200101.tif", "format": "cog", "zIndex": 50, "timestamps": [1577836800]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO_FMI_STEAM_20210101.tif", "format": "cog", "zIndex": 50, "timestamps": [1609459200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO_FMI_STEAM_20220101.tif", "format": "cog", "zIndex": 50, "timestamps": [1640995200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO_FMI_STEAM_20230101.tif", "format": "cog", "zIndex": 50, "timestamps": [1672531200]}
-      ]
+      }
     },
-	{
+    {
       "name": "CO2 Time Series",
       "isActive": false,
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO2_FMI_STEAM_20190101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1546300800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO2_FMI_STEAM_20200101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1577836800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO2_FMI_STEAM_20210101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1609459200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO2_FMI_STEAM_20220101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1640995200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO2_FMI_STEAM_20230101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1672531200
+          ]
+        }
+      ],
       "timeframe": "Months",
       "meta": {
-        "description": "",
+        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05° × 0.1° for the year 2019 to 2023, covering the European maritime domain (15.25°W to 40°E; 25°N to 74.25°N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS)",
         "attribution": {
-          "text": ""
+          "text": "Finnish Meteorological Institute, Jukka-Pekka.Jalkanen@fmi.fi",
+          "url": "https://en.ilmatieteenlaitos.fi/"
         },
+        "categories": [],
         "colormaps": [
           {
             "min": 0,
-            "max": 2.65043e+08,
+            "max": 265043000,
             "steps": 200,
             "name": "jet",
             "reverse": false
@@ -522,39 +1052,71 @@
       },
       "layout": {
         "interfaceGroup": "STEAM All pollutants",
-        "infoPanel": {
+        "contentLocation": "layerCard",
+        "layerCard": {
+          "toggleable": true,
           "legend": {
             "type": "swatch"
           },
           "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "temporalControls": true,
-            "constraintSlider": false,
-            "blendControls": false
+            "opacitySlider": true
           }
-        },
-        "layerCard": {
-          "toggleable": true
         }
-      },
-      "data": [
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO2_FMI_STEAM_20190101.tif", "format": "cog", "zIndex": 50, "timestamps": [1546300800]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO2_FMI_STEAM_20200101.tif", "format": "cog", "zIndex": 50, "timestamps": [1577836800]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO2_FMI_STEAM_20210101.tif", "format": "cog", "zIndex": 50, "timestamps": [1609459200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO2_FMI_STEAM_20220101.tif", "format": "cog", "zIndex": 50, "timestamps": [1640995200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CO2_FMI_STEAM_20230101.tif", "format": "cog", "zIndex": 50, "timestamps": [1672531200]}
-      ]
+      }
     },
-	{
+    {
       "name": "PM25 Time Series",
       "isActive": false,
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/PM25_FMI_STEAM_20190101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1546300800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/PM25_FMI_STEAM_20200101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1577836800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/PM25_FMI_STEAM_20210101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1609459200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/PM25_FMI_STEAM_20220101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1640995200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/PM25_FMI_STEAM_20230101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1672531200
+          ]
+        }
+      ],
       "timeframe": "Months",
       "meta": {
-        "description": "",
+        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05° × 0.1° for the year 2019 to 2023, covering the European maritime domain (15.25°W to 40°E; 25°N to 74.25°N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS)",
         "attribution": {
-          "text": ""
+          "text": "Finnish Meteorological Institute, Jukka-Pekka.Jalkanen@fmi.fi",
+          "url": "https://en.ilmatieteenlaitos.fi/"
         },
+        "categories": [],
         "colormaps": [
           {
             "min": 0,
@@ -567,39 +1129,71 @@
       },
       "layout": {
         "interfaceGroup": "STEAM All pollutants",
-        "infoPanel": {
+        "contentLocation": "layerCard",
+        "layerCard": {
+          "toggleable": true,
           "legend": {
             "type": "swatch"
           },
           "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "temporalControls": true,
-            "constraintSlider": false,
-            "blendControls": false
+            "opacitySlider": true
           }
-        },
-        "layerCard": {
-          "toggleable": true
         }
-      },
-      "data": [
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/PM25_FMI_STEAM_20190101.tif", "format": "cog", "zIndex": 50, "timestamps": [1546300800]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/PM25_FMI_STEAM_20200101.tif", "format": "cog", "zIndex": 50, "timestamps": [1577836800]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/PM25_FMI_STEAM_20210101.tif", "format": "cog", "zIndex": 50, "timestamps": [1609459200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/PM25_FMI_STEAM_20220101.tif", "format": "cog", "zIndex": 50, "timestamps": [1640995200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/PM25_FMI_STEAM_20230101.tif", "format": "cog", "zIndex": 50, "timestamps": [1672531200]}
-      ]
+      }
     },
-	{
+    {
       "name": "SO4 Time Series",
       "isActive": false,
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SO4_FMI_STEAM_20190101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1546300800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SO4_FMI_STEAM_20200101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1577836800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SO4_FMI_STEAM_20210101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1609459200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SO4_FMI_STEAM_20220101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1640995200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SO4_FMI_STEAM_20230101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1672531200
+          ]
+        }
+      ],
       "timeframe": "Months",
       "meta": {
-        "description": "",
+        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05° × 0.1° for the year 2019 to 2023, covering the European maritime domain (15.25°W to 40°E; 25°N to 74.25°N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS)",
         "attribution": {
-          "text": ""
+          "text": "Finnish Meteorological Institute, Jukka-Pekka.Jalkanen@fmi.fi",
+          "url": "https://en.ilmatieteenlaitos.fi/"
         },
+        "categories": [],
         "colormaps": [
           {
             "min": 0,
@@ -612,84 +1206,71 @@
       },
       "layout": {
         "interfaceGroup": "STEAM All pollutants",
-        "infoPanel": {
+        "contentLocation": "layerCard",
+        "layerCard": {
+          "toggleable": true,
           "legend": {
             "type": "swatch"
           },
           "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "temporalControls": true,
-            "constraintSlider": false,
-            "blendControls": false
+            "opacitySlider": true
           }
-        },
-        "layerCard": {
-          "toggleable": true
         }
-      },
-      "data": [
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SO4_FMI_STEAM_20190101.tif", "format": "cog", "zIndex": 50, "timestamps": [1546300800]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SO4_FMI_STEAM_20200101.tif", "format": "cog", "zIndex": 50, "timestamps": [1577836800]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SO4_FMI_STEAM_20210101.tif", "format": "cog", "zIndex": 50, "timestamps": [1609459200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SO4_FMI_STEAM_20220101.tif", "format": "cog", "zIndex": 50, "timestamps": [1640995200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/SO4_FMI_STEAM_20230101.tif", "format": "cog", "zIndex": 50, "timestamps": [1672531200]}
-      ]
+      }
     },
-	{
-      "name": "CH4 Time Series",
-      "isActive": false,
-      "timeframe": "Months",
-      "meta": {
-        "description": "",
-        "attribution": {
-          "text": ""
-        },
-        "colormaps": [
-          {
-            "min": 0,
-            "max": 41306,
-            "steps": 200,
-            "name": "jet",
-            "reverse": false
-          }
-        ]
-      },
-      "layout": {
-        "interfaceGroup": "STEAM All pollutants",
-        "infoPanel": {
-          "legend": {
-            "type": "swatch"
-          },
-          "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "temporalControls": true,
-            "constraintSlider": false,
-            "blendControls": false
-          }
-        },
-        "layerCard": {
-          "toggleable": true
-        }
-      },
-      "data": [
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CH4_FMI_STEAM_20190101.tif", "format": "cog", "zIndex": 50, "timestamps": [1546300800]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CH4_FMI_STEAM_20200101.tif", "format": "cog", "zIndex": 50, "timestamps": [1577836800]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CH4_FMI_STEAM_20210101.tif", "format": "cog", "zIndex": 50, "timestamps": [1609459200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CH4_FMI_STEAM_20220101.tif", "format": "cog", "zIndex": 50, "timestamps": [1640995200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/CH4_FMI_STEAM_20230101.tif", "format": "cog", "zIndex": 50, "timestamps": [1672531200]}
-      ]
-    },
-	{
+    {
       "name": "NH3 Time Series",
       "isActive": false,
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NH3_FMI_STEAM_20190101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1546300800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NH3_FMI_STEAM_20200101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1577836800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NH3_FMI_STEAM_20210101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1609459200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NH3_FMI_STEAM_20220101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1640995200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NH3_FMI_STEAM_20230101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1672531200
+          ]
+        }
+      ],
       "timeframe": "Months",
       "meta": {
-        "description": "",
+        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05° × 0.1° for the year 2019 to 2023, covering the European maritime domain (15.25°W to 40°E; 25°N to 74.25°N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS)",
         "attribution": {
-          "text": ""
+          "text": "Finnish Meteorological Institute, Jukka-Pekka.Jalkanen@fmi.fi",
+          "url": "https://en.ilmatieteenlaitos.fi/"
         },
+        "categories": [],
         "colormaps": [
           {
             "min": 0,
@@ -702,39 +1283,71 @@
       },
       "layout": {
         "interfaceGroup": "STEAM All pollutants",
-        "infoPanel": {
+        "contentLocation": "layerCard",
+        "layerCard": {
+          "toggleable": true,
           "legend": {
             "type": "swatch"
           },
           "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "temporalControls": true,
-            "constraintSlider": false,
-            "blendControls": false
+            "opacitySlider": true
           }
-        },
-        "layerCard": {
-          "toggleable": true
         }
-      },
-      "data": [
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NH3_FMI_STEAM_20190101.tif", "format": "cog", "zIndex": 50, "timestamps": [1546300800]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NH3_FMI_STEAM_20200101.tif", "format": "cog", "zIndex": 50, "timestamps": [1577836800]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NH3_FMI_STEAM_20210101.tif", "format": "cog", "zIndex": 50, "timestamps": [1609459200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NH3_FMI_STEAM_20220101.tif", "format": "cog", "zIndex": 50, "timestamps": [1640995200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/NH3_FMI_STEAM_20230101.tif", "format": "cog", "zIndex": 50, "timestamps": [1672531200]}
-      ]
+      }
     },
-	{
+    {
       "name": "N20 Time Series",
       "isActive": false,
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/N2O_FMI_STEAM_20190101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1546300800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/N2O_FMI_STEAM_20200101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1577836800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/N2O_FMI_STEAM_20210101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1609459200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/N2O_FMI_STEAM_20220101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1640995200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/N2O_FMI_STEAM_20230101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1672531200
+          ]
+        }
+      ],
       "timeframe": "Months",
       "meta": {
-        "description": "",
+        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05° × 0.1° for the year 2019 to 2023, covering the European maritime domain (15.25°W to 40°E; 25°N to 74.25°N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS)",
         "attribution": {
-          "text": ""
+          "text": "Finnish Meteorological Institute, Jukka-Pekka.Jalkanen@fmi.fi",
+          "url": "https://www.science-partners.com/"
         },
+        "categories": [],
         "colormaps": [
           {
             "min": 0,
@@ -747,39 +1360,732 @@
       },
       "layout": {
         "interfaceGroup": "STEAM All pollutants",
-        "infoPanel": {
+        "contentLocation": "layerCard",
+        "layerCard": {
+          "toggleable": true,
           "legend": {
             "type": "swatch"
           },
           "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "temporalControls": true,
-            "constraintSlider": false,
-            "blendControls": false
+            "opacitySlider": true
           }
-        },
-        "layerCard": {
-          "toggleable": true
         }
-      },
-      "data": [
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/N2O_FMI_STEAM_20190101.tif", "format": "cog", "zIndex": 50, "timestamps": [1546300800]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/N2O_FMI_STEAM_20200101.tif", "format": "cog", "zIndex": 50, "timestamps": [1577836800]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/N2O_FMI_STEAM_20210101.tif", "format": "cog", "zIndex": 50, "timestamps": [1609459200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/N2O_FMI_STEAM_20220101.tif", "format": "cog", "zIndex": 50, "timestamps": [1640995200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants/N2O_FMI_STEAM_20230101.tif", "format": "cog", "zIndex": 50, "timestamps": [1672531200]}
-      ]
+      }
     },
-	{
-      "name": "Individual NO2 Plumes Time Series",
+    {
+      "name": "Individual NOx Plumes Time Series",
       "isActive": false,
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200424.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1587686400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200429.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1588118400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200525.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1590364800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200529.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1590710400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200610.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1591747200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200611.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1591833600
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200627.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1593216000
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200629.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1593388800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200723.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1595462400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200815.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1597449600
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200819.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1597795200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200913.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1599955200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210523.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1621728000
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210603.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1622678400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210619.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1624060800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210702.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1625184000
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210702_002.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1625184001
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210705.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1625443200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210706.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1625529600
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210727.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1627344000
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210827.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1630022400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20220529.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1653782400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20220622.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1655856000
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20220703.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1656806400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20220715.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1657843200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20220814.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1660435200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20220820.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1660953600
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20220907.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1662508800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200424.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1587686400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200429.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1588118400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200525.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1590364800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200529.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1590710400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200610.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1591747200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200611.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1591833600
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200627.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1593216000
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200629.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1593388800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200723.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1595462400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200815.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1597449600
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200819.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1597795200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200913.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1599955200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210523.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1621728000
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210603.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1622678400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210619.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1624060800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210702.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1625184000
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210702_002.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1625184001
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210705.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1625443200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210706.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1625529600
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210727.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1627344000
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210827.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1630022400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20220529.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1653782400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20220622.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1655856000
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20220703.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1656806400
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20220715.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1657843200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20220814.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1660435200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20220820.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1660953600
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20220907.geojson",
+          "format": "geojson",
+          "zIndex": 100,
+          "style": [
+            {
+              "fill-color": "rgba(255, 0, 0, 1.0)"
+            },
+            {
+              "stroke-color": "rgba(60,60,60,1.0)",
+              "stroke-width": 5
+            }
+          ],
+          "timestamps": [
+            1662508800
+          ]
+        }
+      ],
       "timeframe": "Months",
       "meta": {
-        "description": "",
+        "description": "Average NOx emission rate along the entire ship trajectory, from the STEAM model",
         "attribution": {
-          "text": ""
+          "text": "Laboratory for Climate and Environmental Sciences. Contact: gregoire.broquet@lsce.ipsl.fr, hugo.vignesoult@lsce.ipsl.fr",
+          "url": "https://www.lsce.ipsl.fr/en/home-public/"
         },
+        "categories": [],
+        "units": "gEqNO2/s",
         "colormaps": [
           {
             "min": 0,
@@ -791,83 +2097,20 @@
         ]
       },
       "layout": {
-        "interfaceGroup": "Individual NO2 Plumes",
-        "infoPanel": {
+        "interfaceGroup": "Individual NOx Plumes",
+        "contentLocation": "layerCard",
+        "layerCard": {
+          "toggleable": true,
           "legend": {
             "type": "swatch"
           },
           "controls": {
-            "opacitySlider": true,
-            "zoomToCenter": true,
-            "temporalControls": true,
-            "constraintSlider": false,
-            "blendControls": true
+            "opacitySlider": true
           }
-        },
-        "layerCard": {
-          "toggleable": true
         }
-      },
-      "data": [
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200424.tif", "format": "cog", "zIndex": 50, "timestamps": [1587686400]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200429.tif", "format": "cog", "zIndex": 50, "timestamps": [1588118400]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200525.tif", "format": "cog", "zIndex": 50, "timestamps": [1590364800]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200529.tif", "format": "cog", "zIndex": 50, "timestamps": [1590710400]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200610.tif", "format": "cog", "zIndex": 50, "timestamps": [1591747200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200611.tif", "format": "cog", "zIndex": 50, "timestamps": [1591833600]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200627.tif", "format": "cog", "zIndex": 50, "timestamps": [1593216000]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200629.tif", "format": "cog", "zIndex": 50, "timestamps": [1593388800]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200723.tif", "format": "cog", "zIndex": 50, "timestamps": [1595462400]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200815.tif", "format": "cog", "zIndex": 50, "timestamps": [1597449600]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200819.tif", "format": "cog", "zIndex": 50, "timestamps": [1597795200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20200913.tif", "format": "cog", "zIndex": 50, "timestamps": [1599955200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210523.tif", "format": "cog", "zIndex": 50, "timestamps": [1621728000]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210603.tif", "format": "cog", "zIndex": 50, "timestamps": [1622678400]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210619.tif", "format": "cog", "zIndex": 50, "timestamps": [1624060800]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210702.tif", "format": "cog", "zIndex": 50, "timestamps": [1625184000]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210702_002.tif", "format": "cog", "zIndex": 50, "timestamps": [1625184001]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210705.tif", "format": "cog", "zIndex": 50, "timestamps": [1625443200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210706.tif", "format": "cog", "zIndex": 50, "timestamps": [1625529600]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210727.tif", "format": "cog", "zIndex": 50, "timestamps": [1627344000]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20210827.tif", "format": "cog", "zIndex": 50, "timestamps": [1630022400]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20220529.tif", "format": "cog", "zIndex": 50, "timestamps": [1653782400]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20220622.tif", "format": "cog", "zIndex": 50, "timestamps": [1655856000]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20220703.tif", "format": "cog", "zIndex": 50, "timestamps": [1656806400]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20220715.tif", "format": "cog", "zIndex": 50, "timestamps": [1657843200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20220814.tif", "format": "cog", "zIndex": 50, "timestamps": [1660435200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20220820.tif", "format": "cog", "zIndex": 50, "timestamps": [1660953600]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/NO2_LSCE_PLUME_20220907.tif", "format": "cog", "zIndex": 50, "timestamps": [1662508800]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200424.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1587686400]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200429.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1588118400]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200525.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1590364800]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200529.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1590710400]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200610.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1591747200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200611.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1591833600]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200627.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1593216000]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200629.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1593388800]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200723.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1595462400]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200815.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1597449600]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200819.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1597795200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20200913.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1599955200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210523.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1621728000]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210603.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1622678400]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210619.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1624060800]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210702.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1625184000]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210702_002.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1625184001]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210705.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1625443200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210706.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1625529600]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210727.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1627344000]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20210827.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1630022400]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20220529.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1653782400]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20220622.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1655856000]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20220703.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1656806400]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20220715.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1657843200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20220814.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1660435200]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20220820.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1660953600]},
-			{"url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/Plume_Track_20220907.geojson", "format": "geojson", "zIndex": 100, "style": [{"fill-color": "rgba(255, 0, 0, 1.0)"},{"stroke-color": "rgba(60,60,60,1.0)","stroke-width": 5}], "timestamps": [1662508800]}
-      ]
+      }
     },
-	{
+    {
       "name": "Emissions by Marine Regions",
       "isActive": false,
       "data": [
@@ -915,7 +2158,7 @@
           ]
         }
       ],
-	  "charts": [
+      "charts": [
         {
           "chartType": "xy",
           "title": "NOx",
@@ -960,7 +2203,7 @@
             }
           ]
         },
-		{
+        {
           "chartType": "xy",
           "title": "CH4",
           "x": "Date",
@@ -1004,7 +2247,7 @@
             }
           ]
         },
-		{
+        {
           "chartType": "xy",
           "title": "FFCO2",
           "x": "Date",
@@ -1050,9 +2293,10 @@
         }
       ],
       "meta": {
-        "description": "Emissions by Marine Regions",
+        "description": "Monthly budgets of prior and posterior CH₄ shipping emissions for each of the 12 marine areas around Europe. The prior estimates are drawn from the CAMS-REG-v8/STEAM shipping inventory, while the posterior estimates are derived from regional atmospheric inversions assimilating TROPOMI-SRON CH₄ observations.  \n1. Click on \"Data Values.\"\n2. Then click on any of the desired marine regions.\n3. Click on the \"Charts\" to display time-series data",
         "attribution": {
-          "text": "Data attribution not specified"
+          "text": "Science Partners, Contact audrey.fortems@science-partners.com",
+          "url": "https://www.science-partners.com/"
         },
         "categories": [
           {
@@ -1133,48 +2377,17 @@
         }
       }
     },
-	{
+    {
       "name": "Shipping Lanes Emissions based on maritime traffic patterns",
       "isActive": false,
-      "meta": {
-        "description": "Maritime shipping lanes are defined based on maritime traffic patterns from the STEAM 2023 dataset.",
-        "attribution": {
-          "text": "Data attribution not specified"
-        },
-        "categories": [
-		  {
-            "color": "rgba(255, 0, 0,1.0)",
-            "label": "Shipping Lane charts",
-            "value": 0
-          }
-		]
-      },
-      "layout": {
-        "interfaceGroup": "Shipping Lanes Emissions",
-        "contentLocation": "layerCard",
-        "layerCard": {
-          "toggleable": true,
-          "legend": {
-            "type": "swatch"
-          },
-          "controls": {
-            "opacitySlider": false,
-            "zoomToCenter": false,
-            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE/shipping_lanes_with_stats_csv.geojson",
-            "temporalControls": false,
-            "constraintSlider": false,
-            "blendControls": false
-          }
-        }
-      },
       "data": [
         {
           "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE/shipping_lanes_with_stats_csv.geojson",
           "format": "geojson",
           "zIndex": 50,
-		  "style": [
-			{
-			  "fill-color": "rgba(255, 230, 230, 1.0)",
+          "style": [
+            {
+              "fill-color": "rgba(255, 230, 230, 1.0)",
               "stroke-color": "rgba(60,60,60,1.0)",
               "stroke-width": 0.5
             },
@@ -1240,11 +2453,50 @@
             }
           ]
         }
-      ]
+      ],
+      "meta": {
+        "description": "Maritime shipping lanes are defined based on maritime traffic patterns from the STEAM 2023 dataset.",
+        "attribution": {
+          "text": "Laboratory for Climate and Environmental Sciences. Contact: mouhamadou.diouf@lsce.ipsl.fr",
+          "url": "https://www.lsce.ipsl.fr/en/home-public/"
+        },
+        "categories": [
+          {
+            "color": "rgba(255, 0, 0,1.0)",
+            "label": "Shipping Lane charts",
+            "value": 0
+          }
+        ]
+      },
+      "layout": {
+        "interfaceGroup": "Shipping Lanes Emissions",
+        "contentLocation": "layerCard",
+        "layerCard": {
+          "toggleable": true,
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": false,
+            "zoomToCenter": false,
+            "download": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE/shipping_lanes_with_stats_csv.geojson",
+            "temporalControls": false,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        }
+      }
     },
-	{
+    {
       "name": "Setup Plumes Track",
       "isActive": false,
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/worldPolygon.geojson",
+          "format": "geojson",
+          "zIndex": 50
+        }
+      ],
       "meta": {
         "description": "Setup Plumes Track",
         "attribution": {
@@ -1253,7 +2505,7 @@
         "categories": []
       },
       "layout": {
-        "interfaceGroup": "Individual NO2 Plumes",
+        "interfaceGroup": "Individual NOx Plumes",
         "contentLocation": "layerCard",
         "layerCard": {
           "toggleable": true,
@@ -1268,14 +2520,7 @@
             "blendControls": false
           }
         }
-      },
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/Individual_NO2_Plumes/worldPolygon.geojson",
-          "format": "geojson",
-          "zIndex": 50
-        }
-      ]
+      }
     }
   ]
 }

@@ -1676,7 +1676,6 @@
           "url": "https://en.ilmatieteenlaitos.fi/"
         },
         "categories": [],
-        "units": "KG",
         "colormaps": [
           {
             "min": 0,
@@ -1685,7 +1684,8 @@
             "name": "jet",
             "reverse": false
           }
-        ]
+        ],
+        "units": "KG"
       },
       "layout": {
         "interfaceGroup": "STEAM All pollutants (Time series)",
@@ -1760,7 +1760,6 @@
           "url": "https://en.ilmatieteenlaitos.fi/"
         },
         "categories": [],
-        "units": "KG",
         "colormaps": [
           {
             "min": 0,
@@ -1769,7 +1768,8 @@
             "name": "jet",
             "reverse": false
           }
-        ]
+        ],
+        "units": "KG"
       },
       "layout": {
         "interfaceGroup": "STEAM All pollutants (Time series)",
@@ -1844,7 +1844,6 @@
           "url": "https://en.ilmatieteenlaitos.fi/"
         },
         "categories": [],
-        "units": "KG",
         "colormaps": [
           {
             "min": 0,
@@ -1853,7 +1852,8 @@
             "name": "jet",
             "reverse": false
           }
-        ]
+        ],
+        "units": "KG"
       },
       "layout": {
         "interfaceGroup": "STEAM All pollutants (Time series)",
@@ -1928,7 +1928,6 @@
           "url": "https://en.ilmatieteenlaitos.fi/"
         },
         "categories": [],
-        "units": "KG",
         "colormaps": [
           {
             "min": 0,
@@ -1937,7 +1936,8 @@
             "name": "jet",
             "reverse": false
           }
-        ]
+        ],
+        "units": "KG"
       },
       "layout": {
         "interfaceGroup": "STEAM All pollutants (Time series)",
@@ -2012,7 +2012,6 @@
           "url": "https://en.ilmatieteenlaitos.fi/"
         },
         "categories": [],
-        "units": "KG",
         "colormaps": [
           {
             "min": 0,
@@ -2021,7 +2020,8 @@
             "name": "jet",
             "reverse": false
           }
-        ]
+        ],
+        "units": "KG"
       },
       "layout": {
         "interfaceGroup": "STEAM All pollutants (Time series)",
@@ -2096,7 +2096,6 @@
           "url": "https://en.ilmatieteenlaitos.fi/"
         },
         "categories": [],
-        "units": "KG",
         "colormaps": [
           {
             "min": 0,
@@ -2105,7 +2104,8 @@
             "name": "jet",
             "reverse": false
           }
-        ]
+        ],
+        "units": "KG"
       },
       "layout": {
         "interfaceGroup": "STEAM All pollutants (Time series)",
@@ -2180,7 +2180,6 @@
           "url": "https://en.ilmatieteenlaitos.fi/"
         },
         "categories": [],
-        "units": "KG",
         "colormaps": [
           {
             "min": 0,
@@ -2189,7 +2188,8 @@
             "name": "jet",
             "reverse": false
           }
-        ]
+        ],
+        "units": "KG"
       },
       "layout": {
         "interfaceGroup": "STEAM All pollutants (Time series)",
@@ -2264,7 +2264,6 @@
           "url": "https://en.ilmatieteenlaitos.fi/"
         },
         "categories": [],
-        "units": "KG",
         "colormaps": [
           {
             "min": 0,
@@ -2273,7 +2272,8 @@
             "name": "jet",
             "reverse": false
           }
-        ]
+        ],
+        "units": "KG"
       },
       "layout": {
         "interfaceGroup": "STEAM All pollutants (Time series)",
@@ -2348,7 +2348,6 @@
           "url": "https://en.ilmatieteenlaitos.fi/"
         },
         "categories": [],
-        "units": "KG",
         "colormaps": [
           {
             "min": 0,
@@ -2357,7 +2356,8 @@
             "name": "jet",
             "reverse": false
           }
-        ]
+        ],
+        "units": "KG"
       },
       "layout": {
         "interfaceGroup": "STEAM All pollutants (Time series)",
@@ -3400,7 +3400,7 @@
       "isActive": false,
       "data": [
         {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE/shipping_lanes_with_stats_csv.geojson",
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/LSCE/routes_maritimes.geojson",
           "format": "geojson",
           "zIndex": 50,
           "style": [
@@ -3414,9 +3414,13 @@
                 "match",
                 [
                   "get",
-                  "id"
+                  "name"
                 ],
-                "lane_2_46f590",
+                "Shipping lane 1",
+                "rgba(255, 0, 0,1.0)",
+                "Shipping lane 2",
+                "rgba(255, 0, 0,1.0)",
+                "Shipping lane 6",
                 "rgba(255, 0, 0,1.0)",
                 "rgba(200, 200, 200, 0)"
               ],
@@ -3686,6 +3690,13 @@
     {
       "name": "Methane Plume Detection",
       "isActive": false,
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/ONERA_ENMAP/Doha/ENMAP01-____L1C-DT0000158941_20251013T075157Z_003_V010506_20260323T193825Z-SPECTRAL_IMAGEdl0_Concentration_CH4_xppb.tif",
+          "format": "cog",
+          "zIndex": 50
+        }
+      ],
       "meta": {
         "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
         "attribution": {
@@ -3693,7 +3704,6 @@
           "url": "https://www.onera.fr/en"
         },
         "categories": [],
-        "units": "dxch4 in ppb (total column)",
         "colormaps": [
           {
             "min": 0,
@@ -3702,7 +3712,8 @@
             "name": "jet",
             "reverse": false
           }
-        ]
+        ],
+        "units": "dxch4 in ppb (total column)"
       },
       "layout": {
         "interfaceGroup": "Plume Detection from ENMAP",
@@ -3723,14 +3734,7 @@
             "blendControls": false
           }
         }
-      },
-      "data": [
-        {
-          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/ONERA_ENMAP/Doha/ENMAP01-____L1C-DT0000158941_20251013T075157Z_003_V010506_20260323T193825Z-SPECTRAL_IMAGEdl0_Concentration_CH4_xppb.tif",
-          "format": "cog",
-          "zIndex": 50
-        }
-      ]
+      }
     },
     {
       "name": "Piree Theodoria Time Series",

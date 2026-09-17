@@ -9,10 +9,13 @@
   },
   "interfaceGroups": [
     "Regional Inversions",
-    "STEAM All pollutants (Time series)",
+    "STEAM All pollutants V4.3.1 (Time series)",
+	"STEAM All pollutants V5.5.0 (Time series)",
     "Individual NOx Plumes (Time series)",
     "Shipping Lanes Emissions",
-    "Plume Detection from ENMAP"
+    "Plume Detection from ENMAP",
+	"Plume Detection from GHGSAT",
+	"Plume Detection from ENMAP (ONERA)"
   ],
   "exclusivitySets": [],
   "mapConstraints": {
@@ -1688,7 +1691,7 @@
         "units": "KG"
       },
       "layout": {
-        "interfaceGroup": "STEAM All pollutants (Time series)",
+        "interfaceGroup": "STEAM All pollutants V4.3.1 (Time series)",
         "contentLocation": "infoPanel",
         "layerCard": {
           "toggleable": true
@@ -1772,7 +1775,7 @@
         "units": "KG"
       },
       "layout": {
-        "interfaceGroup": "STEAM All pollutants (Time series)",
+        "interfaceGroup": "STEAM All pollutants V4.3.1 (Time series)",
         "contentLocation": "infoPanel",
         "layerCard": {
           "toggleable": true
@@ -1856,7 +1859,7 @@
         "units": "KG"
       },
       "layout": {
-        "interfaceGroup": "STEAM All pollutants (Time series)",
+        "interfaceGroup": "STEAM All pollutants V4.3.1 (Time series)",
         "contentLocation": "infoPanel",
         "layerCard": {
           "toggleable": true
@@ -1940,7 +1943,7 @@
         "units": "KG"
       },
       "layout": {
-        "interfaceGroup": "STEAM All pollutants (Time series)",
+        "interfaceGroup": "STEAM All pollutants V4.3.1 (Time series)",
         "contentLocation": "infoPanel",
         "layerCard": {
           "toggleable": true
@@ -2024,7 +2027,7 @@
         "units": "KG"
       },
       "layout": {
-        "interfaceGroup": "STEAM All pollutants (Time series)",
+        "interfaceGroup": "STEAM All pollutants V4.3.1 (Time series)",
         "contentLocation": "infoPanel",
         "layerCard": {
           "toggleable": true
@@ -2108,7 +2111,7 @@
         "units": "KG"
       },
       "layout": {
-        "interfaceGroup": "STEAM All pollutants (Time series)",
+        "interfaceGroup": "STEAM All pollutants V4.3.1 (Time series)",
         "contentLocation": "infoPanel",
         "layerCard": {
           "toggleable": true
@@ -2192,7 +2195,7 @@
         "units": "KG"
       },
       "layout": {
-        "interfaceGroup": "STEAM All pollutants (Time series)",
+        "interfaceGroup": "STEAM All pollutants V4.3.1 (Time series)",
         "contentLocation": "infoPanel",
         "layerCard": {
           "toggleable": true
@@ -2276,7 +2279,7 @@
         "units": "KG"
       },
       "layout": {
-        "interfaceGroup": "STEAM All pollutants (Time series)",
+        "interfaceGroup": "STEAM All pollutants V4.3.1 (Time series)",
         "contentLocation": "infoPanel",
         "layerCard": {
           "toggleable": true
@@ -2360,7 +2363,7 @@
         "units": "KG"
       },
       "layout": {
-        "interfaceGroup": "STEAM All pollutants (Time series)",
+        "interfaceGroup": "STEAM All pollutants V4.3.1 (Time series)",
         "contentLocation": "infoPanel",
         "layerCard": {
           "toggleable": true
@@ -10458,6 +10461,5732 @@
           }
         }
       }
+    },
+	{
+      "name": "Methane Argentina Plume Detection: 2024/07/13",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_GHGSAT/CH4_20240713_GHGSat_Argentina_Plume.tif",
+          "format": "cog",
+          "zIndex": 50
+        }
+      ],
+      "meta": {
+        "description": "Add description",
+        "attribution": {
+          "text": "add text",
+          "url": "https://www.ghgsat.com/"
+        },
+        "categories": [],
+        "colormaps": [
+          {
+            "min": 23,
+            "max": 128,
+            "steps": 50,
+            "name": "jet",
+            "reverse": false
+          }
+        ],
+        "units": "add units"
+      },
+      "layout": {
+        "interfaceGroup": "Plume Detection from GHGSAT",
+        "contentLocation": "infoPanel",
+        "layerCard": {
+          "toggleable": true
+        },
+        "infoPanel": {
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true,
+            "temporalControls": false,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        }
+      }
+    },
+	{
+      "name": "Methane Netherlands Plume Detection: 2026/02/25",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_GHGSAT/CH4_20260225_GHGSat_Netherlands_Plume.tif",
+          "format": "cog",
+          "zIndex": 50
+        }
+      ],
+      "meta": {
+        "description": "Add description",
+        "attribution": {
+          "text": "add text",
+          "url": "https://www.ghgsat.com/"
+        },
+        "categories": [],
+        "colormaps": [
+          {
+            "min": 30,
+            "max": 166,
+            "steps": 50,
+            "name": "jet",
+            "reverse": false
+          }
+        ],
+        "units": "add units"
+      },
+      "layout": {
+        "interfaceGroup": "Plume Detection from GHGSAT",
+        "contentLocation": "infoPanel",
+        "layerCard": {
+          "toggleable": true
+        },
+        "infoPanel": {
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true,
+            "temporalControls": false,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        }
+      }
+    },
+	{
+      "name": "Methane Greece v1 Plume Detection: 2025/07/12",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_GHGSAT/CH4_20250712_GHGSat_Greece1_Plume.tif",
+          "format": "cog",
+          "zIndex": 50
+        }
+      ],
+      "meta": {
+        "description": "Add description",
+        "attribution": {
+          "text": "add text",
+          "url": "https://www.ghgsat.com/"
+        },
+        "categories": [],
+        "colormaps": [
+          {
+            "min": 35,
+            "max": 120,
+            "steps": 50,
+            "name": "jet",
+            "reverse": false
+          }
+        ],
+        "units": "add units"
+      },
+      "layout": {
+        "interfaceGroup": "Plume Detection from GHGSAT",
+        "contentLocation": "infoPanel",
+        "layerCard": {
+          "toggleable": true
+        },
+        "infoPanel": {
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true,
+            "temporalControls": false,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        }
+      }
+    },
+	{
+      "name": "Methane Greece v2 Plume Detection: 2025/07/12",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/CH4_GHGSAT/CH4_20250712_GHGSat_Greece2_Plume.tif",
+          "format": "cog",
+          "zIndex": 50
+        }
+      ],
+      "meta": {
+        "description": "Add description",
+        "attribution": {
+          "text": "add text",
+          "url": "https://www.ghgsat.com/"
+        },
+        "categories": [],
+        "colormaps": [
+          {
+            "min": 35,
+            "max": 120,
+            "steps": 50,
+            "name": "jet",
+            "reverse": false
+          }
+        ],
+        "units": "add units"
+      },
+      "layout": {
+        "interfaceGroup": "Plume Detection from GHGSAT",
+        "contentLocation": "infoPanel",
+        "layerCard": {
+          "toggleable": true
+        },
+        "infoPanel": {
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true,
+            "temporalControls": false,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        }
+      }
+    },
+	{
+      "name": "NOx",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/NOx_FMI_STEAM_20190101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1546300800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/NOx_FMI_STEAM_20200101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1577836800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/NOx_FMI_STEAM_20210101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1609459200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/NOx_FMI_STEAM_20220101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1640995200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/NOx_FMI_STEAM_20230101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1672531200
+          ]
+        }
+      ],
+      "timeframe": "Years",
+      "meta": {
+        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05° × 0.1° from 2019 to 2023, covering the European maritime domain (15.25°W to 40°E; 25°N to 74.25°N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS). Recent refinements of STEAM include updated emission factors for NOx, CO2, SOx, PM2.5, and alternative fuels like methanol and ammonia, ensuring alignment with evolving maritime regulations and technologies.",
+        "attribution": {
+          "text": "Finnish Meteorological Institute, Jukka-Pekka.Jalkanen@fmi.fi",
+          "url": "https://en.ilmatieteenlaitos.fi/"
+        },
+        "categories": [],
+        "colormaps": [
+          {
+            "min": 0,
+            "max": 40000,
+            "steps": 200,
+            "name": "jet",
+            "reverse": false
+          }
+        ],
+        "units": "KG"
+      },
+      "layout": {
+        "interfaceGroup": "STEAM All pollutants V5.5.0 (Time series)",
+        "contentLocation": "infoPanel",
+        "layerCard": {
+          "toggleable": true
+        },
+        "infoPanel": {
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true,
+            "temporalControls": true,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        }
+      }
+    },
+    {
+      "name": "SOx",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/SOx_FMI_STEAM_20190101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1546300800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/SOx_FMI_STEAM_20200101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1577836800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/SOx_FMI_STEAM_20210101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1609459200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/SOx_FMI_STEAM_20220101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1640995200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/SOx_FMI_STEAM_20230101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1672531200
+          ]
+        }
+      ],
+      "timeframe": "Years",
+      "meta": {
+        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05° × 0.1° from 2019 to 2023, covering the European maritime domain (15.25°W to 40°E; 25°N to 74.25°N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS). Recent refinements of STEAM include updated emission factors for NOx, CO2, SOx, PM2.5, and alternative fuels like methanol and ammonia, ensuring alignment with evolving maritime regulations and technologies.",
+        "attribution": {
+          "text": "Finnish Meteorological Institute, Jukka-Pekka.Jalkanen@fmi.fi",
+          "url": "https://en.ilmatieteenlaitos.fi/"
+        },
+        "categories": [],
+        "colormaps": [
+          {
+            "min": 0,
+            "max": 4000,
+            "steps": 200,
+            "name": "jet",
+            "reverse": false
+          }
+        ],
+        "units": "KG"
+      },
+      "layout": {
+        "interfaceGroup": "STEAM All pollutants V5.5.0 (Time series)",
+        "contentLocation": "infoPanel",
+        "layerCard": {
+          "toggleable": true
+        },
+        "infoPanel": {
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true,
+            "temporalControls": true,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        }
+      }
+    },
+    {
+      "name": "CO",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/CO_FMI_STEAM_20190101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1546300800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/CO_FMI_STEAM_20200101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1577836800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/CO_FMI_STEAM_20210101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1609459200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/CO_FMI_STEAM_20220101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1640995200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/CO_FMI_STEAM_20230101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1672531200
+          ]
+        }
+      ],
+      "timeframe": "Years",
+      "meta": {
+        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05° × 0.1° from 2019 to 2023, covering the European maritime domain (15.25°W to 40°E; 25°N to 74.25°N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS). Recent refinements of STEAM include updated emission factors for NOx, CO2, SOx, PM2.5, and alternative fuels like methanol and ammonia, ensuring alignment with evolving maritime regulations and technologies.",
+        "attribution": {
+          "text": "Finnish Meteorological Institute, Jukka-Pekka.Jalkanen@fmi.fi",
+          "url": "https://en.ilmatieteenlaitos.fi/"
+        },
+        "categories": [],
+        "colormaps": [
+          {
+            "min": 0,
+            "max": 6000,
+            "steps": 200,
+            "name": "jet",
+            "reverse": false
+          }
+        ],
+        "units": "KG"
+      },
+      "layout": {
+        "interfaceGroup": "STEAM All pollutants V5.5.0 (Time series)",
+        "contentLocation": "infoPanel",
+        "layerCard": {
+          "toggleable": true
+        },
+        "infoPanel": {
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true,
+            "temporalControls": true,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        }
+      }
+    },
+    {
+      "name": "CO2",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/CO2_FMI_STEAM_20190101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1546300800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/CO2_FMI_STEAM_20200101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1577836800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/CO2_FMI_STEAM_20210101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1609459200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/CO2_FMI_STEAM_20220101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1640995200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/CO2_FMI_STEAM_20230101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1672531200
+          ]
+        }
+      ],
+      "timeframe": "Years",
+      "meta": {
+        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05° × 0.1° from 2019 to 2023, covering the European maritime domain (15.25°W to 40°E; 25°N to 74.25°N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS). Recent refinements of STEAM include updated emission factors for NOx, CO2, SOx, PM2.5, and alternative fuels like methanol and ammonia, ensuring alignment with evolving maritime regulations and technologies.",
+        "attribution": {
+          "text": "Finnish Meteorological Institute, Jukka-Pekka.Jalkanen@fmi.fi",
+          "url": "https://en.ilmatieteenlaitos.fi/"
+        },
+        "categories": [],
+        "colormaps": [
+          {
+            "min": 0,
+            "max": 2000000,
+            "steps": 200,
+            "name": "jet",
+            "reverse": false
+          }
+        ],
+        "units": "KG"
+      },
+      "layout": {
+        "interfaceGroup": "STEAM All pollutants V5.5.0 (Time series)",
+        "contentLocation": "infoPanel",
+        "layerCard": {
+          "toggleable": true
+        },
+        "infoPanel": {
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true,
+            "temporalControls": true,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        }
+      }
+    },
+    {
+      "name": "PM25",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/PM25_FMI_STEAM_20190101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1546300800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/PM25_FMI_STEAM_20200101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1577836800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/PM25_FMI_STEAM_20210101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1609459200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/PM25_FMI_STEAM_20220101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1640995200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/PM25_FMI_STEAM_20230101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1672531200
+          ]
+        }
+      ],
+      "timeframe": "Years",
+      "meta": {
+        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05° × 0.1° from 2019 to 2023, covering the European maritime domain (15.25°W to 40°E; 25°N to 74.25°N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS). Recent refinements of STEAM include updated emission factors for NOx, CO2, SOx, PM2.5, and alternative fuels like methanol and ammonia, ensuring alignment with evolving maritime regulations and technologies.",
+        "attribution": {
+          "text": "Finnish Meteorological Institute, Jukka-Pekka.Jalkanen@fmi.fi",
+          "url": "https://en.ilmatieteenlaitos.fi/"
+        },
+        "categories": [],
+        "colormaps": [
+          {
+            "min": 0,
+            "max": 700,
+            "steps": 200,
+            "name": "jet",
+            "reverse": false
+          }
+        ],
+        "units": "KG"
+      },
+      "layout": {
+        "interfaceGroup": "STEAM All pollutants V5.5.0 (Time series)",
+        "contentLocation": "infoPanel",
+        "layerCard": {
+          "toggleable": true
+        },
+        "infoPanel": {
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true,
+            "temporalControls": true,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        }
+      }
+    },
+    {
+      "name": "SO4",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/SO4_FMI_STEAM_20190101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1546300800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/SO4_FMI_STEAM_20200101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1577836800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/SO4_FMI_STEAM_20210101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1609459200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/SO4_FMI_STEAM_20220101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1640995200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/SO4_FMI_STEAM_20230101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1672531200
+          ]
+        }
+      ],
+      "timeframe": "Years",
+      "meta": {
+        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05° × 0.1° from 2019 to 2023, covering the European maritime domain (15.25°W to 40°E; 25°N to 74.25°N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS). Recent refinements of STEAM include updated emission factors for NOx, CO2, SOx, PM2.5, and alternative fuels like methanol and ammonia, ensuring alignment with evolving maritime regulations and technologies.",
+        "attribution": {
+          "text": "Finnish Meteorological Institute, Jukka-Pekka.Jalkanen@fmi.fi",
+          "url": "https://en.ilmatieteenlaitos.fi/"
+        },
+        "categories": [],
+        "colormaps": [
+          {
+            "min": 0,
+            "max": 2000,
+            "steps": 200,
+            "name": "jet",
+            "reverse": false
+          }
+        ],
+        "units": "KG"
+      },
+      "layout": {
+        "interfaceGroup": "STEAM All pollutants V5.5.0 (Time series)",
+        "contentLocation": "infoPanel",
+        "layerCard": {
+          "toggleable": true
+        },
+        "infoPanel": {
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true,
+            "temporalControls": true,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        }
+      }
+    },
+    {
+      "name": "CH4",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/CH4_FMI_STEAM_20190101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1546300800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/CH4_FMI_STEAM_20200101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1577836800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/CH4_FMI_STEAM_20210101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1609459200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/CH4_FMI_STEAM_20220101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1640995200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/CH4_FMI_STEAM_20230101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1672531200
+          ]
+        }
+      ],
+      "timeframe": "Years",
+      "meta": {
+        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05° × 0.1° from 2019 to 2023, covering the European maritime domain (15.25°W to 40°E; 25°N to 74.25°N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS). Recent refinements of STEAM include updated emission factors for NOx, CO2, SOx, PM2.5, and alternative fuels like methanol and ammonia, ensuring alignment with evolving maritime regulations and technologies.",
+        "attribution": {
+          "text": "Finnish Meteorological Institute, Jukka-Pekka.Jalkanen@fmi.fi",
+          "url": "https://en.ilmatieteenlaitos.fi/"
+        },
+        "categories": [],
+        "colormaps": [
+          {
+            "min": 0,
+            "max": 4000,
+            "steps": 200,
+            "name": "jet",
+            "reverse": false
+          }
+        ],
+        "units": "KG"
+      },
+      "layout": {
+        "interfaceGroup": "STEAM All pollutants V5.5.0 (Time series)",
+        "contentLocation": "infoPanel",
+        "layerCard": {
+          "toggleable": true
+        },
+        "infoPanel": {
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true,
+            "temporalControls": true,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        }
+      }
+    },
+    {
+      "name": "NH3",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/NH3_FMI_STEAM_20190101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1546300800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/NH3_FMI_STEAM_20200101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1577836800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/NH3_FMI_STEAM_20210101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1609459200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/NH3_FMI_STEAM_20220101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1640995200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/NH3_FMI_STEAM_20230101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1672531200
+          ]
+        }
+      ],
+      "timeframe": "Years",
+      "meta": {
+        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05° × 0.1° from 2019 to 2023, covering the European maritime domain (15.25°W to 40°E; 25°N to 74.25°N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS). Recent refinements of STEAM include updated emission factors for NOx, CO2, SOx, PM2.5, and alternative fuels like methanol and ammonia, ensuring alignment with evolving maritime regulations and technologies.",
+        "attribution": {
+          "text": "Finnish Meteorological Institute, Jukka-Pekka.Jalkanen@fmi.fi",
+          "url": "https://en.ilmatieteenlaitos.fi/"
+        },
+        "categories": [],
+        "colormaps": [
+          {
+            "min": 0,
+            "max": 60,
+            "steps": 200,
+            "name": "jet",
+            "reverse": false
+          }
+        ],
+        "units": "KG"
+      },
+      "layout": {
+        "interfaceGroup": "STEAM All pollutants V5.5.0 (Time series)",
+        "contentLocation": "infoPanel",
+        "layerCard": {
+          "toggleable": true
+        },
+        "infoPanel": {
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true,
+            "temporalControls": true,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        }
+      }
+    },
+    {
+      "name": "N2O",
+      "isActive": false,
+      "data": [
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/N2O_FMI_STEAM_20190101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1546300800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/N2O_FMI_STEAM_20200101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1577836800
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/N2O_FMI_STEAM_20210101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1609459200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/N2O_FMI_STEAM_20220101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1640995200
+          ]
+        },
+        {
+          "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/STEAM_FMI_Pollutants_v5.5/N2O_FMI_STEAM_20230101.tif",
+          "format": "cog",
+          "zIndex": 50,
+          "timestamps": [
+            1672531200
+          ]
+        }
+      ],
+      "timeframe": "Months",
+      "meta": {
+        "description": "This dataset provides gridded binary data at an hourly temporal resolution and at a finer spatial resolution of 0.05° × 0.1° from 2019 to 2023, covering the European maritime domain (15.25°W to 40°E; 25°N to 74.25°N).    In principle, STEAM produces detailed ship emission estimates by integrating vessel activity data from the Orbcomm Ltd AIS archive with technical specifications from the S&P Global databases. It models ship fuel consumption and emissions by incorporating its internal database of ship-specific parameters, such as engine load and abatement technologies, and environmental influences, including wind, sea ice, and ocean currents from the Copernicus Climate Data Store (CDS) and Copernicus Marine Environmental Monitoring Service (CMEMS). Recent refinements of STEAM include updated emission factors for NOx, CO2, SOx, PM2.5, and alternative fuels like methanol and ammonia, ensuring alignment with evolving maritime regulations and technologies.",
+        "attribution": {
+          "text": "Finnish Meteorological Institute, Jukka-Pekka.Jalkanen@fmi.fi",
+          "url": "https://en.ilmatieteenlaitos.fi/"
+        },
+        "categories": [],
+        "colormaps": [
+          {
+            "min": 0,
+            "max": 1000,
+            "steps": 200,
+            "name": "jet",
+            "reverse": false
+          }
+        ],
+        "units": "KG"
+      },
+      "layout": {
+        "interfaceGroup": "STEAM All pollutants V5.5.0 (Time series)",
+        "contentLocation": "infoPanel",
+        "layerCard": {
+          "toggleable": true
+        },
+        "infoPanel": {
+          "legend": {
+            "type": "swatch"
+          },
+          "controls": {
+            "opacitySlider": true,
+            "zoomToCenter": true,
+            "temporalControls": true,
+            "constraintSlider": false,
+            "blendControls": false
+          }
+        }
+      }
+    },
+	{
+    "name": "ENMAP01_Angola_20251022T101106Z_Radiance",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Angola_20251022T101106Z_Radiance.tif",
+        "format": "cog",
+        "zIndex": 50,
+        "style": {
+          "variables": {
+            "rBand": 1,
+            "gBand": 2,
+            "bBand": 3,
+            "rMin": 0.000259661755990237,
+            "rMax": 0.045072197914123535,
+            "gMin": 0.09502925723791122,
+            "gMax": 0.32239988446235657,
+            "bMin": 0.06523755192756653,
+            "bMax": 0.3499418795108795
+          },
+          "color": [
+            "array",
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "rBand"
+                ]
+              ],
+              [
+                "var",
+                "rMin"
+              ],
+              0,
+              [
+                "var",
+                "rMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "gBand"
+                ]
+              ],
+              [
+                "var",
+                "gMin"
+              ],
+              0,
+              [
+                "var",
+                "gMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "bBand"
+                ]
+              ],
+              [
+                "var",
+                "bMin"
+              ],
+              0,
+              [
+                "var",
+                "bMax"
+              ],
+              1
+            ],
+            [
+              "case",
+              [
+                "==",
+                [
+                  "band",
+                  [
+                    "var",
+                    "rBand"
+                  ]
+                ],
+                0
+              ],
+              0,
+              1
+            ]
+          ]
+        },
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "convertToRGB": true
+      }
+    ],
+    "meta": {
+      "description": "EnMAP Input image",
+      "attribution": {
+        "text": "ONERA, French Areospace Space, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": []
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Angola",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
     }
+  },
+  {
+    "name": "ENMAP01_Angola_20251022T101106Z_Concentration",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Angola_20251022T101106Z_Concentration.tif",
+        "format": "cog",
+        "zIndex": 50
+      }
+    ],
+    "meta": {
+      "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
+      "attribution": {
+        "text": "ONERA French Areospace Lab, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": [],
+      "colormaps": [
+        {
+          "min": 0,
+          "max": 3546,
+          "steps": 50,
+          "name": "jet",
+          "reverse": false
+        }
+      ],
+      "units": "dxch4 in ppb (total column)"
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Angola",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Angola_20251022T101106Z_Synthetic",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Angola_20251022T101106Z_Synthetic.tif",
+        "format": "cog",
+        "zIndex": 50
+      }
+    ],
+    "meta": {
+      "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
+      "attribution": {
+        "text": "ONERA French Areospace Lab, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": [],
+      "colormaps": [
+        {
+          "min": 0,
+          "max": 746,
+          "steps": 50,
+          "name": "jet",
+          "reverse": false
+        }
+      ],
+      "units": "dxch4 in ppb (total column)"
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Angola",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+    {
+    "name": "ENMAP01_Caspian_20250721T080913Z_Radiance",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Caspian_20250721T080913Z_Radiance.tif",
+        "format": "cog",
+        "zIndex": 50,
+        "style": {
+          "variables": {
+            "rBand": 1,
+            "gBand": 2,
+            "bBand": 3,
+            "rMin": 0.00025113479932770133,
+            "rMax": 0.008629907853901386,
+            "gMin": 0.07360021770000458,
+            "gMax": 0.3035491406917572,
+            "bMin": 0.04450231045484543,
+            "bMax": 0.31799718737602234
+          },
+          "color": [
+            "array",
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "rBand"
+                ]
+              ],
+              [
+                "var",
+                "rMin"
+              ],
+              0,
+              [
+                "var",
+                "rMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "gBand"
+                ]
+              ],
+              [
+                "var",
+                "gMin"
+              ],
+              0,
+              [
+                "var",
+                "gMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "bBand"
+                ]
+              ],
+              [
+                "var",
+                "bMin"
+              ],
+              0,
+              [
+                "var",
+                "bMax"
+              ],
+              1
+            ],
+            [
+              "case",
+              [
+                "==",
+                [
+                  "band",
+                  [
+                    "var",
+                    "rBand"
+                  ]
+                ],
+                0
+              ],
+              0,
+              1
+            ]
+          ]
+        },
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "convertToRGB": true
+      }
+    ],
+    "meta": {
+      "description": "EnMAP Input image",
+      "attribution": {
+        "text": "ONERA, French Areospace Space, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": []
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Caspian",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Caspian_20250721T080913Z_Synthetic",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Caspian_20250721T080913Z_Synthetic.tif",
+        "format": "cog",
+        "zIndex": 50
+      }
+    ],
+    "meta": {
+      "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
+      "attribution": {
+        "text": "ONERA French Areospace Lab, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": [],
+      "colormaps": [
+        {
+          "min": 0,
+          "max": 909,
+          "steps": 50,
+          "name": "jet",
+          "reverse": false
+        }
+      ],
+      "units": "dxch4 in ppb (total column)"
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Caspian",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Caspian_20250620T080619Z_Radiance",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Caspian_20250620T080619Z_Radiance.tif",
+        "format": "cog",
+        "zIndex": 50,
+        "style": {
+          "variables": {
+            "rBand": 1,
+            "gBand": 2,
+            "bBand": 3,
+            "rMin": 4.7744215407874435e-05,
+            "rMax": 0.006828561425209045,
+            "gMin": 0.06009204313158989,
+            "gMax": 0.16595514118671417,
+            "bMin": 0.031121276319026947,
+            "bMax": 0.18105579912662506
+          },
+          "color": [
+            "array",
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "rBand"
+                ]
+              ],
+              [
+                "var",
+                "rMin"
+              ],
+              0,
+              [
+                "var",
+                "rMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "gBand"
+                ]
+              ],
+              [
+                "var",
+                "gMin"
+              ],
+              0,
+              [
+                "var",
+                "gMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "bBand"
+                ]
+              ],
+              [
+                "var",
+                "bMin"
+              ],
+              0,
+              [
+                "var",
+                "bMax"
+              ],
+              1
+            ],
+            [
+              "case",
+              [
+                "==",
+                [
+                  "band",
+                  [
+                    "var",
+                    "rBand"
+                  ]
+                ],
+                0
+              ],
+              0,
+              1
+            ]
+          ]
+        },
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "convertToRGB": true
+      }
+    ],
+    "meta": {
+      "description": "EnMAP Input image",
+      "attribution": {
+        "text": "ONERA, French Areospace Space, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": []
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Caspian",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Caspian_20250620T080619Z_Synthetic",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Caspian_20250620T080619Z_Synthetic.tif",
+        "format": "cog",
+        "zIndex": 50
+      }
+    ],
+    "meta": {
+      "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
+      "attribution": {
+        "text": "ONERA French Areospace Lab, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": [],
+      "colormaps": [
+        {
+          "min": 0,
+          "max": 713,
+          "steps": 50,
+          "name": "jet",
+          "reverse": false
+        }
+      ],
+      "units": "dxch4 in ppb (total column)"
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Caspian",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Caspian_20240808T081257Z_Radiance",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Caspian_20240808T081257Z_Radiance.tif",
+        "format": "cog",
+        "zIndex": 50,
+        "style": {
+          "variables": {
+            "rBand": 1,
+            "gBand": 2,
+            "bBand": 3,
+            "rMin": 0.00017701605975162238,
+            "rMax": 0.004595964215695858,
+            "gMin": 0.06823884695768356,
+            "gMax": 0.14416015148162842,
+            "bMin": 0.03938215598464012,
+            "bMax": 0.15778708457946777
+          },
+          "color": [
+            "array",
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "rBand"
+                ]
+              ],
+              [
+                "var",
+                "rMin"
+              ],
+              0,
+              [
+                "var",
+                "rMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "gBand"
+                ]
+              ],
+              [
+                "var",
+                "gMin"
+              ],
+              0,
+              [
+                "var",
+                "gMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "bBand"
+                ]
+              ],
+              [
+                "var",
+                "bMin"
+              ],
+              0,
+              [
+                "var",
+                "bMax"
+              ],
+              1
+            ],
+            [
+              "case",
+              [
+                "==",
+                [
+                  "band",
+                  [
+                    "var",
+                    "rBand"
+                  ]
+                ],
+                0
+              ],
+              0,
+              1
+            ]
+          ]
+        },
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "convertToRGB": true
+      }
+    ],
+    "meta": {
+      "description": "EnMAP Input image",
+      "attribution": {
+        "text": "ONERA, French Areospace Space, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": []
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Caspian",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Caspian_20240808T081257Z_Synthetic",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Caspian_20240808T081257Z_Synthetic.tif",
+        "format": "cog",
+        "zIndex": 50
+      }
+    ],
+    "meta": {
+      "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
+      "attribution": {
+        "text": "ONERA French Areospace Lab, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": [],
+      "colormaps": [
+        {
+          "min": 0,
+          "max": 592,
+          "steps": 50,
+          "name": "jet",
+          "reverse": false
+        }
+      ],
+      "units": "dxch4 in ppb (total column)"
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Caspian",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Caspian_20240712T081320Z_Radiance",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Caspian_20240712T081320Z_Radiance.tif",
+        "format": "cog",
+        "zIndex": 50,
+        "style": {
+          "variables": {
+            "rBand": 1,
+            "gBand": 2,
+            "bBand": 3,
+            "rMin": 4.4985965359956026e-05,
+            "rMax": 0.005302391946315765,
+            "gMin": 0.06409039348363876,
+            "gMax": 0.11990965902805328,
+            "bMin": 0.03653073310852051,
+            "bMax": 0.12627080082893372
+          },
+          "color": [
+            "array",
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "rBand"
+                ]
+              ],
+              [
+                "var",
+                "rMin"
+              ],
+              0,
+              [
+                "var",
+                "rMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "gBand"
+                ]
+              ],
+              [
+                "var",
+                "gMin"
+              ],
+              0,
+              [
+                "var",
+                "gMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "bBand"
+                ]
+              ],
+              [
+                "var",
+                "bMin"
+              ],
+              0,
+              [
+                "var",
+                "bMax"
+              ],
+              1
+            ],
+            [
+              "case",
+              [
+                "==",
+                [
+                  "band",
+                  [
+                    "var",
+                    "rBand"
+                  ]
+                ],
+                0
+              ],
+              0,
+              1
+            ]
+          ]
+        },
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "convertToRGB": true
+      }
+    ],
+    "meta": {
+      "description": "EnMAP Input image",
+      "attribution": {
+        "text": "ONERA, French Areospace Space, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": []
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Caspian",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Caspian_20240712T081320Z_Concentration",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Caspian_20240712T081320Z_Concentration.tif",
+        "format": "cog",
+        "zIndex": 50
+      }
+    ],
+    "meta": {
+      "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
+      "attribution": {
+        "text": "ONERA French Areospace Lab, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": [],
+      "colormaps": [
+        {
+          "min": 0,
+          "max": 951,
+          "steps": 50,
+          "name": "jet",
+          "reverse": false
+        }
+      ],
+      "units": "dxch4 in ppb (total column)"
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Caspian",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Caspian_20240712T081320Z_Synthetic",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Caspian_20240712T081320Z_Synthetic.tif",
+        "format": "cog",
+        "zIndex": 50
+      }
+    ],
+    "meta": {
+      "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
+      "attribution": {
+        "text": "ONERA French Areospace Lab, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": [],
+      "colormaps": [
+        {
+          "min": 0,
+          "max": 345,
+          "steps": 50,
+          "name": "jet",
+          "reverse": false
+        }
+      ],
+      "units": "dxch4 in ppb (total column)"
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Caspian",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+    {
+    "name": "ENMAP01_Gilbratar_20260119T114413Z_Radiance",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Gilbratar_20260119T114413Z_Radiance.tif",
+        "format": "cog",
+        "zIndex": 50,
+        "style": {
+          "variables": {
+            "rBand": 1,
+            "gBand": 2,
+            "bBand": 3,
+            "rMin": -1.1054813512600958e-05,
+            "rMax": 0.006938388105481863,
+            "gMin": 0.034546807408332825,
+            "gMax": 0.16308118402957916,
+            "bMin": 0.0155936349183321,
+            "bMax": 0.18067903816699982
+          },
+          "color": [
+            "array",
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "rBand"
+                ]
+              ],
+              [
+                "var",
+                "rMin"
+              ],
+              0,
+              [
+                "var",
+                "rMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "gBand"
+                ]
+              ],
+              [
+                "var",
+                "gMin"
+              ],
+              0,
+              [
+                "var",
+                "gMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "bBand"
+                ]
+              ],
+              [
+                "var",
+                "bMin"
+              ],
+              0,
+              [
+                "var",
+                "bMax"
+              ],
+              1
+            ],
+            [
+              "case",
+              [
+                "==",
+                [
+                  "band",
+                  [
+                    "var",
+                    "rBand"
+                  ]
+                ],
+                0
+              ],
+              0,
+              1
+            ]
+          ]
+        },
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "convertToRGB": true
+      }
+    ],
+    "meta": {
+      "description": "EnMAP Input image",
+      "attribution": {
+        "text": "ONERA, French Areospace Space, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": []
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Gilbratar",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Gilbratar_20260119T114413Z_Synthetic",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Gilbratar_20260119T114413Z_Synthetic.tif",
+        "format": "cog",
+        "zIndex": 50
+      }
+    ],
+    "meta": {
+      "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
+      "attribution": {
+        "text": "ONERA French Areospace Lab, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": [],
+      "colormaps": [
+        {
+          "min": 0,
+          "max": 206,
+          "steps": 50,
+          "name": "jet",
+          "reverse": false
+        }
+      ],
+      "units": "dxch4 in ppb (total column)"
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Gilbratar",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Gilbratar_20251126T114356Z_Radiance",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Gilbratar_20251126T114356Z_Radiance.tif",
+        "format": "cog",
+        "zIndex": 50,
+        "style": {
+          "variables": {
+            "rBand": 1,
+            "gBand": 2,
+            "bBand": 3,
+            "rMin": -2.526687239878811e-05,
+            "rMax": 0.019204339012503624,
+            "gMin": 0.033270519226789474,
+            "gMax": 0.12514321506023407,
+            "bMin": 0.014255172573029995,
+            "bMax": 0.15437504649162292
+          },
+          "color": [
+            "array",
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "rBand"
+                ]
+              ],
+              [
+                "var",
+                "rMin"
+              ],
+              0,
+              [
+                "var",
+                "rMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "gBand"
+                ]
+              ],
+              [
+                "var",
+                "gMin"
+              ],
+              0,
+              [
+                "var",
+                "gMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "bBand"
+                ]
+              ],
+              [
+                "var",
+                "bMin"
+              ],
+              0,
+              [
+                "var",
+                "bMax"
+              ],
+              1
+            ],
+            [
+              "case",
+              [
+                "==",
+                [
+                  "band",
+                  [
+                    "var",
+                    "rBand"
+                  ]
+                ],
+                0
+              ],
+              0,
+              1
+            ]
+          ]
+        },
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "convertToRGB": true
+      }
+    ],
+    "meta": {
+      "description": "EnMAP Input image",
+      "attribution": {
+        "text": "ONERA, French Areospace Space, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": []
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Gilbratar",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Gilbratar_20251126T114356Z_Synthetic",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Gilbratar_20251126T114356Z_Synthetic.tif",
+        "format": "cog",
+        "zIndex": 50
+      }
+    ],
+    "meta": {
+      "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
+      "attribution": {
+        "text": "ONERA French Areospace Lab, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": [],
+      "colormaps": [
+        {
+          "min": 0,
+          "max": 155,
+          "steps": 50,
+          "name": "jet",
+          "reverse": false
+        }
+      ],
+      "units": "dxch4 in ppb (total column)"
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Gilbratar",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Gilbratar_20250617T114438Z_Radiance",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Gilbratar_20250617T114438Z_Radiance.tif",
+        "format": "cog",
+        "zIndex": 50,
+        "style": {
+          "variables": {
+            "rBand": 1,
+            "gBand": 2,
+            "bBand": 3,
+            "rMin": 0.0002486382727511227,
+            "rMax": 0.01461051870137453,
+            "gMin": 0.06298274546861649,
+            "gMax": 0.3018670082092285,
+            "bMin": 0.04350193217396736,
+            "bMax": 0.27043747901916504
+          },
+          "color": [
+            "array",
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "rBand"
+                ]
+              ],
+              [
+                "var",
+                "rMin"
+              ],
+              0,
+              [
+                "var",
+                "rMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "gBand"
+                ]
+              ],
+              [
+                "var",
+                "gMin"
+              ],
+              0,
+              [
+                "var",
+                "gMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "bBand"
+                ]
+              ],
+              [
+                "var",
+                "bMin"
+              ],
+              0,
+              [
+                "var",
+                "bMax"
+              ],
+              1
+            ],
+            [
+              "case",
+              [
+                "==",
+                [
+                  "band",
+                  [
+                    "var",
+                    "rBand"
+                  ]
+                ],
+                0
+              ],
+              0,
+              1
+            ]
+          ]
+        },
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "convertToRGB": true
+      }
+    ],
+    "meta": {
+      "description": "EnMAP Input image",
+      "attribution": {
+        "text": "ONERA, French Areospace Space, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": []
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Gilbratar",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Gilbratar_20250617T114438Z_Synthetic",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Gilbratar_20250617T114438Z_Synthetic.tif",
+        "format": "cog",
+        "zIndex": 50
+      }
+    ],
+    "meta": {
+      "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
+      "attribution": {
+        "text": "ONERA French Areospace Lab, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": [],
+      "colormaps": [
+        {
+          "min": 0,
+          "max": 740,
+          "steps": 50,
+          "name": "jet",
+          "reverse": false
+        }
+      ],
+      "units": "dxch4 in ppb (total column)"
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Gilbratar",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Gilbratar_20250424T114359Z_Radiance",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Gilbratar_20250424T114359Z_Radiance.tif",
+        "format": "cog",
+        "zIndex": 50,
+        "style": {
+          "variables": {
+            "rBand": 1,
+            "gBand": 2,
+            "bBand": 3,
+            "rMin": 0.00028171128360554576,
+            "rMax": 0.013545847497880459,
+            "gMin": 0.06261865794658661,
+            "gMax": 0.2655000686645508,
+            "bMin": 0.04197508841753006,
+            "bMax": 0.30011698603630066
+          },
+          "color": [
+            "array",
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "rBand"
+                ]
+              ],
+              [
+                "var",
+                "rMin"
+              ],
+              0,
+              [
+                "var",
+                "rMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "gBand"
+                ]
+              ],
+              [
+                "var",
+                "gMin"
+              ],
+              0,
+              [
+                "var",
+                "gMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "bBand"
+                ]
+              ],
+              [
+                "var",
+                "bMin"
+              ],
+              0,
+              [
+                "var",
+                "bMax"
+              ],
+              1
+            ],
+            [
+              "case",
+              [
+                "==",
+                [
+                  "band",
+                  [
+                    "var",
+                    "rBand"
+                  ]
+                ],
+                0
+              ],
+              0,
+              1
+            ]
+          ]
+        },
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "convertToRGB": true
+      }
+    ],
+    "meta": {
+      "description": "EnMAP Input image",
+      "attribution": {
+        "text": "ONERA, French Areospace Space, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": []
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Gilbratar",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Gilbratar_20250424T114359Z_Synthetic",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Gilbratar_20250424T114359Z_Synthetic.tif",
+        "format": "cog",
+        "zIndex": 50
+      }
+    ],
+    "meta": {
+      "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
+      "attribution": {
+        "text": "ONERA French Areospace Lab, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": [],
+      "colormaps": [
+        {
+          "min": 0,
+          "max": 977,
+          "steps": 50,
+          "name": "jet",
+          "reverse": false
+        }
+      ],
+      "units": "dxch4 in ppb (total column)"
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Gilbratar",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Gilbratar_20250328T114426Z_Radiance",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Gilbratar_20250328T114426Z_Radiance.tif",
+        "format": "cog",
+        "zIndex": 50,
+        "style": {
+          "variables": {
+            "rBand": 1,
+            "gBand": 2,
+            "bBand": 3,
+            "rMin": -8.828961654216982e-06,
+            "rMax": 0.018982628360390663,
+            "gMin": 0.047860920429229736,
+            "gMax": 0.40676432847976685,
+            "bMin": 0.02140102908015251,
+            "bMax": 0.2939928472042084
+          },
+          "color": [
+            "array",
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "rBand"
+                ]
+              ],
+              [
+                "var",
+                "rMin"
+              ],
+              0,
+              [
+                "var",
+                "rMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "gBand"
+                ]
+              ],
+              [
+                "var",
+                "gMin"
+              ],
+              0,
+              [
+                "var",
+                "gMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "bBand"
+                ]
+              ],
+              [
+                "var",
+                "bMin"
+              ],
+              0,
+              [
+                "var",
+                "bMax"
+              ],
+              1
+            ],
+            [
+              "case",
+              [
+                "==",
+                [
+                  "band",
+                  [
+                    "var",
+                    "rBand"
+                  ]
+                ],
+                0
+              ],
+              0,
+              1
+            ]
+          ]
+        },
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "convertToRGB": true
+      }
+    ],
+    "meta": {
+      "description": "EnMAP Input image",
+      "attribution": {
+        "text": "ONERA, French Areospace Space, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": []
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Gilbratar",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Gilbratar_20250328T114426Z_Synthetic",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Gilbratar_20250328T114426Z_Synthetic.tif",
+        "format": "cog",
+        "zIndex": 50
+      }
+    ],
+    "meta": {
+      "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
+      "attribution": {
+        "text": "ONERA French Areospace Lab, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": [],
+      "colormaps": [
+        {
+          "min": 0,
+          "max": 328,
+          "steps": 50,
+          "name": "jet",
+          "reverse": false
+        }
+      ],
+      "units": "dxch4 in ppb (total column)"
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Gilbratar",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Gilbratar_20240824T114421Z_Radiance",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Gilbratar_20240824T114421Z_Radiance.tif",
+        "format": "cog",
+        "zIndex": 50,
+        "style": {
+          "variables": {
+            "rBand": 1,
+            "gBand": 2,
+            "bBand": 3,
+            "rMin": 0.00015417551912833005,
+            "rMax": 0.015165125951170921,
+            "gMin": 0.06312660127878189,
+            "gMax": 0.3111721873283386,
+            "bMin": 0.039153777062892914,
+            "bMax": 0.35784727334976196
+          },
+          "color": [
+            "array",
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "rBand"
+                ]
+              ],
+              [
+                "var",
+                "rMin"
+              ],
+              0,
+              [
+                "var",
+                "rMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "gBand"
+                ]
+              ],
+              [
+                "var",
+                "gMin"
+              ],
+              0,
+              [
+                "var",
+                "gMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "bBand"
+                ]
+              ],
+              [
+                "var",
+                "bMin"
+              ],
+              0,
+              [
+                "var",
+                "bMax"
+              ],
+              1
+            ],
+            [
+              "case",
+              [
+                "==",
+                [
+                  "band",
+                  [
+                    "var",
+                    "rBand"
+                  ]
+                ],
+                0
+              ],
+              0,
+              1
+            ]
+          ]
+        },
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "convertToRGB": true
+      }
+    ],
+    "meta": {
+      "description": "EnMAP Input image",
+      "attribution": {
+        "text": "ONERA, French Areospace Space, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": []
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Gilbratar",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Gilbratar_20240824T114421Z_Synthetic",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Gilbratar_20240824T114421Z_Synthetic.tif",
+        "format": "cog",
+        "zIndex": 50
+      }
+    ],
+    "meta": {
+      "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
+      "attribution": {
+        "text": "ONERA French Areospace Lab, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": [],
+      "colormaps": [
+        {
+          "min": 0,
+          "max": 371,
+          "steps": 50,
+          "name": "jet",
+          "reverse": false
+        }
+      ],
+      "units": "dxch4 in ppb (total column)"
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Gilbratar",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Gilbratar_20240701T114438Z_Radiance",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Gilbratar_20240701T114438Z_Radiance.tif",
+        "format": "cog",
+        "zIndex": 50,
+        "style": {
+          "variables": {
+            "rBand": 1,
+            "gBand": 2,
+            "bBand": 3,
+            "rMin": 6.0896836657775566e-05,
+            "rMax": 0.03267965093255043,
+            "gMin": 0.05638514459133148,
+            "gMax": 0.31605473160743713,
+            "bMin": 0.034435320645570755,
+            "bMax": 0.3844250738620758
+          },
+          "color": [
+            "array",
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "rBand"
+                ]
+              ],
+              [
+                "var",
+                "rMin"
+              ],
+              0,
+              [
+                "var",
+                "rMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "gBand"
+                ]
+              ],
+              [
+                "var",
+                "gMin"
+              ],
+              0,
+              [
+                "var",
+                "gMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "bBand"
+                ]
+              ],
+              [
+                "var",
+                "bMin"
+              ],
+              0,
+              [
+                "var",
+                "bMax"
+              ],
+              1
+            ],
+            [
+              "case",
+              [
+                "==",
+                [
+                  "band",
+                  [
+                    "var",
+                    "rBand"
+                  ]
+                ],
+                0
+              ],
+              0,
+              1
+            ]
+          ]
+        },
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "convertToRGB": true
+      }
+    ],
+    "meta": {
+      "description": "EnMAP Input image",
+      "attribution": {
+        "text": "ONERA, French Areospace Space, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": []
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Gilbratar",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Gilbratar_20240616T115516Z_Radiance",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Gilbratar_20240616T115516Z_Radiance.tif",
+        "format": "cog",
+        "zIndex": 50,
+        "style": {
+          "variables": {
+            "rBand": 1,
+            "gBand": 2,
+            "bBand": 3,
+            "rMin": 0.0001749506191117689,
+            "rMax": 0.018887851387262344,
+            "gMin": 0.04954242706298828,
+            "gMax": 0.2850223481655121,
+            "bMin": 0.030850639566779137,
+            "bMax": 0.32480567693710327
+          },
+          "color": [
+            "array",
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "rBand"
+                ]
+              ],
+              [
+                "var",
+                "rMin"
+              ],
+              0,
+              [
+                "var",
+                "rMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "gBand"
+                ]
+              ],
+              [
+                "var",
+                "gMin"
+              ],
+              0,
+              [
+                "var",
+                "gMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "bBand"
+                ]
+              ],
+              [
+                "var",
+                "bMin"
+              ],
+              0,
+              [
+                "var",
+                "bMax"
+              ],
+              1
+            ],
+            [
+              "case",
+              [
+                "==",
+                [
+                  "band",
+                  [
+                    "var",
+                    "rBand"
+                  ]
+                ],
+                0
+              ],
+              0,
+              1
+            ]
+          ]
+        },
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "convertToRGB": true
+      }
+    ],
+    "meta": {
+      "description": "EnMAP Input image",
+      "attribution": {
+        "text": "ONERA, French Areospace Space, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": []
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Gilbratar",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Gilbratar_20220803T114734Z_Radiance",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Gilbratar_20220803T114734Z_Radiance.tif",
+        "format": "cog",
+        "zIndex": 50,
+        "style": {
+          "variables": {
+            "rBand": 1,
+            "gBand": 2,
+            "bBand": 3,
+            "rMin": 0.00010742276936070994,
+            "rMax": 0.014910374768078327,
+            "gMin": 0.0556177981197834,
+            "gMax": 0.25927162170410156,
+            "bMin": 0.03412307798862457,
+            "bMax": 0.3077905476093292
+          },
+          "color": [
+            "array",
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "rBand"
+                ]
+              ],
+              [
+                "var",
+                "rMin"
+              ],
+              0,
+              [
+                "var",
+                "rMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "gBand"
+                ]
+              ],
+              [
+                "var",
+                "gMin"
+              ],
+              0,
+              [
+                "var",
+                "gMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "bBand"
+                ]
+              ],
+              [
+                "var",
+                "bMin"
+              ],
+              0,
+              [
+                "var",
+                "bMax"
+              ],
+              1
+            ],
+            [
+              "case",
+              [
+                "==",
+                [
+                  "band",
+                  [
+                    "var",
+                    "rBand"
+                  ]
+                ],
+                0
+              ],
+              0,
+              1
+            ]
+          ]
+        },
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "convertToRGB": true
+      }
+    ],
+    "meta": {
+      "description": "EnMAP Input image",
+      "attribution": {
+        "text": "ONERA, French Areospace Space, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": []
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Gilbratar",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Gilbratar_20220803T114734Z_Synthetic",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Gilbratar_20220803T114734Z_Synthetic.tif",
+        "format": "cog",
+        "zIndex": 50
+      }
+    ],
+    "meta": {
+      "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
+      "attribution": {
+        "text": "ONERA French Areospace Lab, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": [],
+      "colormaps": [
+        {
+          "min": 0,
+          "max": 270,
+          "steps": 50,
+          "name": "jet",
+          "reverse": false
+        }
+      ],
+      "units": "dxch4 in ppb (total column)"
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Gilbratar",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Gilbratar_20220726T114034Z_Radiance",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Gilbratar_20220726T114034Z_Radiance.tif",
+        "format": "cog",
+        "zIndex": 50,
+        "style": {
+          "variables": {
+            "rBand": 1,
+            "gBand": 2,
+            "bBand": 3,
+            "rMin": 0.00014019511581864208,
+            "rMax": 0.0164863932877779,
+            "gMin": 0.05931146442890167,
+            "gMax": 0.27989280223846436,
+            "bMin": 0.033768367022275925,
+            "bMax": 0.310075968503952
+          },
+          "color": [
+            "array",
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "rBand"
+                ]
+              ],
+              [
+                "var",
+                "rMin"
+              ],
+              0,
+              [
+                "var",
+                "rMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "gBand"
+                ]
+              ],
+              [
+                "var",
+                "gMin"
+              ],
+              0,
+              [
+                "var",
+                "gMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "bBand"
+                ]
+              ],
+              [
+                "var",
+                "bMin"
+              ],
+              0,
+              [
+                "var",
+                "bMax"
+              ],
+              1
+            ],
+            [
+              "case",
+              [
+                "==",
+                [
+                  "band",
+                  [
+                    "var",
+                    "rBand"
+                  ]
+                ],
+                0
+              ],
+              0,
+              1
+            ]
+          ]
+        },
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "convertToRGB": true
+      }
+    ],
+    "meta": {
+      "description": "EnMAP Input image",
+      "attribution": {
+        "text": "ONERA, French Areospace Space, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": []
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Gilbratar",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Gilbratar_20220726T114034Z_Synthetic",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Gilbratar_20220726T114034Z_Synthetic.tif",
+        "format": "cog",
+        "zIndex": 50
+      }
+    ],
+    "meta": {
+      "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
+      "attribution": {
+        "text": "ONERA French Areospace Lab, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": [],
+      "colormaps": [
+        {
+          "min": 0,
+          "max": 251,
+          "steps": 50,
+          "name": "jet",
+          "reverse": false
+        }
+      ],
+      "units": "dxch4 in ppb (total column)"
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Gilbratar",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+    {
+    "name": "ENMAP01_Huelva_20250309T115102Z_Radiance",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Huelva_20250309T115102Z_Radiance.tif",
+        "format": "cog",
+        "zIndex": 50,
+        "style": {
+          "variables": {
+            "rBand": 1,
+            "gBand": 2,
+            "bBand": 3,
+            "rMin": -4.552337031782372e-06,
+            "rMax": 0.007342669181525707,
+            "gMin": 0.0461539700627327,
+            "gMax": 0.24500517547130585,
+            "bMin": 0.023749420419335365,
+            "bMax": 0.2866872549057007
+          },
+          "color": [
+            "array",
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "rBand"
+                ]
+              ],
+              [
+                "var",
+                "rMin"
+              ],
+              0,
+              [
+                "var",
+                "rMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "gBand"
+                ]
+              ],
+              [
+                "var",
+                "gMin"
+              ],
+              0,
+              [
+                "var",
+                "gMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "bBand"
+                ]
+              ],
+              [
+                "var",
+                "bMin"
+              ],
+              0,
+              [
+                "var",
+                "bMax"
+              ],
+              1
+            ],
+            [
+              "case",
+              [
+                "==",
+                [
+                  "band",
+                  [
+                    "var",
+                    "rBand"
+                  ]
+                ],
+                0
+              ],
+              0,
+              1
+            ]
+          ]
+        },
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "convertToRGB": true
+      }
+    ],
+    "meta": {
+      "description": "EnMAP Input image",
+      "attribution": {
+        "text": "ONERA, French Areospace Space, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": []
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Huelva",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Huelva_20250309T115102Z_Synthetic",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Huelva_20250309T115102Z_Synthetic.tif",
+        "format": "cog",
+        "zIndex": 50
+      }
+    ],
+    "meta": {
+      "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
+      "attribution": {
+        "text": "ONERA French Areospace Lab, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": [],
+      "colormaps": [
+        {
+          "min": 0,
+          "max": 468,
+          "steps": 50,
+          "name": "jet",
+          "reverse": false
+        }
+      ],
+      "units": "dxch4 in ppb (total column)"
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Huelva",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Huelva_20250114T115048Z_Synthetic",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Huelva_20250114T115048Z_Synthetic.tif",
+        "format": "cog",
+        "zIndex": 50
+      }
+    ],
+    "meta": {
+      "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
+      "attribution": {
+        "text": "ONERA French Areospace Lab, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": [],
+      "colormaps": [
+        {
+          "min": 0,
+          "max": 189,
+          "steps": 50,
+          "name": "jet",
+          "reverse": false
+        }
+      ],
+      "units": "dxch4 in ppb (total column)"
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Huelva",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Huelva_20240928T115051Z_Radiance",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Huelva_20240928T115051Z_Radiance.tif",
+        "format": "cog",
+        "zIndex": 50,
+        "style": {
+          "variables": {
+            "rBand": 1,
+            "gBand": 2,
+            "bBand": 3,
+            "rMin": -8.633419201942161e-05,
+            "rMax": 0.014894315972924232,
+            "gMin": 0.04724087193608284,
+            "gMax": 0.2308690845966339,
+            "bMin": 0.021429814398288727,
+            "bMax": 0.2955043613910675
+          },
+          "color": [
+            "array",
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "rBand"
+                ]
+              ],
+              [
+                "var",
+                "rMin"
+              ],
+              0,
+              [
+                "var",
+                "rMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "gBand"
+                ]
+              ],
+              [
+                "var",
+                "gMin"
+              ],
+              0,
+              [
+                "var",
+                "gMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "bBand"
+                ]
+              ],
+              [
+                "var",
+                "bMin"
+              ],
+              0,
+              [
+                "var",
+                "bMax"
+              ],
+              1
+            ],
+            [
+              "case",
+              [
+                "==",
+                [
+                  "band",
+                  [
+                    "var",
+                    "rBand"
+                  ]
+                ],
+                0
+              ],
+              0,
+              1
+            ]
+          ]
+        },
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "convertToRGB": true
+      }
+    ],
+    "meta": {
+      "description": "EnMAP Input image",
+      "attribution": {
+        "text": "ONERA, French Areospace Space, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": []
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Huelva",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Huelva_20240928T115051Z_Synthetic",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Huelva_20240928T115051Z_Synthetic.tif",
+        "format": "cog",
+        "zIndex": 50
+      }
+    ],
+    "meta": {
+      "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
+      "attribution": {
+        "text": "ONERA French Areospace Lab, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": [],
+      "colormaps": [
+        {
+          "min": 0,
+          "max": 331,
+          "steps": 50,
+          "name": "jet",
+          "reverse": false
+        }
+      ],
+      "units": "dxch4 in ppb (total column)"
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Huelva",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Huelva_20240709T115127Z_Radiance",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Huelva_20240709T115127Z_Radiance.tif",
+        "format": "cog",
+        "zIndex": 50,
+        "style": {
+          "variables": {
+            "rBand": 1,
+            "gBand": 2,
+            "bBand": 3,
+            "rMin": 1.889056875370443e-05,
+            "rMax": 0.029782535508275032,
+            "gMin": 0.05708002299070358,
+            "gMax": 0.3342908024787903,
+            "bMin": 0.031769461929798126,
+            "bMax": 0.40140300989151
+          },
+          "color": [
+            "array",
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "rBand"
+                ]
+              ],
+              [
+                "var",
+                "rMin"
+              ],
+              0,
+              [
+                "var",
+                "rMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "gBand"
+                ]
+              ],
+              [
+                "var",
+                "gMin"
+              ],
+              0,
+              [
+                "var",
+                "gMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "bBand"
+                ]
+              ],
+              [
+                "var",
+                "bMin"
+              ],
+              0,
+              [
+                "var",
+                "bMax"
+              ],
+              1
+            ],
+            [
+              "case",
+              [
+                "==",
+                [
+                  "band",
+                  [
+                    "var",
+                    "rBand"
+                  ]
+                ],
+                0
+              ],
+              0,
+              1
+            ]
+          ]
+        },
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "convertToRGB": true
+      }
+    ],
+    "meta": {
+      "description": "EnMAP Input image",
+      "attribution": {
+        "text": "ONERA, French Areospace Space, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": []
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Huelva",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Huelva_20240709T115127Z_Synthetic",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Huelva_20240709T115127Z_Synthetic.tif",
+        "format": "cog",
+        "zIndex": 50
+      }
+    ],
+    "meta": {
+      "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
+      "attribution": {
+        "text": "ONERA French Areospace Lab, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": [],
+      "colormaps": [
+        {
+          "min": 0,
+          "max": 799,
+          "steps": 50,
+          "name": "jet",
+          "reverse": false
+        }
+      ],
+      "units": "dxch4 in ppb (total column)"
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Huelva",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+    {
+    "name": "ENMAP01_Theodoria_20251215T095902Z_Radiance",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Theodoria_20251215T095902Z_Radiance.tif",
+        "format": "cog",
+        "zIndex": 50,
+        "style": {
+          "variables": {
+            "rBand": 1,
+            "gBand": 2,
+            "bBand": 3,
+            "rMin": -1.0742724043666385e-05,
+            "rMax": 0.033092498779296875,
+            "gMin": 0.028992321342229843,
+            "gMax": 0.7523032426834106,
+            "bMin": 0.012822066433727741,
+            "bMax": 0.654596209526062
+          },
+          "color": [
+            "array",
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "rBand"
+                ]
+              ],
+              [
+                "var",
+                "rMin"
+              ],
+              0,
+              [
+                "var",
+                "rMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "gBand"
+                ]
+              ],
+              [
+                "var",
+                "gMin"
+              ],
+              0,
+              [
+                "var",
+                "gMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "bBand"
+                ]
+              ],
+              [
+                "var",
+                "bMin"
+              ],
+              0,
+              [
+                "var",
+                "bMax"
+              ],
+              1
+            ],
+            [
+              "case",
+              [
+                "==",
+                [
+                  "band",
+                  [
+                    "var",
+                    "rBand"
+                  ]
+                ],
+                0
+              ],
+              0,
+              1
+            ]
+          ]
+        },
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "convertToRGB": true
+      }
+    ],
+    "meta": {
+      "description": "EnMAP Input image",
+      "attribution": {
+        "text": "ONERA, French Areospace Space, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": []
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Theodoria",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Theodoria_20251215T095902Z_Synthetic",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Theodoria_20251215T095902Z_Synthetic.tif",
+        "format": "cog",
+        "zIndex": 50
+      }
+    ],
+    "meta": {
+      "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
+      "attribution": {
+        "text": "ONERA French Areospace Lab, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": [],
+      "colormaps": [
+        {
+          "min": 0,
+          "max": 136,
+          "steps": 50,
+          "name": "jet",
+          "reverse": false
+        }
+      ],
+      "units": "dxch4 in ppb (total column)"
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Theodoria",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Theodoria_20250829T095901Z_Radiance",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Theodoria_20250829T095901Z_Radiance.tif",
+        "format": "cog",
+        "zIndex": 50,
+        "style": {
+          "variables": {
+            "rBand": 1,
+            "gBand": 2,
+            "bBand": 3,
+            "rMin": -2.3498958398704417e-05,
+            "rMax": 0.028302844613790512,
+            "gMin": 0.045534953474998474,
+            "gMax": 0.3602037727832794,
+            "bMin": 0.022419346496462822,
+            "bMax": 0.4123871922492981
+          },
+          "color": [
+            "array",
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "rBand"
+                ]
+              ],
+              [
+                "var",
+                "rMin"
+              ],
+              0,
+              [
+                "var",
+                "rMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "gBand"
+                ]
+              ],
+              [
+                "var",
+                "gMin"
+              ],
+              0,
+              [
+                "var",
+                "gMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "bBand"
+                ]
+              ],
+              [
+                "var",
+                "bMin"
+              ],
+              0,
+              [
+                "var",
+                "bMax"
+              ],
+              1
+            ],
+            [
+              "case",
+              [
+                "==",
+                [
+                  "band",
+                  [
+                    "var",
+                    "rBand"
+                  ]
+                ],
+                0
+              ],
+              0,
+              1
+            ]
+          ]
+        },
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "convertToRGB": true
+      }
+    ],
+    "meta": {
+      "description": "EnMAP Input image",
+      "attribution": {
+        "text": "ONERA, French Areospace Space, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": []
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Theodoria",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Theodoria_20250829T095901Z_Synthetic",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Theodoria_20250829T095901Z_Synthetic.tif",
+        "format": "cog",
+        "zIndex": 50
+      }
+    ],
+    "meta": {
+      "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
+      "attribution": {
+        "text": "ONERA French Areospace Lab, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": [],
+      "colormaps": [
+        {
+          "min": 0,
+          "max": 675,
+          "steps": 50,
+          "name": "jet",
+          "reverse": false
+        }
+      ],
+      "units": "dxch4 in ppb (total column)"
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Theodoria",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Theodoria_20240426T095504Z_Radiance",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Theodoria_20240426T095504Z_Radiance.tif",
+        "format": "cog",
+        "zIndex": 50,
+        "style": {
+          "variables": {
+            "rBand": 1,
+            "gBand": 2,
+            "bBand": 3,
+            "rMin": 3.6333636671770364e-05,
+            "rMax": 0.026443423703312874,
+            "gMin": 0.04871000349521637,
+            "gMax": 0.32458624243736267,
+            "bMin": 0.025315459817647934,
+            "bMax": 0.3245082497596741
+          },
+          "color": [
+            "array",
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "rBand"
+                ]
+              ],
+              [
+                "var",
+                "rMin"
+              ],
+              0,
+              [
+                "var",
+                "rMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "gBand"
+                ]
+              ],
+              [
+                "var",
+                "gMin"
+              ],
+              0,
+              [
+                "var",
+                "gMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "bBand"
+                ]
+              ],
+              [
+                "var",
+                "bMin"
+              ],
+              0,
+              [
+                "var",
+                "bMax"
+              ],
+              1
+            ],
+            [
+              "case",
+              [
+                "==",
+                [
+                  "band",
+                  [
+                    "var",
+                    "rBand"
+                  ]
+                ],
+                0
+              ],
+              0,
+              1
+            ]
+          ]
+        },
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "convertToRGB": true
+      }
+    ],
+    "meta": {
+      "description": "EnMAP Input image",
+      "attribution": {
+        "text": "ONERA, French Areospace Space, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": []
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Theodoria",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Theodoria_20240426T095504Z_Synthetic",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Theodoria_20240426T095504Z_Synthetic.tif",
+        "format": "cog",
+        "zIndex": 50
+      }
+    ],
+    "meta": {
+      "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
+      "attribution": {
+        "text": "ONERA French Areospace Lab, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": [],
+      "colormaps": [
+        {
+          "min": 0,
+          "max": 761,
+          "steps": 50,
+          "name": "jet",
+          "reverse": false
+        }
+      ],
+      "units": "dxch4 in ppb (total column)"
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Theodoria",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Theodoria_20240330T095507Z_Radiance",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Theodoria_20240330T095507Z_Radiance.tif",
+        "format": "cog",
+        "zIndex": 50,
+        "style": {
+          "variables": {
+            "rBand": 1,
+            "gBand": 2,
+            "bBand": 3,
+            "rMin": -7.678922884224448e-06,
+            "rMax": 0.013616682961583138,
+            "gMin": 0.042477138340473175,
+            "gMax": 0.23107756674289703,
+            "bMin": 0.018893295899033546,
+            "bMax": 0.28344061970710754
+          },
+          "color": [
+            "array",
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "rBand"
+                ]
+              ],
+              [
+                "var",
+                "rMin"
+              ],
+              0,
+              [
+                "var",
+                "rMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "gBand"
+                ]
+              ],
+              [
+                "var",
+                "gMin"
+              ],
+              0,
+              [
+                "var",
+                "gMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "bBand"
+                ]
+              ],
+              [
+                "var",
+                "bMin"
+              ],
+              0,
+              [
+                "var",
+                "bMax"
+              ],
+              1
+            ],
+            [
+              "case",
+              [
+                "==",
+                [
+                  "band",
+                  [
+                    "var",
+                    "rBand"
+                  ]
+                ],
+                0
+              ],
+              0,
+              1
+            ]
+          ]
+        },
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "convertToRGB": true
+      }
+    ],
+    "meta": {
+      "description": "EnMAP Input image",
+      "attribution": {
+        "text": "ONERA, French Areospace Space, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": []
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Theodoria",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Theodoria_20240330T095507Z_Synthetic",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Theodoria_20240330T095507Z_Synthetic.tif",
+        "format": "cog",
+        "zIndex": 50
+      }
+    ],
+    "meta": {
+      "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
+      "attribution": {
+        "text": "ONERA French Areospace Lab, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": [],
+      "colormaps": [
+        {
+          "min": 0,
+          "max": 184,
+          "steps": 50,
+          "name": "jet",
+          "reverse": false
+        }
+      ],
+      "units": "dxch4 in ppb (total column)"
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Theodoria",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+    {
+    "name": "ENMAP01_Thailand_20250211T041604Z_Radiance",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Thailand_20250211T041604Z_Radiance.tif",
+        "format": "cog",
+        "zIndex": 50,
+        "style": {
+          "variables": {
+            "rBand": 1,
+            "gBand": 2,
+            "bBand": 3,
+            "rMin": 0.00047120454837568104,
+            "rMax": 0.00635717436671257,
+            "gMin": 0.08392804861068726,
+            "gMax": 0.23647339642047882,
+            "bMin": 0.053746193647384644,
+            "bMax": 0.25500452518463135
+          },
+          "color": [
+            "array",
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "rBand"
+                ]
+              ],
+              [
+                "var",
+                "rMin"
+              ],
+              0,
+              [
+                "var",
+                "rMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "gBand"
+                ]
+              ],
+              [
+                "var",
+                "gMin"
+              ],
+              0,
+              [
+                "var",
+                "gMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "bBand"
+                ]
+              ],
+              [
+                "var",
+                "bMin"
+              ],
+              0,
+              [
+                "var",
+                "bMax"
+              ],
+              1
+            ],
+            [
+              "case",
+              [
+                "==",
+                [
+                  "band",
+                  [
+                    "var",
+                    "rBand"
+                  ]
+                ],
+                0
+              ],
+              0,
+              1
+            ]
+          ]
+        },
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "convertToRGB": true
+      }
+    ],
+    "meta": {
+      "description": "EnMAP Input image",
+      "attribution": {
+        "text": "ONERA, French Areospace Space, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": []
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Thailand",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Thailand_20250211T041604Z_Synthetic",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Thailand_20250211T041604Z_Synthetic.tif",
+        "format": "cog",
+        "zIndex": 50
+      }
+    ],
+    "meta": {
+      "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
+      "attribution": {
+        "text": "ONERA French Areospace Lab, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": [],
+      "colormaps": [
+        {
+          "min": 0,
+          "max": 520,
+          "steps": 50,
+          "name": "jet",
+          "reverse": false
+        }
+      ],
+      "units": "dxch4 in ppb (total column)"
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Thailand",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Thailand_20241026T041610Z_Synthetic",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Thailand_20241026T041610Z_Synthetic.tif",
+        "format": "cog",
+        "zIndex": 50
+      }
+    ],
+    "meta": {
+      "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
+      "attribution": {
+        "text": "ONERA French Areospace Lab, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": [],
+      "colormaps": [
+        {
+          "min": 0,
+          "max": 827,
+          "steps": 50,
+          "name": "jet",
+          "reverse": false
+        }
+      ],
+      "units": "dxch4 in ppb (total column)"
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Thailand",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Thailand_20240810T041929Z_Radiance",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Thailand_20240810T041929Z_Radiance.tif",
+        "format": "cog",
+        "zIndex": 50,
+        "style": {
+          "variables": {
+            "rBand": 1,
+            "gBand": 2,
+            "bBand": 3,
+            "rMin": 7.2631100920261815e-06,
+            "rMax": 0.022357003763318062,
+            "gMin": 0.05488894507288933,
+            "gMax": 0.49398717284202576,
+            "bMin": 0.02425510063767433,
+            "bMax": 0.5524519681930542
+          },
+          "color": [
+            "array",
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "rBand"
+                ]
+              ],
+              [
+                "var",
+                "rMin"
+              ],
+              0,
+              [
+                "var",
+                "rMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "gBand"
+                ]
+              ],
+              [
+                "var",
+                "gMin"
+              ],
+              0,
+              [
+                "var",
+                "gMax"
+              ],
+              1
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "band",
+                [
+                  "var",
+                  "bBand"
+                ]
+              ],
+              [
+                "var",
+                "bMin"
+              ],
+              0,
+              [
+                "var",
+                "bMax"
+              ],
+              1
+            ],
+            [
+              "case",
+              [
+                "==",
+                [
+                  "band",
+                  [
+                    "var",
+                    "rBand"
+                  ]
+                ],
+                0
+              ],
+              0,
+              1
+            ]
+          ]
+        },
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "convertToRGB": true
+      }
+    ],
+    "meta": {
+      "description": "EnMAP Input image",
+      "attribution": {
+        "text": "ONERA, French Areospace Space, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": []
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Thailand",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ENMAP01_Thailand_20240810T041929Z_Synthetic",
+    "isActive": false,
+    "data": [
+      {
+        "url": "https://eo4sembucket.s3.eu-north-1.amazonaws.com/+ONERA_ENMAP_V2/ENMAP01_Thailand_20240810T041929Z_Synthetic.tif",
+        "format": "cog",
+        "zIndex": 50
+      }
+    ],
+    "meta": {
+      "description": "Methane plumes from maritime and offshore sources are detected using hyperspectral imagery from the EnMAP satellite. The process takes L1C radiance data as input, visualised as false-colour RGB composites using shortwave infrared and visible bands (R: 2315 nm, G: 440 nm, B: 550 nm), and produces georeferenced CH4 concentration maps in parts per billion (dXCH4, total column).",
+      "attribution": {
+        "text": "ONERA French Areospace Lab, Contact- pierre-yves.foucher@onera.fr",
+        "url": "https://www.onera.fr/en"
+      },
+      "categories": [],
+      "colormaps": [
+        {
+          "min": 0,
+          "max": 460,
+          "steps": 50,
+          "name": "jet",
+          "reverse": false
+        }
+      ],
+      "units": "dxch4 in ppb (total column)"
+    },
+    "layout": {
+      "interfaceGroup": "Plume Detection from ENMAP (ENORA)",
+      "subinterfaceGroup": "Thailand",
+      "contentLocation": "infoPanel",
+      "layerCard": {
+        "toggleable": true
+      },
+      "infoPanel": {
+        "legend": {
+          "type": "swatch"
+        },
+        "controls": {
+          "opacitySlider": true,
+          "zoomToCenter": true,
+          "temporalControls": false,
+          "constraintSlider": false,
+          "blendControls": false
+        }
+      }
+    }
+  }
   ]
 }
